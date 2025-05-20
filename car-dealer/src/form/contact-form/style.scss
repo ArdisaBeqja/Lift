@@ -1,0 +1,11 @@
+@import '../../assets/scss/variable';
+
+.contact-form {
+  padding: 50px;
+  box-shadow: 0 0.5rem 1rem rgba($black-color, 0.15) !important;
+}
+.contact-form .form-control {
+  padding: 0;
+  margin: 0;
+  border: none;
+}

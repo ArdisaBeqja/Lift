@@ -1,0 +1,104 @@
+@import '../../assets/scss/variable.scss';
+
+/*-----------------------------------------------------*/
+/* Infobox */
+/*-----------------------------------------------------*/
+.cdhl-infobox .infobox-title {font-size: 24px; font-weight: 500; line-height: 34px; color: $secondary-color; margin-bottom: 15px;}
+.cdhl-infobox h2.infobox-title {font-size: 34px; line-height: 42px;}
+.cdhl-infobox h3.infobox-title {font-size: 30px; line-height: 40px;}
+.cdhl-infobox h5.infobox-title {font-size: 22px; line-height: 32px;}
+.cdhl-infobox h6.infobox-title {font-size: 20px; line-height: 30px;}
+.cdhl-infobox .infobox-description {color: $body-color;}
+
+/* Icon Deafult */
+.cdhl-infobox.icon-type-default .infobox-icon i {
+	font-size: 60px;
+	color: $primary-color;
+	line-height: normal;
+}
+
+/* Icon Border */
+.cdhl-infobox.icon-type-border .infobox-icon i {
+	width: 85px;
+	height: 85px;
+	font-size: 40px;
+	color: $primary-color;
+	border: 2px solid;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Icon Flat */
+.cdhl-infobox.icon-type-flat .infobox-icon i {
+	width: 85px;
+	height: 85px;
+	font-size: 40px;
+	color: #FFFFFF;
+	background: $primary-color;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Icon Shape */
+.cdhl-infobox .infobox-icon.icon-shape-rounded i {border-radius: $radius-5;}
+.cdhl-infobox .infobox-icon.icon-shape-round i {border-radius: $radius-50;}
+
+/* Infobox Shadow */
+.infobox_wrapper .cdhl-infobox.infobox-shadow {
+    background-color: #ffffff;
+    padding: 35px;
+    box-shadow: 0 11px 20px rgba(0,0,0,0.03);
+}
+
+/*------------------------*/
+/* Style 1 */
+/*------------------------*/
+.cdhl-infobox.style-1 .infobox-icon {margin-bottom: 20px;}
+
+/*------------------------*/
+/* Style 2 */
+/*------------------------*/
+.cdhl-infobox.style-2 {display: flex; gap: 25px;}
+.cdhl-infobox.style-2 .icon-type-default {margin-right: 5px;}
+.cdhl-infobox.style-2 .infobox-icon {margin-bottom: 0;}
+
+/*------------------------*/
+/* Style 3 */
+/*------------------------*/
+.cdhl-infobox.style-3 .infobox-head {display: flex; gap: 25px; margin-bottom: 20px;}
+.cdhl-infobox.style-3 .icon-type-default {margin-right: 5px;}
+.cdhl-infobox.style-3 .infobox-title {align-self: center; margin-bottom: 0;}
+
+/*-----------------------*/
+/* Infobox Link */
+/*-----------------------*/
+.cdhl-infobox .infobox-link {position: relative; display: inline-flex; align-items: center; color: $primary-color; font-size: 0.95em; font-weight: 500;
+  line-height: 28px; margin-top: 20px; overflow: hidden;  transition: all 0.25s ease-in-out;}
+.cdhl-infobox .infobox-link:after {content: ""; width: 0; height: 1px; background: $primary-color; position: absolute; left: 0; bottom: 0; transition: all .25s ease-out 0s;}
+.cdhl-infobox .infobox-link:hover:after {width: 100%;}
+
+.cdhl-infobox .infobox-link span {position: relative; margin-right: 0; display: inline-block; vertical-align: middle; text-indent: -110px; visibility: hidden; white-space: nowrap;  opacity: 0; -webkit-transition: visibility 0.4s ease,margin-right 0.4s ease-out,text-indent 0.5s ease-out,opacity 0.4s ease; -ms-transition: visibility 0.4s ease,margin-right 0.4s ease-out,text-indent 0.5s ease-out,opacity 0.4s ease; transition: visibility 0.4s ease,margin-right 0.4s ease-out,text-indent 0.5s ease-out,opacity 0.4s ease; will-change: visibility,margin-right,text-indent,opacity;}
+
+.cdhl-infobox:hover .infobox-link span,
+.cdhl-infobox .infobox-link:hover span {opacity: 1; text-indent: 0; margin-right: 10px; visibility: visible; -webkit-transition: visibility 0.4s ease,margin-right 0.3s ease-out,text-indent 0.4s ease-out,opacity 0.4s ease; -ms-transition: visibility 0.4s ease,margin-right 0.3s ease-out,text-indent 0.4s ease-out,opacity 0.4s ease; transition: visibility 0.4s ease,margin-right 0.3s ease-out,text-indent 0.4s ease-out,opacity 0.4s ease;}
+
+/*-----------------------*/
+/* Infobox Light */
+/*-----------------------*/
+.cdhl-infobox.infobox-light .infobox-title,
+.cdhl-infobox.infobox-light .infobox-description,
+.cdhl-infobox.infobox-light .infobox-link {color: $white-color;}
+.cdhl-infobox.infobox-light .infobox-link:after {background: $white-color;}
+
+/*======================================================*/
+/* Responsive CSS */
+/*======================================================*/
+@media only screen and (max-width: 991px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+
+}

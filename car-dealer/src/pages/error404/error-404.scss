@@ -1,0 +1,38 @@
+@import '../../assets/scss/variable.scss';
+
+/*------------------------------------*/
+/* Error 404 */
+/*------------------------------------*/
+.error-404 .title {
+  margin-top: 30px;
+}
+
+.error-content .error-number {
+  font-size: 400px;
+  color: $light-color;
+  line-height: 300px;
+}
+
+.error-content img {
+  margin-top: -80px;
+}
+
+.error-content h3 {
+  color: $primary-color;
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+
+.error-content strong {
+  font-style: italic;
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  color: $secondary-color;
+}
+
+.error-search {
+  margin-top: 30px;
+}

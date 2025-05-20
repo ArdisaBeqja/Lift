@@ -1,0 +1,97 @@
+@import '../../assets/scss/variable.scss';
+
+/*------------------------------------*/
+/* Accordion */
+/*------------------------------------*/
+.accordion-pgs .accordion-button {
+  background: transparent;
+  display: flex;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 24px;
+  color: $title-color;
+  padding: 11px 60px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid $border-color;
+  position: relative;
+  border-radius: 0px;
+  font-weight: 700;
+  box-shadow: none;
+}
+.accordion-pgs .accordion-button:not(.collapsed) {
+  background: $primary-color;
+  color: $white-color;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.accordion-pgs .accordion-item {
+  border: none;
+  margin-bottom: 20px;
+}
+.accordion-item:last-of-type .accordion-button.collapsed,
+.accordion-item:first-of-type .accordion-button {
+  border-radius: 0px;
+}
+.accordion-pgs .accordion-item:last-child {
+  margin-bottom: 0;
+}
+.accordion-pgs .accordion-item .accordion-body {
+  padding: 25px;
+  color: $body-color;
+  border: 1px solid $border-color;
+}
+.accordion-pgs .accordion-item:last-child .accordion-body {
+  padding-bottom: 0;
+}
+
+.accordion .accordion-header .accordion-button.collapsed:hover {
+  text-decoration: none;
+  background-color: transparent;
+  color: $primary-color;
+}
+
+/* Accordion Arrow */
+.accordion-pgs .accordion-header .accordion-button:after {
+  position: absolute;
+  content: '\f107';
+  left: 20px;
+  top: 50%;
+  margin-top: -10px;
+  margin-left: 0;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: bold;
+  width: auto;
+  background: none;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.accordion-pgs .accordion-header .accordion-button:not(.collapsed):after {
+  background: none;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* Accordion List */
+.accordion-pgs .accordion-item .ckeck-list {
+  margin-top: 30px;
+}
+.accordion-pgs .accordion-item .ckeck-list li {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 15px;
+  line-height: 20px;
+  color: $black-color;
+}
+.accordion-pgs .accordion-item .ckeck-list li i {
+  color: $primary-color;
+  padding-right: 10px;
+}
+
+/*--------------------------------------------*/
+/* Responsive View */
+/*--------------------------------------------*/
+@media (max-width: 767px) {
+}

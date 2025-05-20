@@ -1,0 +1,192 @@
+@import '../../assets/scss/variable.scss';
+
+/*------------------------------------*/
+/* Vehicles Search */
+/*------------------------------------*/
+.vehicles-search-inner .sort-filters-tab {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.vehicles-search-inner .sort-filters-tab .filters-title {
+  margin: 0;
+  margin-right: 20px;
+}
+.vehicles-search-inner .search-box {
+  position: relative;
+}
+.vehicles-search-inner .vehicles-total-info {
+  position: absolute;
+  right: 0;
+  top: -82px;
+  width: auto;
+}
+.vehicles-search-inner .vehicles-total-info .vehicles-total {
+  font-size: 26px;
+  margin: 0;
+}
+.vehicles-search-inner .vehicles-total-info .vehicles-total i {
+  padding-right: 8px;
+  font-size: 20px;
+  line-height: 24px;
+  display: inline-block;
+}
+.vehicles-search-inner .vehicles-total-info .vehicles-label {
+  color: $primary-color;
+}
+
+/* Vehicles Filters Dropdown */
+.vehicles-search-inner .search-box input.form-control {
+  font-size: 15px;
+  height: 44px;
+  border: 1px solid #e8e8e8;
+  border-radius: 0;
+}
+.vehicles-search-inner .search-box input.form-control:focus {
+  border-color: $primary-color;
+  box-shadow: none;
+}
+
+/* Vehicles Filters Button */
+.vehicles-search-inner .search-box .search-btn {width: 100%; display: flex; justify-content: center; align-items: center;}
+
+/*------------------------------------*/
+/* Vehicles Search Style 1 */
+/*------------------------------------*/
+.vehicles-search-inner.vehicles-search-style-1 {
+  background: #fff;
+  padding: 30px;
+  border: 1px solid #e3e3e3;
+}
+.vehicles-search-inner.vehicles-search-style-1 .sort-filters-tab .filters-title {
+  font-size: 24px;
+  line-height: 32px;
+}
+.vehicles-search-inner.vehicles-search-style-1 .sort-filters-tab {
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Vehicles Filters Tab */
+.vehicles-search-inner.vehicles-search-style-1 .sort-filters-tab .nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.vehicles-search-inner.vehicles-search-style-1 .sort-filters-tab .nav-item .nav-link {
+  font-size: 13px;
+  color: #323232;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  background: #f6f6f6;
+  border-radius: $radius-3;
+}
+.vehicles-search-inner.vehicles-search-style-1 .sort-filters-tab .nav-item .nav-link:hover,
+.vehicles-search-inner.vehicles-search-style-1 .sort-filters-tab .nav-item .nav-link.active {
+  background: $primary-color;
+  color: #ffffff;
+  outline: none;
+}
+
+/*------------------------------------*/
+/* Vehicles Search Style 2 */
+/*------------------------------------*/
+.vehicles-search-inner.vehicles-search-style-2 .sort-filters-tab .filters-title {
+  font-size: 30px;
+  line-height: normal;
+  margin-right: 40px;
+}
+.vehicles-search-inner.vehicles-search-style-2 .vehicles-total-info {
+  top: -68px;
+}
+.vehicles-search-inner.vehicles-search-style-2 .css-13cymwt-control,
+.vehicles-search-inner.vehicles-search-style-2 .css-t3ipsp-control,
+.vehicles-search-inner.vehicles-search-style-2 .search-box input.form-control,
+.vehicles-search-inner.vehicles-search-style-2 .search-box .search-btn {
+  min-height: 50px;
+  border-radius: 3px;
+}
+
+/* Vehicles Filters Tab */
+.vehicles-search-inner.vehicles-search-style-2 .sort-filters-tab {
+  margin-bottom: 30px;
+}
+.vehicles-search-inner.vehicles-search-style-2 .sort-filters-tab .nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 25px;
+}
+.vehicles-search-inner.vehicles-search-style-2 .sort-filters-tab .nav-item .nav-link {
+  font-size: 20px;
+  line-height: 28px;
+  color: #323232;
+  opacity: 0.6;
+  padding: 0;
+  text-decoration: underline !important;
+  text-underline-offset: 5px;
+}
+.vehicles-search-inner.vehicles-search-style-2 .sort-filters-tab .nav-item .nav-link:hover,
+.vehicles-search-inner.vehicles-search-style-2 .sort-filters-tab .nav-item .nav-link.active {
+  color: $primary-color;
+  outline: none;
+  opacity: 1;
+}
+
+/*------------------------------------*/
+/* Vehicles Search : Light */
+/*------------------------------------*/
+.vehicles-search-wrapper.light .vehicles-search-inner .sort-filters-tab .filters-title,
+.vehicles-search-wrapper.light .vehicles-search-inner .vehicles-total-info .vehicles-total {color: $white-color;}
+
+.vehicles-search-wrapper.light2 .vehicles-search-inner .sort-filters-tab .filters-title,
+.vehicles-search-wrapper.light2 .vehicles-search-inner .vehicles-total-info .vehicles-total,
+.vehicles-search-wrapper.light2 .vehicles-search-inner .vehicles-total-info .vehicles-label {color: $white-color;}
+
+/* Vehicles Search Style 1 : Light */
+.vehicles-search-wrapper.light .vehicles-search-inner.vehicles-search-style-1 {background: rgba(17, 20, 22, .5); border-color: rgba(255,255,255,0.1);}
+.vehicles-search-wrapper.light .vehicles-search-inner.vehicles-search-style-1 .sort-filters-tab {border-bottom-color: rgba(255,255,255,0.1);}
+
+/* Vehicles Search Style 1 : Light2 */
+.vehicles-search-wrapper.light2 .vehicles-search-inner.vehicles-search-style-1 {background: rgba(17, 20, 22, .1); border-color: rgba(255,255,255,0.2);}
+.vehicles-search-wrapper.light2 .vehicles-search-inner.vehicles-search-style-1 .sort-filters-tab .nav-item .nav-link:hover,
+.vehicles-search-wrapper.light2 .vehicles-search-inner.vehicles-search-style-1 .sort-filters-tab .nav-item .nav-link.active {background: $dark-color;}
+
+.vehicles-search-wrapper.light2 .vehicles-search-inner.vehicles-search-style-1 .search-box .search-btn {background: $dark-color;}
+.vehicles-search-wrapper.light2 .vehicles-search-inner.vehicles-search-style-1 .search-box .search-btn:hover { color: $secondary-color;}
+.vehicles-search-wrapper.light2 .vehicles-search-inner.vehicles-search-style-1 .search-box .search-btn.button:before {background: $white-color;}
+
+/* Vehicles Search Style 2 : Light */
+.vehicles-search-wrapper.light .vehicles-search-inner.vehicles-search-style-2 .sort-filters-tab .nav-item .nav-link {color: $white-color;}
+.vehicles-search-wrapper.light .vehicles-search-inner.vehicles-search-style-2 .sort-filters-tab .nav-item .nav-link:hover,
+.vehicles-search-wrapper.light .vehicles-search-inner.vehicles-search-style-2 .sort-filters-tab .nav-item .nav-link.active {color: $primary-color;}
+
+/* Vehicles Search Style 2 : Light2 */
+.vehicles-search-wrapper.light2 .vehicles-search-inner.vehicles-search-style-2 .sort-filters-tab .nav-item .nav-link {color: $white-color;}
+.vehicles-search-wrapper.light2 .vehicles-search-inner.vehicles-search-style-2 .search-box .search-btn {background: $dark-color;}
+.vehicles-search-wrapper.light2 .vehicles-search-inner.vehicles-search-style-2 .search-box .search-btn:hover { color: $secondary-color;}
+.vehicles-search-wrapper.light2 .vehicles-search-inner.vehicles-search-style-2 .search-box .search-btn.button:before {background: $white-color;}
+
+/*==========================================================*/
+/* Responsive CSS */
+/*==========================================================*/
+@media only screen and (max-width: 991px) {
+
+  .vehicles-search-inner .sort-filters-tab {flex-wrap: wrap;}
+  .vehicles-search-inner .sort-filters-tab .filters-title {width: 100%; margin: 0; margin-bottom: 20px;}
+  .vehicles-search-inner.vehicles-search-style-2 .vehicles-total-info {top: -62px;}
+}
+
+@media only screen and (max-width: 767px) {
+
+  .vehicles-search-inner .vehicles-total-info,
+  .vehicles-search-inner.vehicles-search-style-2 .vehicles-total-info {position: relative; top: auto; width: 100%; margin-bottom: 15px;}
+  .vehicles-search-inner.vehicles-search-style-2 .sort-filters-tab .filters-title {font-size: 24px; line-height: 32px;}
+}
+
+@media only screen and (max-width: 575px) {
+  
+  .vehicles-search-inner .search-box .search-btn {margin-top: 15px;}
+}

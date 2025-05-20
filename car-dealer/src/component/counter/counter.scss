@@ -1,0 +1,387 @@
+@import '../../assets/scss/variable.scss';
+
+/*---------------------------------*/
+/* Counter */
+/*---------------------------------*/
+.counter .counter-inner {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.counter .counter-icon i {
+  color: $primary-color;
+  margin-right: 0px;
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.counter .counter-content .counter-title {
+  position: relative;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  color: $title-color;
+  text-transform: uppercase;
+  font-family: $title-font;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+.counter .counter-content .counter-title:before {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: $primary-color;
+  left: 50%;
+  margin-left: -10px;
+  bottom: 0px;
+}
+.counter .counter-content .counter-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: $title-color;
+}
+.counter .counter-content .counter-info .timer {
+  font-family: $body-font;
+  font-weight: bold;
+}
+.counter .counter-content .counter-info label {
+  margin-left: 3px;
+}
+.counter .counter-content > label {
+  display: block;
+  color: $body-color;
+  margin-bottom: 0;
+}
+.counter .counter-content .counter-info + label {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+/*---------------------------------*/
+/* Counter Style-02 */
+/*---------------------------------*/
+.counter.counterstyle-02 .counter-inner {
+  flex-direction: inherit;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.counter.counterstyle-02 .counter-content .counter-info {
+  font-size: 40px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  justify-content: flex-start;
+}
+
+.counter.counterstyle-02 .counter-content .counter-info .timer {
+  color: $primary-color;
+}
+.counter.counterstyle-02 .counter-content .counter-title {
+  font-weight: 500;
+  font-size: 12px;
+  position: relative;
+  padding-bottom: 10px;
+  margin: 0;
+  color: $body-color;
+}
+.counter.counterstyle-02 .counter-content .counter-title:before {
+  display: none;
+}
+
+.counter.counterstyle-02 .counter-icon {
+  padding: 0 20px;
+}
+.counter.counterstyle-02 .counter-icon i {
+  color: $body-color;
+}
+
+/*---------------------------------*/
+/* Counter Style-02 icon right */
+/*---------------------------------*/
+.counter.counterstyle-02.icon-right .counter-inner {
+  flex-direction: row-reverse;
+}
+
+.counter.counterstyle-02.icon-right .counter-content .counter-info {
+  justify-content: flex-end;
+}
+
+/*---------------------------------*/
+/* Counter Style-03 */
+/*---------------------------------*/
+.counter.counterstyle-03 .counter-inner {
+  margin-left: 16px;
+  position: relative;
+  justify-content: flex-start;
+  flex-direction: inherit;
+  align-items: end;
+}
+
+.counter.counterstyle-03 .counter-inner .counter-separator {
+  position: relative;
+}
+
+.counter.counterstyle-03 .counter-inner .counter-separator::before {
+  position: absolute;
+  bottom: 0;
+  float: left;
+  content: '';
+  display: block;
+  margin: auto;
+  width: 1px;
+  height: 30px;
+  background: $white-color;
+  transition:
+    height 0.8s ease,
+    background-color 0.8s ease;
+  -webkit-transition:
+    height 0.8s ease,
+    background-color 0.8s ease;
+  -o-transition:
+    height 0.8s ease,
+    background-color 0.8s ease;
+  -ms-transition:
+    height 0.8s ease,
+    background-color 0.8s ease;
+  -moz-transition:
+    height 0.8s ease,
+    background-color 0.8s ease;
+  margin-right: 10px;
+}
+.counter.counterstyle-03 .counter-inner .counter-separator::after {
+  position: absolute;
+  bottom: 0;
+  float: left;
+  height: 50px;
+  display: block;
+  margin: auto;
+  content: '';
+  width: 1px;
+  background: $white-color;
+  left: 5px;
+  transition:
+    height 0.8s ease,
+    background-color 0.8s ease;
+  -webkit-transition:
+    height 0.8s ease,
+    background-color 0.8s ease;
+  -o-transition:
+    height 0.8s ease,
+    background-color 0.8s ease;
+  -ms-transition:
+    height 0.8s ease,
+    background-color 0.8s ease;
+  -moz-transition:
+    height 0.8s ease,
+    background-color 0.8s ease;
+}
+
+.counter.counterstyle-03 .counter-inner:hover .counter-separator:before {
+  height: 50px;
+}
+
+.counter.counterstyle-03 .counter-inner:hover .counter-separator:after {
+  height: 30px;
+}
+
+.counter.counterstyle-03 .counter-inner .counter-details {
+  margin-left: 30px;
+}
+.counter.counterstyle-03 .counter-inner .counter-details .counter-title {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  color: $white-color;
+  text-transform: uppercase;
+  font-family: $title-font;
+  margin-bottom: 8px;
+}
+
+.counter.counterstyle-03 .counter-inner .counter-details .counter-content {
+  display: flex;
+}
+
+.counter.counterstyle-03
+  .counter-inner
+  .counter-details
+  .counter-content
+  .counter-icon {
+  margin-right: 10px;
+  color: $white-color;
+}
+
+.counter.counterstyle-03
+  .counter-inner
+  .counter-details
+  .counter-content
+  .counter-icon
+  i {
+  color: $white-color;
+  font-size: 30px;
+}
+
+.counter.counterstyle-03
+  .counter-inner
+  .counter-details
+  .counter-content
+  .counter-info {
+  margin-top: 0;
+  color: $white-color;
+  font-size: 40px;
+  font-weight: 600;
+}
+.counter.counterstyle-03
+  .counter-inner
+  .counter-details
+  .counter-content
+  .counter-info
+  .timer {
+  font-family: $body-font;
+  font-weight: 600;
+}
+
+/*---------------------------------*/
+/* Counter List */
+/*---------------------------------*/
+
+.counter-list {
+  list-style: none;
+}
+
+.counter-list li {
+  width: 50%;
+  float: left;
+  padding: 20px 48px;
+}
+.counter-list li:nth-child(1) {
+  border-bottom: 1px solid $light-color;
+  border-right: 1px solid $light-color;
+}
+
+.counter-list li:nth-child(2) {
+  border-bottom: 1px solid $light-color;
+}
+
+.counter-list li:nth-child(3) {
+  border-right: 1px solid $light-color;
+  clear: both;
+}
+
+/*---------------------------------*/
+/* Counter LG */
+/*---------------------------------*/
+.counter .counter-content .counter-info.lg {
+  font-size: 70px;
+  line-height: 70px;
+  font-weight: 500;
+}
+
+/*---------------------------------*/
+/* Counter Grey */
+/*---------------------------------*/
+.counter.counter-grey .counter-icon i {
+  color: #dfdfdf;
+}
+
+/*---------------------------------*/
+/* Counter Light */
+/*---------------------------------*/
+.counter.counter-light .counter-content .timer,
+.counter.counter-light .counter-content label {
+  color: $white-color;
+}
+
+/* Counter Primary Bg Box */
+.counter-primary-bg {
+  background-color: $primary-color;
+  padding: 33px;
+  text-align: center;
+  display: block;
+  border-radius: 5px;
+}
+.text-center .counter .counter-content .counter-info,
+.counter-primary-bg .counter-content .counter-info {
+  justify-content: center;
+}
+
+/*---------------------------------*/
+/* Counter Style-04 */
+/*---------------------------------*/
+.counter.counter-style-4 .counter-info .timer {
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 1;
+  color: $primary-color;
+}
+.counter.counter-style-4 .counter-info label {
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 1;
+  color: $primary-color;
+}
+.counter.counter-style-4 .counter-title {
+  margin: 0;
+  padding: 0;
+  margin-top: 15px;
+  color: $secondary-color;
+  font-size: 20px;
+}
+
+/* Counter Light */
+.counter.counter-style-4.counter-light .timer,
+.counter.counter-style-4.counter-light .counter-info label,
+.counter.counter-style-4.counter-light .counter-title {
+  color: #ffffff;
+}
+
+/*==========================================================*/
+/* Responsive CSS */
+/*==========================================================*/
+@media only screen and (max-width: 1399px) {
+  .counter-list li {
+    padding: 20px 20px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .welcome-2 .counter-style-light {
+    margin-top: 40px;
+  }
+  .counter-list li {
+    padding: 20px 30px;
+    border: 0;
+    width: 100%;
+  }
+  .counter-list li:nth-child(1) {
+    border: none;
+    border-bottom: none;
+    border-right: none;
+  }
+  .counter-list li:nth-child(2) {
+    border-bottom: none;
+  }
+  .counter.counterstyle-02 .counter-inner,
+  .counter.counterstyle-02.icon-right .counter-inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .counter.counterstyle-02.icon-right .counter-content .counter-info,
+  .counter.counterstyle-02 .counter-content .counter-info {
+    margin-top: 10px;
+    justify-content: center;
+  }
+}

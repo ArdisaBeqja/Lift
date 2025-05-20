@@ -1,0 +1,84 @@
+@import '../../assets/scss/variable.scss';
+
+/*---------------------------------*/
+/* Our Clients */
+/*---------------------------------*/
+.our-clients.cl-size-full .our-clients-img img {
+  width: 100%;
+}
+.our-clients.cl-size-lg .our-clients-img img {
+  width: 180px;
+}
+.our-clients.cl-size-md .our-clients-img img {
+  width: 150px;
+}
+.our-clients.cl-size-sm .our-clients-img img {
+  width: 100px;
+}
+
+.our-clients.logo-grayscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: $transition-3;
+  transition: $transition-3;
+}
+.our-clients.logo-grayscale:hover {
+  -webkit-filter: inherit;
+  filter: inherit;
+}
+
+.client-logo-style-02 li {
+  display: inline-block;
+  margin: 0;
+  border: 1px solid $border-color;
+  padding: 30px;
+  margin-left: -1px;
+  margin-top: -1px;
+}
+
+.client-logo-style-02 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.client-logo-style-02 .our-clients .our-clients-img {
+  text-align: center;
+}
+
+/*==========================================================*/
+/* Responsive CSS */
+/*==========================================================*/
+@media only screen and (max-width: 1199px) {
+  .brand-logos .client-title {
+    flex: 0 0 16%;
+  }
+  .brand-logos .our-clients-main {
+    flex: 0 0 62%;
+  }
+  .brand-logos .client-btn {
+    flex: 0 0 22%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .brand-logos {
+    display: block;
+    padding: 0;
+  }
+  .brand-logos .svg-item {
+    display: none;
+  }
+  .brand-logos .client-title {
+    padding-left: 20px;
+    padding: 20px;
+    background: $primary-color;
+  }
+  .brand-logos .our-clients-main {
+    display: block;
+    padding: 40px 30px;
+  }
+  .brand-logos .client-btn {
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+}

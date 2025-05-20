@@ -1,0 +1,48 @@
+@import '../../assets/scss/variable.scss';
+
+/*=====================================================*/
+/* Sidebar - CSS */
+/*=====================================================*/
+.sidebar .sidebar-widget {
+  margin-bottom: 40px;
+}
+.sidebar .sidebar-widget:last-child {
+  margin-bottom: 0px;
+}
+
+/*-----------------------------------*/
+/* Widget Title */
+/*-----------------------------------*/
+.sidebar .widget .widget-title {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  color: $title-color;
+}
+.sidebar .widget .widget-title:before {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: $primary-color;
+  left: 0;
+  bottom: 0px;
+}
+.sidebar .widget-recent-post .recent-post .recent-post-info {
+  padding-right: 30px;
+}
+
+/*==========================================================*/
+/* Responsive CSS */
+/*==========================================================*/
+@media only screen and (max-width: 767px) {
+
+  .sidebar.left-sidebar {margin-bottom: 50px;}
+}
+
+@media only screen and (max-width: 575px) {
+}

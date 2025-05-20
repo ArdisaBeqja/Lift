@@ -1,0 +1,187 @@
+@import '../../assets/scss/variable.scss';
+
+/*----------------------------------------------------*/
+/* Feature Box */
+/*----------------------------------------------------*/
+.feature-box .feature-box-icon {
+  margin-bottom: 20px;
+}
+.feature-box .feature-box-icon .feature-icon {
+  font-size: 30px;
+  color: $primary-color;
+}
+
+.feature-box .feature-box-description .feature-box-title {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  font-family: $title-font;
+  margin-bottom: 8px;
+}
+
+/* Feature Box box-hover */
+.feature-box.feature-box-hover {
+  padding: 20px;
+  transition: $transition-5;
+}
+.feature-box.feature-box-hover:hover,
+.feature-box.feature-box-hover.active {
+  background: $primary-color;
+}
+
+.feature-box.feature-box-hover .feature-box-icon .feature-icon,
+.feature-box.feature-box-hover .feature-box-description .feature-box-title,
+.feature-box.feature-box-hover .feature-box-description .feature-box-content {
+  transition: $transition-5;
+}
+.feature-box.feature-box-hover:hover .feature-box-icon .feature-icon,
+.feature-box.feature-box-hover.active .feature-box-icon .feature-icon,
+.feature-box.feature-box-hover:hover
+  .feature-box-description
+  .feature-box-title,
+.feature-box.feature-box-hover.active
+  .feature-box-description
+  .feature-box-title,
+.feature-box.feature-box-hover:hover
+  .feature-box-description
+  .feature-box-content,
+.feature-box.feature-box-hover.active
+  .feature-box-description
+  .feature-box-content {
+  color: $white-color;
+}
+
+/* Feature Box style-01 */
+
+.feature-box.feature-box-style-01 {
+  text-align: center;
+}
+
+.feature-box.feature-box-style-01 .feature-box-icon {
+  display: flex;
+  justify-content: center;
+}
+.feature-box.feature-box-style-01 .feature-box-icon .feature-icon {
+  width: 80px;
+  height: 80px;
+  font-size: 30px;
+  background: $light-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius-100;
+  color: $body-color;
+  transition: $transition-5;
+}
+
+.feature-box.feature-box-style-01 .feature-box-description .feature-box-title {
+  position: relative;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.feature-box.feature-box-style-01
+  .feature-box-description
+  .feature-box-title:before {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: $primary-color;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+}
+
+.feature-box.feature-box-style-01:hover .feature-box-icon .feature-icon {
+  background: $primary-color;
+  color: $white-color;
+}
+
+/* Feature Box style-02 */
+
+.feature-wrapper-nogap.grid-wrapper {
+  gap: 0;
+}
+
+.feature-box.feature-box-style-02 {
+  border-right: 1px solid $gray-7-color;
+  border-bottom: 1px solid $gray-7-color;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+/* Feature Box style-03*/
+
+.feature-box.feature-box-style-03 {
+  display: flex;
+}
+.feature-box.feature-box-style-03 .feature-box-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+  border-radius: $radius-100;
+  border: 1px solid $white-color;
+  transition: $transition-5;
+  margin-bottom: 0;
+}
+
+.feature-box.feature-box-style-03.grey-border .feature-box-icon {
+  border: 1px solid $border-light-color;
+}
+
+.feature-box.feature-box-style-03 .feature-box-icon .feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  background: $border-light-color;
+  color: $body-color;
+  border-radius: $radius-100;
+  margin: 9px 10px 10px 9px;
+  width: 50px;
+  height: 50px;
+  transition: $transition-5;
+}
+
+.feature-box.feature-box-style-03 .feature-box-description {
+  margin-top: 10px;
+  vertical-align: top;
+}
+
+.feature-box.feature-box-style-03 .feature-box-description .feature-box-title {
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+.feature-box.feature-box-style-03 .feature-box-description p {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.feature-box.feature-box-style-03:hover .feature-box-icon,
+.feature-box.feature-box-style-03:hover .feature-box-icon .feature-icon {
+  border-color: $primary-color;
+}
+
+.feature-box.feature-box-style-03:hover .feature-box-icon .feature-icon {
+  background: $primary-color;
+  color: $white-color;
+}
+
+/*==========================================================*/
+/* Responsive CSS */
+/*==========================================================*/
+@media only screen and (max-width: 991px) {
+}
+
+@media only screen and (max-width: 767px) {
+  .feature-box.feature-box-style-02 {
+    border: none;
+    padding: 20px 30px;
+  }
+}

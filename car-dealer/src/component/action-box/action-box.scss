@@ -1,0 +1,54 @@
+@import '../../assets/scss/variable.scss';
+
+/*------------------------------------*/
+/* Action Box 1 */
+/*------------------------------------*/
+.action-box {
+  background: rgba($secondary-color, 1);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.action-box .action-box-title {
+  color: $white-color;
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+.action-box p {
+  margin-bottom: 16px;
+  color: $body-color;
+}
+
+.action-box .action-content {
+  flex: 0 0 70%;
+}
+
+.action-box .button {
+  margin-left: 20px;
+}
+
+.action-box .button:hover {
+  color: $primary-color;
+}
+
+.action-box .button:before {
+  background-color: $white-color;
+}
+
+/*--------------------------------------------*/
+/* Responsive View */
+/*--------------------------------------------*/
+@media (max-width: 767px) {
+  .action-box {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 575px) {
+  .action-box {
+    padding: 30px;
+  }
+}

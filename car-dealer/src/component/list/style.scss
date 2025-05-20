@@ -1,0 +1,44 @@
+@import '../../assets/scss/variable.scss';
+
+.pgs-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.pgs-list li {
+  margin-bottom: 15px;
+  line-height: 20px;
+  color: $dark-color;
+  display: flex;
+}
+.pgs-list li i {
+  color: $primary-color;
+  padding-right: 8px;
+}
+.pgs-list li a {
+  color: $dark-color;
+}
+.pgs-list li a:hover {
+  color: $primary-color;
+}
+
+.pgs-list.page-sidebar-list li {
+  color: $body-color;
+}
+.pgs-list.page-sidebar-list li i {
+  font-size: 12px;
+  padding-top: 5px;
+}
+
+/*-------------------------------*/
+/* List New */
+/*-------------------------------*/
+.list-new {display: flex; flex-direction: column; gap: 6px 0;}
+.list-new li {list-style: none; font-weight: 500; display: flex; color: $secondary-color; margin: 0;}
+.list-new li > i {margin-right: 12px; font-size: 16px;line-height: 28px; color: $primary-color;}
+.list-new span {font-weight: 500; font-size: 17px; line-height: 28px; letter-spacing: 0px;}
+
+.list-new-2 {padding-top: 5px; padding-right: 15px; padding-bottom: 3px; padding-left: 15px; background-color: #f4f4f4;}
+.list-new-2 li {margin: 7px 0 7px 0; font-weight: 500; color: $secondary-color; list-style: none;}
+.list-new-2 li i {margin-right: 16px; padding-right: 0; font-size: 18px; line-height: 28px; color: $primary-color;}
+.list-new-2 span {font-weight: 500; font-size: 17px; line-height: 28px; letter-spacing: 0px;}

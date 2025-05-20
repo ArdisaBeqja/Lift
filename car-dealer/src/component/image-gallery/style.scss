@@ -1,0 +1,118 @@
+@import '../../assets/scss/variable.scss';
+
+/*----------------------------------------------------*/
+/* Image Gallery */
+/*----------------------------------------------------*/
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+.gallery-item .gallery-image img {
+  cursor: pointer;
+  transform: scale(1);
+  transition: $transition-3;
+}
+.gallery-item:hover .gallery-image img {
+  transform: scale(1.1);
+}
+
+.gallery-item .gallery-overlay {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $white-color;
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  top: 15px;
+  bottom: 15px;
+  padding: 30px;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  border-radius: 0;
+  transition: $transition-3;
+}
+.gallery-item .gallery-overlay .open-btn {
+  align-self: flex-start;
+  border: none;
+  padding: 0;
+  background: none;
+  font-size: 20px;
+  color: $primary-color;
+}
+.gallery-item .gallery-overlay .gallery-info {
+  align-self: flex-end;
+  width: 100%;
+}
+.gallery-item .gallery-info .gallery-title {
+  color: $title-color;
+  margin-bottom: 7px;
+  transition: $transition-3;
+}
+.gallery-item .gallery-info .gallery-category {
+  color: $primary-color;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+/*------------------------------*/
+/* gallery : Style 2 */
+/*------------------------------*/
+.gallery-item.gallery-style-2 .gallery-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($black-color, 0.3);
+  transform: none;
+  padding: 0;
+}
+.gallery-item.gallery-style-2 .gallery-overlay .open-btn {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  background: $primary-color;
+  color: $white-color;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  opacity: 0;
+  margin-top: 25px;
+  transition: $transition-3;
+}
+.gallery-item.gallery-style-2:hover .gallery-overlay .open-btn {
+  opacity: 1;
+  margin-top: 0;
+}
+
+/*------------------------------*/
+/* Lightbox PopUp Setting */
+/*------------------------------*/
+.ReactModalPortal .ril-outer .ril-toolbar .ril__toolbarSide .ril-zoom-in,
+.ReactModalPortal .ril-outer .ril-toolbar .ril__toolbarSide .ril-zoom-out {
+  display: none;
+}
+.ReactModalPortal .ril-outer .ril-prev-button {
+  left: 25px;
+  background-size: 13px;
+  width: 40px;
+  height: 60px;
+  display: flex;
+  padding: 0;
+  background-color: rgba($white-color, 0.1);
+}
+.ReactModalPortal .ril-outer .ril-next-button {
+  right: 25px;
+  background-size: 13px;
+  width: 40px;
+  height: 60px;
+  display: flex;
+  padding: 0;
+  background-color: rgba($white-color, 0.1);
+}

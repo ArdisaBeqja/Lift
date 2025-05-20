@@ -1,0 +1,62 @@
+@import '../../assets/scss/variable.scss';
+
+.topbar {
+  border-bottom: 1px solid rgba($white-color, 0.2);
+  padding: 10px 30px;
+  font-family: $title-font;
+  .list-inline {
+    padding-left: 0;
+    list-style: none;
+    li {
+      display: inline-block;
+      padding-right: 5px;
+      padding-left: 5px;
+      line-height: 34px;
+      font-family: $title-font;
+
+      i {
+        padding-right: 5px;
+      }
+    }
+  }
+}
+
+.topbar li,
+.topbar li a {
+  color: $white-color;
+}
+
+.topbar-left li i {
+  padding-right: 5px;
+}
+
+.topbar-right .list-inline li:last-child,
+.topbar-right li:last-child i {
+  padding-right: 0px;
+}
+
+.topbar .topbar-right li a:hover {
+  color: $primary-color;
+}
+
+.topbar-right li i {
+  padding-right: 5px;
+}
+
+/*------------------------------------------*/
+/* Topbar Dark */
+/*------------------------------------------*/
+
+.topbar.topbar-dark {
+  background-color: $secondary-color;
+
+  .list-inline {
+    li {
+      line-height: 29px;
+    }
+  }
+}
+
+/*==========================================================*/
+/* Responsive CSS */
+/*==========================================================*/

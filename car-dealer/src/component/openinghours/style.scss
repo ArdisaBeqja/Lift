@@ -1,0 +1,35 @@
+@import '../../assets/scss/variable.scss';
+
+.opening-hours {
+  padding: 25px;
+}
+.opening-hours .title {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+.opening-hours .title:before {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: $primary-color;
+  left: 0;
+  bottom: 0px;
+}
+.opening-hours li {
+  line-height: 30px;
+  color: $dark-color;
+  display: flex;
+}
+.opening-hours li strong {
+  width: 100px;
+  display: inline-block;
+  color: $title-color;
+}
+.opening-hours li span {
+  color: $body-color;
+}
+.opening-hours li:first-child span {
+  color: $red-color;
+}

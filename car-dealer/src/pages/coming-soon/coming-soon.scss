@@ -1,0 +1,78 @@
+@import '../../assets/scss/variable.scss';
+
+/*------------------------------------*/
+/* Coming Soon */
+/*------------------------------------*/
+.coming-soon-page .coming-soon-title {
+  margin-bottom: 30px;
+}
+
+.coming-soon .countdown-wrapper .time-section .time {
+  color: $primary-color;
+  font-size: 46px;
+  font-weight: bold;
+}
+.coming-soon .countdown-wrapper .time-section .time-text {
+  color: $gray-color;
+  font-size: 20px;
+  line-height: 40px;
+  padding: 0px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.newsletter-form .input-control {
+  display: flex;
+  gap: 10px;
+}
+
+.coming-soon .countdown {
+  list-style: none;
+  margin: 0 0 45px;
+  padding: 0;
+  display: block;
+  text-align: center;
+}
+
+.coming-soon .countdown p {
+  font-size: 20px;
+  padding: 0 190px;
+  line-height: 40px;
+  margin-bottom: 60px;
+}
+
+.coming-soon-search p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+/*==========================================================*/
+/* Responsive CSS */
+/*==========================================================*/
+@media only screen and (max-width: 991px) {
+  .countdown-wrapper.size-lg {
+    gap: 15px 20px;
+  }
+  .countdown-wrapper.size-lg .time {
+    font-size: 40px;
+    line-height: 38px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .coming-soon .title {
+    font-size: 30px;
+  }
+  .countdown-wrapper.size-lg {
+    gap: 15px 10px;
+  }
+  .countdown-wrapper.size-lg .time {
+    font-size: 30px;
+    line-height: 28px;
+  }
+  .newsletter-form .input-control {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

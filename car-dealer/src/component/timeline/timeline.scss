@@ -1,0 +1,183 @@
+@import '../../assets/scss/variable.scss';
+
+/*----------------------------------------------------*/
+/* Timeline */
+/*----------------------------------------------------*/
+.timeline {
+  display: flex;
+  padding-bottom: 40px;
+  position: relative;
+  padding-right: 90px;
+}
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 2px;
+  background: $light-color;
+  transform: translateX(-50%);
+}
+.timeline:last-child {
+  padding-bottom: 0px;
+}
+.timeline .timeline-info-number {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  margin-left: -25px;
+  z-index: 1;
+}
+.timeline .timeline-info-number .timeline-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $white-color;
+  color: $title-color;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  font-weight: 600;
+  border-radius: 50%;
+  position: relative;
+  border: 1px solid $hr-gray-border-color;
+  transition: $transition-5;
+}
+.timeline .timeline-info-content {
+  padding: 30px;
+  width: 50%;
+  border: 1px solid $hr-gray-border-color;
+  transition: $transition-3;
+  position: relative;
+}
+.timeline .timeline-info-content:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid $white-color;
+  border-right: 0 solid $white-color;
+  border-bottom: 14px solid transparent;
+  content: ' ';
+  transition: $transition-3;
+}
+.timeline .timeline-info-content:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid $gray-5-color;
+  border-right: 0 solid $gray-5-color;
+  border-bottom: 15px solid transparent;
+  content: ' ';
+  transition: $transition-3;
+}
+.timeline-step-wrapper .timeline:nth-child(2n-2) .timeline-info-content:before {
+  position: absolute;
+  top: 26px;
+  left: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid $gray-5-color;
+  border-right: 0 solid $gray-5-color;
+  border-bottom: 15px solid transparent;
+  content: ' ';
+  transition: $transition-3;
+}
+.timeline-step-wrapper .timeline:nth-child(2n-2) .timeline-info-content:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+.timeline-step-wrapper .timeline:nth-child(2n-2) .timeline-info-content:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+.timeline .timeline-info-content .timeline-title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 26px;
+  transition: $transition-3;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.timeline .timeline-info-content .timeline-title:before {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: $primary-color;
+  left: 0px;
+  bottom: 0px;
+  transition: $transition-3;
+}
+.timeline .timeline-info-content .timeline-content {
+  margin-bottom: 0;
+}
+
+.timeline:hover .timeline-info-number .timeline-number,
+.timeline:hover .timeline-info-content {
+  background: $primary-color;
+  color: $white-color;
+}
+.timeline:hover .timeline-info-content .timeline-title {
+  color: $white-color;
+}
+.timeline:hover .timeline-info-content .timeline-title:before {
+  background: $white-color;
+}
+.timeline:hover .timeline-info-content:after {
+  border-left: 14px solid $primary-color;
+}
+.timeline-step-wrapper
+  .timeline:hover:nth-child(2n-2)
+  .timeline-info-content:after {
+  border-right: 14px solid $primary-color;
+}
+.timeline-step-wrapper .timeline:nth-child(2n-2) {
+  justify-content: end;
+  padding-left: 90px;
+  padding-right: 0px;
+}
+
+@media (max-width: 991px) {
+  .timeline-step-wrapper .timeline:nth-child(2n-2) {
+    justify-content: start;
+    padding-left: 75px;
+    padding-right: 0px;
+  }
+  .timeline {
+    padding-left: 75px;
+    padding-right: 0px;
+  }
+  .timeline .timeline-info-number,
+  .timeline:before {
+    left: 25px;
+  }
+  .timeline .timeline-info-content {
+    width: 100%;
+  }
+  .timeline .timeline-info-content:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+  }
+  .timeline .timeline-info-content::before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+  .timeline:hover .timeline-info-content:after {
+    border-right: 14px solid $primary-color;
+    border-left: none;
+  }
+}

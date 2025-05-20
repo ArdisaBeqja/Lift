@@ -1,0 +1,158 @@
+@import '../../assets/scss/variable.scss';
+
+/*************************
+    Button
+*************************/
+/*button.border */
+.button.border {
+  background: transparent;
+  border: 1px solid $border-color;
+  color: $secondary-color;
+}
+.button.border:before {
+  background: $primary-color;
+}
+.button.border:hover,
+.button.border:focus,
+.button.border:active {
+  color: $white-color;
+  border-color: $primary-color;
+}
+
+/*button.white*/
+.button.button-white {
+  background: $white-color;
+  color: $primary-color;
+}
+.button.button-white:before {
+  background: $secondary-color;
+}
+.button.button-white:hover,
+.button.button-white:focus,
+.button.button-white:active {
+  color: $white-color;
+  border-color: $primary-color;
+}
+
+.bg-secondary .button.button-white:before {
+  background: $primary-color;
+}
+
+.bg-primary .button.button-white:before {
+  background: $secondary-color;
+}
+
+/*button secondary*/
+.button.secondary {
+  background: $secondary-color;
+  color: $white-color;
+}
+.button.secondary:before {
+  background: $primary-color;
+}
+.button.secondary:hover,
+.button.secondary:focus,
+.button.secondary:active {
+  color: $white-color;
+  border-color: $white-color;
+}
+
+.bg-primary .button.secondary:before {
+  background: $white-color;
+}
+.bg-primary .button.secondary:hover,
+.bg-primary .button.secondary:focus,
+.bg-primary .button.secondary:active {
+  color: $secondary-color;
+  border-color: $white-color;
+}
+
+/*button.black*/
+.button.black {
+  background: $black-color;
+  color: $white-color;
+}
+.button.black:before {
+  background: $white-color;
+}
+.button.black:hover,
+.button.black:focus,
+.button.black:active {
+  color: $primary-color;
+  border-color: $white-color;
+}
+
+/*---------------------------------*/
+/* Link */
+/*---------------------------------*/
+.btn-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+  border-radius: 0;
+  background: transparent;
+  color: $primary-color;
+  position: relative;
+  z-index: 1;
+  transition: $transition-3;
+  text-decoration: none;
+}
+
+.button.btn-link {
+  padding: 0;
+}
+
+.btn-link::before {
+  display: none;
+}
+.btn-link:hover {
+  color: $secondary-color;
+}
+
+.link-light {
+  color: $white-color !important;
+}
+.link-light:hover {
+  color: $primary-color !important;
+}
+.link-primary {
+  color: $primary-color !important;
+}
+.link-primary:hover {
+  color: $secondary-color !important;
+}
+.link-secondary {
+  color: $secondary-color !important;
+}
+.link-secondary:hover {
+  color: $primary-color !important;
+}
+
+/*---------------------------------*/
+/* Size */
+/*---------------------------------*/
+.button.btn-sm {
+  padding: 6px 18px;
+}
+
+.button.btn-md {
+  padding: 10px 30px;
+}
+
+.button.btn-lg {
+  padding: 15px 50px;
+  font-size: 16px;
+}
+
+.btn-app {
+  display: flex;
+}
+
+.btn-app i {
+  font-size: 40px;
+}

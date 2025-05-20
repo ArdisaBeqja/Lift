@@ -1,0 +1,354 @@
+@import '../assets/scss/variable.scss';
+
+.pgs-form.form-control {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+}
+.pgs-form .row-gap {
+  gap: 15px 0;
+}
+.pgs-form .input-control {
+  width: 100%;
+}
+.pgs-form .checkbox-control {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+.pgs-form .input-control label {
+  display: none;
+  margin-bottom: 10px;
+}
+
+.pgs-form .input-control:last-child {
+  margin-bottom: 0;
+}
+.pgs-form .input-control input,
+.pgs-form .input-control select,
+.pgs-form .input-control textarea {
+  width: 100%;
+  padding: 12px 20px;
+  background: $light-color;
+  outline: none;
+  border-radius: 0;
+  border: 1px solid transparent;
+  transition: $transition-5;
+  color: $gray-color;
+}
+.pgs-form .input-control .css-13cymwt-control {
+  padding: 6px 20px;
+  background: $light-color;
+  outline: none;
+  border-radius: 0;
+  border: 1px solid transparent;
+  transition: $transition-5;
+}
+
+.pgs-form .input-control .css-t3ipsp-control {
+  padding: 6px 20px;
+  background: $light-color;
+  border: 1px solid $primary-color !important;
+  border-radius: 0 !important;
+  box-shadow: none;
+}
+.pgs-form .input-control .css-t3ipsp-control .css-1fdsijx-ValueContainer,
+.pgs-form .input-control .css-13cymwt-control .css-1fdsijx-ValueContainer {
+  padding: 0;
+}
+.pgs-form
+  .input-control
+  .css-t3ipsp-control
+  .css-1hb7zxy-IndicatorsContainer
+  .css-1u9des2-indicatorSeparator,
+.pgs-form
+  .input-control
+  .css-13cymwt-control
+  .css-1hb7zxy-IndicatorsContainer
+  .css-1u9des2-indicatorSeparator {
+  display: none;
+}
+.pgs-form .input-control input:focus,
+.pgs-form .input-control select:focus,
+.pgs-form .input-control textarea:focus {
+  border-color: $primary-color;
+  background: $white-color;
+}
+
+.pgs-form .input-control .button {
+  display: block;
+  text-align: center;
+  border: 0px;
+  padding: 10px 30px;
+}
+.pgs-form .input-control .button.btn-full {
+  width: 100%;
+}
+.pgs-form .input-control [type='submit'] i {
+  padding-left: 7px;
+}
+
+.pgs-form .preferred-contact {
+  display: flex;
+}
+.pgs-form .preferred-contact > label {
+  margin-right: 15px;
+}
+
+.pgs-form .preferred-contact .form-check-inline input[type='radio'] {
+  border: 1px solid rgba(0, 0, 0, 0.25) !important;
+  background-color: transparent;
+}
+
+.pgs-form
+  .preferred-contact
+  .form-check.form-check-inline
+  .form-check-input:checked,
+.pgs-form .preferred-contact .form-check-input:checked {
+  background-color: $primary-color;
+  border: 1px solid rgba(219 45 46 / 25%) !important;
+}
+
+.pgs-form .preferred-contact .form-check-input:focus {
+  box-shadow: none;
+}
+
+.trade-in-appraisal-form .pgs-form .preferred-contact {
+  flex-direction: column;
+}
+.trade-in-appraisal-form .pgs-form .preferred-contact label {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-right: 0;
+}
+.trade-in-appraisal-form .pgs-form .input-control label,
+.email-friend-form .pgs-form .input-control label,
+.makeanoffer-form .pgs-form .input-control label,
+.enquiry-form .pgs-form .input-control label,
+.request-form .pgs-form .input-control label,
+.test-drive-form .pgs-form .input-control label,
+.financing-form .pgs-form .input-control label {
+  display: block;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.trade-in-appraisal-form .pgs-form .error,
+.email-friend-form .pgs-form .error,
+.makeanoffer-form .pgs-form .error,
+.enquiry-form .pgs-form .error,
+.request-form .pgs-form .error,
+.test-drive-form .pgs-form .error {
+  top: 47px;
+}
+
+.trade-in-appraisal-form .pgs-form .title {
+  margin: 40px 0 20px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.pgs-form .error {
+  color: $red-color;
+}
+
+/*------------------------------------------*/
+/* Form Light */
+/*------------------------------------------*/
+.pgs-form.form-light .input-control input,
+.pgs-form.form-light .input-control select,
+.pgs-form.form-light .input-control textarea {
+  color: $white-color;
+  padding: 10px 0;
+  border: none;
+  background: none;
+  border-radius: 0;
+  border-bottom: 1px solid rgba($white-color, 0.15);
+}
+.pgs-form.form-light .input-control input:focus,
+.pgs-form.form-light .input-control select:focus,
+.pgs-form.form-light .input-control textarea:focus {
+  border-bottom-color: $primary-color;
+}
+
+.pgs-form.form-light .input-control input::placeholder,
+.pgs-form.form-light .input-control select::placeholder,
+.pgs-form.form-light .input-control textarea::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba($white-color, 0.5);
+}
+.pgs-form.form-light .input-control input:-ms-input-placeholder,
+.pgs-form.form-light .input-control select:-ms-input-placeholder,
+.pgs-form.form-light .input-control textarea:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba($white-color, 0.5);
+}
+.pgs-form.form-light .input-control input::-ms-input-placeholder,
+.pgs-form.form-light .input-control select::-ms-input-placeholder,
+.pgs-form.form-light .input-control textarea::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba($white-color, 0.5);
+}
+
+/*------------------------------------------*/
+/* Form form-white */
+/*------------------------------------------*/
+.pgs-form.form-white .input-control input,
+.pgs-form.form-white .input-control select,
+.pgs-form.form-white .input-control textarea {
+  color: $dark-color;
+  padding: 10px 20px;
+  border: 1px solid $gray-6-color;
+  background: $white-color;
+  border-radius: $radius-5;
+}
+.pgs-form.form-white .input-control input:focus,
+.pgs-form.form-white .input-control select:focus,
+.pgs-form.form-white .input-control textarea:focus {
+  border-color: $primary-color;
+}
+
+.pgs-form.form-white .input-control input::placeholder,
+.pgs-form.form-white .input-control select::placeholder,
+.pgs-form.form-white .input-control textarea::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba($title-color, 0.7);
+}
+.pgs-form.form-white .input-control input:-ms-input-placeholder,
+.pgs-form.form-white .input-control select:-ms-input-placeholder,
+.pgs-form.form-white .input-control textarea:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba($title-color, 0.7);
+}
+.pgs-form.form-white .input-control input::-ms-input-placeholder,
+.pgs-form.form-white .input-control select::-ms-input-placeholder,
+.pgs-form.form-white .input-control textarea::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba($title-color, 0.7);
+}
+
+/*------------------------------------------*/
+/* Form Vertical */
+/*------------------------------------------*/
+.pgs-form-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.pgs-form-vertical .input-control textarea {
+  vertical-align: top;
+}
+
+/*------------------------------------------*/
+/* Form Validation */
+/*------------------------------------------*/
+.input-control {
+  position: relative;
+}
+.input-control .error {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 14px;
+  color: $red-color;
+}
+.form-control .checkbox-error {
+  position: relative;
+  left: 25px;
+  top: -12px;
+  font-size: 14px;
+  color: $red-color;
+}
+.form-control .success-message {
+  background: #d1e7dd;
+  color: #0a3622;
+  padding: 15px 20px;
+  border: 1px solid #a3cfbb;
+  border-radius: 3px;
+  box-shadow: 0 3px 15px rgba($black-color, 0.07);
+}
+
+/*Trade In Appraisal Form*/
+.form.car-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+.form-check-input:checked {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+.form-check-input:focus {
+  box-shadow: none;
+  border-color: $border-color;
+}
+
+/*------------------------------------------*/
+/* Custom Filters */
+/*------------------------------------------*/
+.custom-filters.search-block-verticle {
+  margin-left: 80px;
+}
+.custom-filters.search-block-verticle {
+  padding: 40px;
+  padding-top: 0;
+  background-color: #ffffff;
+  border: 10px solid #f9f9f9;
+  z-index: 1;
+  position: relative;
+  border-radius: 10px;
+}
+.search-block-verticle .search-block-title {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.custom-filters.search-block-verticle .css-b62m3t-container {
+  margin-bottom: 13px;
+}
+.custom-filters.search-block-verticle .price-btn .button {
+  width: 100%;
+  padding: 13px 20px;
+}
+
+/* Range Slider */
+.custom-filters .price-slide {
+  margin: 10px 0;
+}
+.custom-filters .price-slide .price-wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.custom-filters .price-slide .price-wrapper .price-value {
+  margin: 0;
+}
+.custom-filters .price-slide .price-wrapper .form-label {
+  font-size: 15px;
+  line-height: 22px;
+  text-transform: inherit;
+  color: inherit;
+  margin: 0;
+}
+.custom-filters .price-slide .price-wrapper .price-value,
+.custom-filters .price-slide .price-wrapper .price-value span {
+  color: $secondary-color;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+/*==========================================================*/
+/* Responsive CSS */
+/*==========================================================*/
+@media only screen and (max-width: 767px) {
+
+}

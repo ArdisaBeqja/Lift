@@ -1,0 +1,198 @@
+@import '../../assets/scss/variable.scss';
+
+/*content-box*/
+.content-box {
+  background: $light-color;
+  position: relative;
+  transition: $transition-3;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.content-box .box-info {
+  position: relative;
+  z-index: 9;
+}
+
+.content-box i {
+  font-size: 48px;
+  line-height: 100px;
+  color: $primary-color;
+  width: 100%;
+  transition: $transition-3;
+}
+
+.content-box h5 {
+  text-transform: uppercase;
+  padding: 0 0 10px;
+  transition: $transition-3;
+  margin-top: 0;
+}
+
+.content-box p {
+  font-weight: 400;
+  padding: 15px 20px;
+  transition: $transition-3;
+}
+
+.content-box a.btn-link {
+  font-size: 14px;
+  font-weight: 400;
+  color: $gray-3-color;
+  margin: 25px 0 15px;
+  display: block;
+  position: relative;
+  z-index: 3;
+  line-height: 14px;
+  text-decoration: none;
+}
+
+/*contentbox-style-01*/
+.content-box.contentbox-style-01 {
+  text-align: center;
+}
+.content-box.contentbox-style-01 .content-box-img {
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+  transition: $transition-3;
+  z-index: 0;
+  background-size: cover;
+  background-position: center center;
+}
+
+.content-box.contentbox-style-01 .border {
+  border: none !important;
+  position: absolute;
+  background: $primary-color;
+  height: 0px;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  transition: $transition-3;
+}
+
+.content-box.contentbox-style-01:hover .content-box-img,
+.content-box.contentbox-style-01.active .content-box-img {
+  opacity: 1;
+}
+
+.content-box.contentbox-style-01:hover .border,
+.content-box.contentbox-style-01.active .border {
+  height: 45px;
+}
+
+.content-box.contentbox-style-01:hover i,
+.content-box.contentbox-style-01.active i {
+  color: $white-color;
+}
+
+.content-box.contentbox-style-01:hover h5,
+.content-box.contentbox-style-01.active h5,
+.content-box.contentbox-style-01:hover p,
+.content-box.contentbox-style-01.active p {
+  color: $white-color;
+}
+
+.content-box.contentbox-style-01:hover a,
+.content-box.contentbox-style-01.active a {
+  color: $white-color;
+}
+
+.content-box.contentbox-style-01:hover:before,
+.content-box.contentbox-style-01.active:before {
+  background: rgba($black-color, 0.5) none repeat scroll 0 0;
+  color: $white-color;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  transition: $transition-3;
+}
+
+/*content-box-2*/
+.content-box.contentbox-style-02 {
+  border-top: 4px solid $primary-color;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  padding: 30px 30px 154px;
+}
+
+.content-box.contentbox-style-02 a.title {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: 0;
+  display: block;
+  font-weight: 700;
+  line-height: 24px;
+  color: $title-color;
+}
+
+.content-box.contentbox-style-02 a.title:hover {
+  color: $primary-color;
+}
+
+.content-box.contentbox-style-02 p {
+  padding: 0;
+}
+
+.content-box.contentbox-style-02 i {
+  color: $primary-color;
+  font-size: 30px;
+  line-height: 24px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.contentbox-style-02 a.btn-link {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: $title-color;
+  text-transform: capitalize;
+  opacity: 0;
+}
+
+.contentbox-style-02 a.btn-link i {
+  font-size: 12px;
+  display: inline-block;
+  padding-left: 5px;
+  color: $title-color;
+  margin-bottom: 0;
+  width: auto;
+  line-height: normal;
+}
+
+.contentbox-style-02:hover a.btn-link {
+  opacity: 1;
+}
+
+.contentbox-style-02 a.btn-link:hover,
+.contentbox-style-02 a.btn-link:hover i {
+  color: $primary-color;
+}
+
+.contentbox-style-02 .content-box-img {
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+  transition: $transition-3;
+  z-index: -1;
+  background-size: cover;
+  background-position: center center;
+}

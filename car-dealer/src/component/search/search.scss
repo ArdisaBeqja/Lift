@@ -1,0 +1,223 @@
+@import '../../assets/scss/variable.scss';
+
+/*------------------------------------------*/
+/* Header Search */
+/*------------------------------------------*/
+
+.search-box .search-box-main {
+  position: fixed;
+  height: auto;
+  top: 150px;
+  left: 0;
+  right: 0;
+  z-index: 8;
+  transition:
+    visibility 300ms ease 0s,
+    opacity 300ms ease 0s;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
+.header-search.search-active .search-box .search-box-main {
+  top: 150px;
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+
+.header-sticky .search-box .search-box-main {
+  top: 65px;
+}
+
+.header-sticky .header-search.search-active .search-box .search-box-main {
+  top: 65px;
+}
+
+.search-form-wrap {
+  background-color: $white-color;
+  padding: 15px 15px 10px;
+  border-top: 5px solid $primary-color;
+}
+
+/* Seach Header area */
+.search-box .search-header-wrap {
+  display: flex;
+  justify-content: space-between;
+  color: $white-color;
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+.search-box .search-header-wrap .site-logo {
+  display: flex !important;
+  align-items: center;
+  padding: 0 !important;
+}
+.search-box .search-header-wrap .site-logo svg {
+  width: 180px;
+  height: auto;
+}
+.search-box .search-header-wrap .search-btn {
+  color: $white-color;
+  font-size: 20px;
+  border: 2px solid rgba($white-color, 0.15);
+  width: 50px;
+  height: 50px;
+  border-radius: 70px;
+  transition: all 0.2s ease-in-out;
+}
+.search-box .search-header-wrap .search-btn i:before {
+  content: '\f00d';
+}
+.search-box .search-header-wrap .search-btn:hover {
+  background: $primary-color;
+  border-color: $primary-color;
+}
+
+/* Search BG Overlay */
+.search-box .search-bg-overlay {
+  position: fixed;
+  width: 100%;
+  height: 150vh;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  background: rgba($black-color, 0.05);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.header-search.search-active .search-bg-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Search Form */
+.search-box form {
+  position: relative;
+  display: flex;
+  background: none;
+}
+.search-box form.search-box .css-13cymwt-control {
+  cursor: pointer;
+  position: relative;
+  font-size: 14px !important;
+  color: $secondary-color !important;
+  width: 100% !important;
+  height: 40px !important;
+  border: 1px solid $border-color !important;
+  border-radius: 0 !important;
+}
+
+.search-box form.search-box .css-t3ipsp-control {
+  border: 1px solid $border-color !important;
+  border-radius: 0 !important;
+  box-shadow: none;
+}
+
+.search-box form.search-box .css-1nmdiq5-menu {
+  border: 1px solid $border-color !important;
+  top: 30px;
+  border-radius: 0 !important;
+  max-height: 170px;
+  overflow: auto;
+  background-color: $white-color;
+}
+
+.search-box form.search-box .css-1u9des2-indicatorSeparator {
+  display: none !important;
+}
+.search-box form .search-button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: none;
+  background: none;
+  padding: 0 10px;
+  font-size: 22px;
+  font-weight: 700;
+  color: $primary-color;
+  cursor: pointer;
+  width: 100%;
+}
+
+.search-box form.search-box .button {
+  width: 100%;
+  border: none;
+}
+
+.search-box form .form-control::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba($white-color, 0.5);
+}
+.search-box form .form-control:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba($white-color, 0.5);
+}
+.search-box form .form-control::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba($white-color, 0.5);
+}
+
+/* Search Pages */
+.searchpages form {
+  position: relative;
+}
+
+.searchpages form .form-control {
+  width: 100%;
+  resize: vertical;
+  background: $light-color;
+  border: 1px solid transparent;
+  transition: $transition-5;
+  border-radius: 0;
+  height: auto;
+  line-height: 1.33333;
+  padding: 12px 18px;
+  padding-right: 140px;
+  font-size: 14px;
+}
+
+.searchpages form .search-button.button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: transparent;
+  padding: 11px 30px 10px;
+}
+
+/*==========================================================*/
+/* Responsive CSS */
+/*==========================================================*/
+@media only screen and (max-width: 992px) {
+  .search-box .search-box-main {
+    padding: 0 15px;
+  }
+
+  .css-b62m3t-container {
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .search-box .search-box-main {
+    height: 350px;
+    top: -400px;
+  }
+  .search-box .search-header-wrap {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .search-box .search-header-wrap .site-logo svg {
+    width: 140px;
+  }
+  .search-box .search-header-wrap .search-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+  }
+  .search-box form .form-control {
+    font-size: 22px;
+  }
+}

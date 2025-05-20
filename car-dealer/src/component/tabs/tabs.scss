@@ -1,0 +1,47 @@
+@import '../../assets/scss/variable.scss';
+
+/*------------------------------------*/
+/* Tabs Default */
+/*------------------------------------*/
+.tabs-main .nav-item .nav-link > i {
+  padding-right: 10px;
+  font-weight: 500;
+}
+
+.tabs-main.tabs-default .nav-tab {
+  gap: 10px;
+}
+.tabs-main.tabs-default .nav-item .nav-link {
+  transition: $transition-5;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  border-bottom: 3px solid transparent;
+  line-height: 25px;
+  padding: 10px 10px;
+  color: $title-color;
+  overflow: hidden;
+  background: transparent;
+  margin-bottom: 0px;
+  display: inline-block;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+}
+.tabs-main.tabs-default .nav-item .nav-link.active,
+.tabs-main.tabs-default .nav-item .nav-link:hover {
+  border-bottom: 3px solid $primary-color;
+}
+.tabs-main.tabs-default .tab-content {
+  margin-top: 3rem;
+}
+
+/*==========================================================*/
+/* Responsive CSS */
+/*==========================================================*/
+@media only screen and (max-width: 991px) {
+}
+
+@media only screen and (max-width: 767px) {
+}

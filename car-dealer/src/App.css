@@ -1,0 +1,12 @@
+.video-section:before {
+    /* background-color: #16181e; */
+    opacity: 0.6;
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+

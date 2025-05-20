@@ -1,0 +1,240 @@
+@import '../../assets/scss/variable.scss';
+
+.site-footer {
+  position: relative;
+}
+.site-footer .footer-main {
+  position: relative;
+  padding: 50px 0;
+}
+.site-footer .widget {
+  margin: 20px 0;
+}
+.site-footer .widget + .widget {
+  margin-top: 30px;
+}
+
+.site-footer .footer-logo {
+  height: 35px;
+}
+
+/*---------------------------*/
+/* Footer Top */
+/*---------------------------*/
+.site-footer .footer-top .social-list-02 li a,
+.site-footer .footer-top .social-list-02 li a:hover i {
+  color: #ffffff;
+}
+.site-footer .footer-top .social-list-02 li a i {
+  color: #969696;
+}
+
+/*--------------------------------------------------*/
+/* Footer Copyright */
+/*--------------------------------------------------*/
+.footer-copyright {
+  padding: 30px 0;
+  padding-bottom: 15px;
+  position: relative;
+  border-top: 1px solid rgba($white-color, 0.1);
+}
+.footer-copyright .copyright-text {
+  margin-bottom: 16px;
+}
+.footer-copyright .copyright-text a {
+  color: $primary-color;
+}
+.footer-copyright .widget-social-info {
+  display: inline-block;
+}
+.footer-copyright .footer-menu.copyright-menu .footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.footer-copyright .footer-menu.copyright-menu .footer-link li {
+  margin-bottom: 0;
+  position: relative;
+  border: none;
+  padding: 0;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+.footer-copyright .footer-menu.copyright-menu .footer-link li:last-child {
+  padding-right: 0px;
+  margin-right: 0px;
+}
+.footer-copyright .footer-menu.copyright-menu .footer-link li::before {
+  position: absolute;
+  content: '';
+  background-color: $body-color;
+  width: 1px;
+  height: 15px;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.footer-copyright .footer-menu.copyright-menu .footer-link  li:last-child::before {
+  content: none;
+}
+.footer-copyright .footer-menu.copyright-menu .footer-link li a {
+  color: $body-color;
+  text-transform: capitalize;
+}
+.footer-copyright .footer-menu.copyright-menu .footer-link li a:hover {
+  color: $primary-color;
+}
+.footer-copyright .footer-menu.copyright-menu .footer-link li a i {
+  display: none;
+}
+
+/*----------------------------------------*/
+/* Footer Style 2 */
+/*----------------------------------------*/
+.site-footer.footer-style-01 .footer-top .widget {
+  margin-top: 0;
+}
+.site-footer.footer-style-02 .widget-social-info {
+  margin-top: 25px;
+}
+.site-footer.footer-style-02 .widget-social-info .social-list {
+  gap: 0;
+}
+.site-footer.footer-style-02 .widget-social-info .social-list li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  width: 40px;
+  height: 40px;
+  float: none;
+  background: rgba(39, 39, 39, 0.2);
+  color: rgba($white-color, 0.4);
+  margin-right: 2px;
+  transition: $transition-5;
+}
+.site-footer.footer-style-02 .widget-social-info .social-list li a:hover {
+  background-color: $primary-color;
+  color: $white-color;
+}
+.site-footer.footer-style-02 .footer-bottom {
+  margin-bottom: 60px;
+}
+.site-footer.footer-style-02 .footer-bottom .action-box {
+  background: rgba(255,255,255,0.07);
+}
+.site-footer.footer-style-02 .action-box .action-box-title {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+.site-footer.footer-style-02 .footer-bottom .action-box .button {
+  font-size: 14px;
+  padding: 6px 25px;
+}
+.site-footer.footer-style-02 .footer-copyright {
+  background: rgba(255,255,255,0.07);
+  padding: 30px 0px 20px;
+  margin-top: 0px;
+  border: none;
+}
+
+/*----------------------------------------*/
+/* Footer Style 3 */
+/*----------------------------------------*/
+.site-footer.footer-style-03 .footer-top-inner {
+  padding-top: 60px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $light-color;
+}
+.site-footer.footer-style-03 .footer-top .footer-link {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.site-footer.footer-style-03 .footer-top .footer-link li a {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $gray-2-color;
+  margin: 0 5px;
+}
+.site-footer.footer-style-03 .footer-top .footer-link li a:hover {
+  color: $primary-color;
+}
+.site-footer.footer-style-03 .footer-top .footer-link li a i {
+  display: none;
+}
+.site-footer.footer-style-03 .social-list {
+  justify-content: flex-end;
+  gap: 0;
+}
+.site-footer.footer-style-03 .social-list li a {
+  margin-right: 10px;
+}
+.site-footer.footer-style-03 .social-list li:last-child a {
+  margin-right: 0px;
+}
+.site-footer.footer-style-03 .social-list li a i {
+  background-color: $light-color;
+  color: $gray-2-color;
+  font-size: 12px;
+  width: 35px;
+  height: 35px;
+  line-height: 37px;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  transition: $transition-5;
+}
+.site-footer.footer-style-03 .social-list li a:hover i {
+  background-color: $primary-color;
+  color: $white-color;
+}
+.site-footer.footer-style-03 .widget-title {
+  color: $secondary-color;
+}
+.site-footer.footer-style-03 .widget-about-text .widget-title {
+  color: $secondary-color;
+}
+.site-footer.footer-style-03 .footer-copyright {
+  background-color: $light-color;
+  padding: 30px 0 20px;
+  border: 0;
+}
+
+/*----------------------------------------*/
+/* Footer New 1 */
+/*----------------------------------------*/
+.footer-new-01 .footer-top-inner {
+  padding: 50px 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  align-items: center;
+}
+.footer-new-01 .footer-top .footer-logo {
+  margin-bottom: 0;
+}
+.footer-new-01 .footer-top .widget-social-info {
+  display: inline-block;
+}
+.footer-new-01 .footer-top .widget-social-info .social-list li a {
+  color: #ffffff;
+}
+
+/*==========================================================*/
+/* Responsive CSS */
+/*==========================================================*/
+@media only screen and (max-width: 991px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+
+}
+
+@media only screen and (max-width: 479px) {
+
+}

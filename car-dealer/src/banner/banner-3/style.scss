@@ -1,0 +1,132 @@
+@import "../../assets/scss/variable.scss";
+
+/*=====================================================*/
+/* Banner 03 */
+/*=====================================================*/
+.banner-section.banner-slider03 {
+  height: 700px;
+}
+.banner-section.banner-slider03 .banner-item {display: flex; align-items: flex-start; justify-content: center; position: relative;}
+.banner-section.banner-slider03 .banner-title .title {font-family: $title-font; color: $white-color; font-size: 70px; line-height: 70px; font-weight: 700; margin-bottom: 0;}
+.banner-section.banner-slider03 .banner-content {
+  max-width: 100%;
+  text-align: left;
+  color: $white-color;
+  padding-top: 0px;
+}
+
+.banner-section.banner-slider03 .banner-item {
+  align-items: center;
+}
+
+.banner-section.banner-slider03 .banner-item .banner-title {
+  margin-bottom: 0;
+}
+
+.banner-section.banner-slider03 .banner-item .banner-title .title {
+  font-size: 70px;
+  line-height: 80px;
+  font-weight: 900;
+}
+.banner-section.banner-slider03 .banner-item .banner-title .title span {
+  display: block;
+}
+
+.banner-section.banner-slider03 .banner-item .banner-title p {
+  padding-right: 180px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+/* Banner 03 Slider Arrow */
+.banner-section.banner-slider03 .swiper .swiper-button-prev {
+  left: 20px;
+}
+.banner-section.banner-slider03 .swiper .swiper-button-next {
+  right: 20px;
+}
+.banner-section.banner-slider03 .swiper .swiper-button-prev,
+.banner-section.banner-slider03 .swiper .swiper-button-next {
+  display: flex;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  opacity: 1;
+  background: rgba($black-color, 0.1);
+  border: none;
+  outline: none;
+  border-radius: $radius-100;
+}
+.banner-section.banner-slider03 .swiper .swiper-button-prev:after,
+.banner-section.banner-slider03 .swiper .swiper-button-next:after {
+  font-size: 20px;
+}
+.banner-section.banner-slider03 .swiper .swiper-button-prev:hover,
+.banner-section.banner-slider03 .swiper .swiper-button-next:hover {
+  opacity: 1;
+}
+
+/*==========================================================*/
+/* Responsive CSS */
+/*==========================================================*/
+@media only screen and (max-width: 1399px) {
+
+}
+
+@media only screen and (max-width: 1199px) {
+  
+  /* Home 3*/
+  .banner-section.banner-slider03 {
+    height: 550px;
+  }
+  .banner-section.banner-slider03 .banner-item .banner-title .title {
+    font-size: 55px;
+    line-height: 65px;
+  }
+
+}
+
+@media only screen and (max-width: 991px) {
+  
+  /* Home 3*/
+  .banner-section.banner-slider03 {
+    height: 420px;
+  }
+  .banner-section.banner-slider03 .banner-item .banner-title .title {
+    font-size: 42px;
+    line-height: 52px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  
+  /* Home 3 : Main Banner */
+  .banner-section.banner-slider03 .swiper .swiper-button-prev,
+  .banner-section.banner-slider03 .swiper .swiper-button-next {
+    display: none;
+  }
+  .banner-section.banner-slider03 .banner-item .banner-title p {
+    padding-right: 0px;
+  }
+}
+
+@media (max-width: 575px) {
+  
+  /* Home 3*/
+  .banner-section.banner-slider03 {
+    height: 320px;
+  }
+  .banner-section.banner-slider03 .banner-item .banner-title .title {
+    font-size: 24px;
+    line-height: 34px;
+  }
+  .banner-section.banner-slider03 .banner-item .banner-title p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+}
+
+@media (max-width: 479px) {
+
+}

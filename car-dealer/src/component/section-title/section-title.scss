@@ -1,0 +1,120 @@
+@import '../../assets/scss/variable.scss';
+
+.section-title {
+  margin-bottom: 60px;
+}
+.section-title .title span {
+  color: $primary-color;
+}
+.section-title .subtitle {
+  font-size: 14px;
+  color: $body-color;
+  margin-bottom: 10px;
+  display: block;
+}
+.section-title p {
+  font-weight: normal;
+  margin-bottom: 0;
+  color: $body-color;
+}
+
+.section-title .separator {
+  position: relative;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.section-title .separator::before,
+.section-title .separator::after {
+  content: '';
+  height: 1px;
+  background: $primary-color;
+  display: block;
+  margin: auto;
+  transition:
+    width 0.8s ease,
+    background-color 0.8s ease;
+  -webkit-transition:
+    width 0.8s ease,
+    background-color 0.8s ease;
+  -o-transition:
+    width 0.8s ease,
+    background-color 0.8s ease;
+  -ms-transition:
+    width 0.8s ease,
+    background-color 0.8s ease;
+  -moz-transition:
+    width 0.8s ease,
+    background-color 0.8s ease;
+}
+
+.section-title .separator::after {
+  width: 100px;
+}
+
+.section-title .separator::before {
+  width: 50px;
+  margin-bottom: 6px;
+}
+
+section:hover .section-title .separator:before {
+  width: 100px;
+  left: 0;
+}
+
+section:hover .section-title .separator:after {
+  width: 50px;
+  left: 0;
+}
+
+/*------------------------------------*/
+/* Section Title Light */
+/*------------------------------------*/
+.section-title.section-title-light .title,
+.section-title.section-title-light p {
+  color: $white-color;
+}
+
+.section-title.section-title-light2 .title {
+  color: $primary-color;
+}
+.section-title.section-title-light2 p {
+  color: $white-color;
+}
+
+/*------------------------------------*/
+/* Section Title New */
+/*------------------------------------*/
+.section-title-new {margin-bottom: 40px;}
+.section-title-new .title {margin-bottom: 0;}
+.section-title-new p {font-size: inherit; line-height: inherit;}
+.section-title-new .subtitle {font-size: 17px; line-height: 28px; display: inline-flex; align-items: center; gap: 12px; color: $primary-color; font-weight: 500;}
+.section-title-new .subtitle:after {content: ""; width: 70px; height: 2px; margin: 0; margin-top: 2px; border-top: 2px solid $primary-color;}
+
+.section-title-new .title + p {margin-top: 20px;}
+.section-title-new .title + p.space-lg {margin-top: 25px;}
+.section-title-new .title + p.space-md {margin-top: 10px;}
+.section-title-new .title + p.space-sm {margin-top: 5px;}
+
+/* Section Title Light */
+.section-title-new.section-title-light2 .title,
+.section-title-new.section-title-light2 p,
+.section-title-new.section-title-light2 .subtitle {color: $white-color;}
+.section-title-new.section-title-light2 .subtitle:after {border-color: $white-color;}
+
+/*==========================================================*/
+/* Responsive CSS */
+/*==========================================================*/
+@media only screen and (max-width: 1199px) {
+  .section-title .title {font-size: 40px; line-height: 50px;}
+}
+
+@media only screen and (max-width: 992px) {
+  .section-title {margin-bottom: 40px;}
+  .section-title .title {font-size: 36px; line-height: 44px;}
+}
+
+@media only screen and (max-width: 767px) {
+  .section-title .title {font-size: 32px; line-height: 38px;}
+}
+

@@ -1,0 +1,101 @@
+@import '../../assets/scss/variable.scss';
+
+.social-list.social-list-02 {
+  gap: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.social-list.social-list-02 li {
+  transition: $transition-5;
+}
+
+.social-list.social-list-02 li a {
+  line-height: 60px;
+  width: 100%;
+  padding: 0px 20px;
+  color: $title-color;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-list.social-list-02 li a i {
+  font-size: 30px;
+  vertical-align: middle;
+  color: rgba($title-color, 0.4);
+  line-height: 60px;
+}
+
+.social-list.social-list-02 li:hover a {
+  color: $white-color;
+}
+
+.social-list.social-list-02 li:hover a i {
+  color: rgba($white-color, 1);
+}
+
+.social-list.social-list-02 li:hover a.facebook {
+  background: #3a5897;
+}
+
+.social-list.social-list-02 li:hover a.twitter {
+  background: #1c9cea;
+}
+
+.social-list.social-list-02 li:hover a.instagram {
+  background: #e13d5c;
+}
+
+.social-list.social-list-02 li:hover a.pinterest {
+  background: #c3222b;
+}
+
+.social-list.social-list-02 li:hover a.dribbble {
+  background: #dd4b80;
+}
+
+.social-list.social-list-02 li:hover a.behance {
+  background: #005cff;
+}
+
+.social-list.social-style-03 {
+  gap: 0;
+}
+.social-list.social-style-03 li a {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  display: block;
+  color: $title-color;
+  font-size: 14px;
+}
+.social-list.social-style-03 li a i {
+  padding-right: 5px;
+}
+
+.social-list-04 {
+  display: flex;
+  list-style-type: none;
+}
+.social-list-04 li a {
+  margin-right: 5px;
+  display: inline-block;
+}
+.social-list-04 li a i {
+  font-size: 14px;
+  height: 40px;
+  width: 40px;
+  margin: 0 1px;
+  color: $white-color;
+  background: $primary-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius-100;
+  transition: $transition-5;
+}
+.social-list-04 li a:hover i {
+  background-color: $secondary-color;
+}

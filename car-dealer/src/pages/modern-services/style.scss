@@ -1,0 +1,85 @@
+@import '../../assets/scss/variable.scss';
+
+/*---------------------------*/
+/* Why Choose Section */
+/*---------------------------*/
+.why-choose-services_section {position: relative;}
+.why-choose-services_section:before {position: absolute; content: ""; top: 0; right: 0; height: 100%; width: 50%; background: url(../../assets/images/modern-demo/video-bg-image-2.webp); background-repeat: no-repeat; background-size: cover; background-position: center center;}
+
+.why-choose-services_section .car-services {padding-right: 100px;}
+.why-choose-services_section .car-services .section-title-new {margin-bottom: 50px;}
+
+.why-choose-services_section .car-services .infobox_wrapper {margin-bottom: 30px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 30px;}
+.why-choose-services_section .car-services .infobox_wrapper:last-child {margin-bottom: 0px; border-bottom: none; padding-bottom: 0px;}
+.why-choose-services_section .video-box {padding-right: 80px;}
+
+
+/*==========================================================*/
+/* Responsive CSS */
+/*==========================================================*/
+@media only screen and (max-width: 1399px) {
+    .modern-banner-2 .banner-bg {
+        background-position: 100% 40px;
+    }
+    .modern-banner-2 .banner-bg {
+        background-position: 100% 40px;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .modern-banner-2 .banner-car img {
+        margin-bottom: -80px;
+        width: 560px;
+    }
+    section.car-directory-section {
+        padding-top: 130px;
+        padding-bottom: 50px;
+    }
+    .modern-banner-2 h2 {
+        font-size: 60px;
+        line-height: 66px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .modern-banner-2 .banner-bg {
+        background-position: 100% 250px;
+        background-size: 500px;
+    }
+    .modern-banner-2 .banner-bg .banner-content {
+        padding-bottom: 20px;
+    }
+    .modern-banner-2 .banner-car img {
+        margin-bottom: -80px;
+        width: auto;
+        max-width: 85%;
+        margin-left: 15%;
+    }
+    .modern-banner-2 h2 {
+        font-size: 50px;
+        line-height: 56px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .modern-banner-2 .banner-bg {
+        background-position: 100% 250px;
+        background-size: 0px;
+        padding-top: 60px;
+    }
+    .modern-banner-2 h2 {
+        font-size: 42px;
+        line-height: 48px;
+    }
+    .modern-banner-2 h3 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .modern-banner-2 h2 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+}

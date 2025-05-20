@@ -1,0 +1,91 @@
+@import '../../assets/scss/variable.scss';
+
+/*------------------------------------------*/
+/* Newsletter Form*/
+/*------------------------------------------*/
+.newsletter-form .input-control {
+    display: flex;
+    flex-wrap: wrap;
+}
+.newsletter-form .input-control input {
+    flex: 2;
+    width: 100%;
+    height: 52px;
+    padding: 5px 20px;
+    color: $title-color;
+    background: #ffffff;
+    display: inline-block;
+    border: 1px solid #e8e8e8;
+    transition: $transition;
+}
+.newsletter-form .input-control input:focus {
+    border-color: $primary-color;
+}
+.newsletter-form .input-control .button {
+    padding: 10px 20px;
+    height: 52px;
+    border: none;
+}
+
+/* Validation Error Message */
+.newsletter-form .error {
+    width: 100%;
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    font-size: 14px;
+    color: #ff0000;
+    margin: 0;
+    margin-top: 10px;
+}
+
+/*---------------------------*/
+/* Newsletter Style 02 */
+/*---------------------------*/
+.newsletter-style-2 .newsletter-form .input-control .button {
+    padding: 10px 20px;
+}
+
+/*---------------------------*/
+/* Newsletter Style 03 */
+/*---------------------------*/
+.newsletter-style-3 .newsletter-form .input-control {
+    gap: 10px;
+}
+.newsletter-style-3 .newsletter-form .input-control .button {
+    padding: 10px 35px;
+}
+.newsletter-style-3 .newsletter-form .input-control .error {
+    margin-top: 0;;
+}
+
+/*---------------------------*/
+/* Newsletter Style 04 */
+/*---------------------------*/
+.newsletter-style-4 .newsletter-form .input-control {
+    border-bottom: 1px solid #e8e8e8;
+    transition: $transition;
+}
+.newsletter-style-4 .newsletter-form .input-control input {
+    border: none;
+    padding: 0;
+    padding-right: 20px;
+}
+.newsletter-style-4 .newsletter-form .input-control:has(input:focus) {
+    border-bottom-color: $primary-color;
+}
+.newsletter-style-4 .newsletter-form .input-control .button {
+    padding: 0 20px;
+    height: 45px;
+    line-height: 45px;
+}
+
+/*==========================================================*/
+/* Responsive CSS */
+/*==========================================================*/
+@media only screen and (max-width: 767px) {
+
+}
+  

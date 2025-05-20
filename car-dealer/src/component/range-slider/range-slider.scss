@@ -1,0 +1,72 @@
+@import '../../assets/scss/variable.scss';
+
+/*----------------------------------------------------*/
+/* Range Slider */
+/*----------------------------------------------------*/
+
+.pricerangeslider .price-value {
+  margin-bottom: 15px;
+}
+
+.pricerangeslider .price-value span {
+  font-size: 14px;
+  font-weight: 600;
+  color: $gray-2-color;
+}
+
+.pricerangeslider .rs-slider-bar {
+  height: 7px;
+  border-radius: 0;
+  background-color: $gray-6-color;
+}
+
+.pricerangeslider .rs-slider-progress-bar {
+  position: absolute;
+  height: 7px;
+  border-radius: 0;
+  background-color: $primary-color;
+  -webkit-transition: background-color ease-in-out 0.3s;
+  transition: background-color ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.pricerangeslider .rs-slider {
+  position: relative;
+}
+
+.pricerangeslider .rs-slider-handle {
+  position: absolute;
+  top: -50%;
+  outline: none;
+}
+
+.pricerangeslider .rs-slider-handle::before {
+  height: 17px;
+  width: 17px;
+  border: 1px solid $primary-color;
+  background-color: $white-color;
+  border-radius: $radius-100;
+  top: -2px;
+  content: '';
+  position: absolute;
+  margin-left: -6px;
+  cursor: pointer;
+  -webkit-transition:
+    background-color 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out,
+    -webkit-transform 0.15s ease-in-out;
+  transition:
+    background-color 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out,
+    -webkit-transform 0.15s ease-in-out;
+  transition:
+    box-shadow 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    transform 0.15s ease-in-out;
+  transition:
+    box-shadow 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    transform 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out,
+    -webkit-transform 0.15s ease-in-out;
+}

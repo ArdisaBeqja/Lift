@@ -1,0 +1,27 @@
+@import '../../assets/scss/variable.scss';
+
+/*===========================================*/
+/* App Button*/
+/*===========================================*/
+.app-button .button-label {font-size: 22px; line-height: 30px; margin-bottom: 15px; font-weight: 500; color: $primary-color; }
+.app-button .button-items {display: flex; flex-wrap: wrap; gap: 15px; }
+.app-button .button-items .button{ display: flex; align-items: center; text-align: inherit; padding: 12px 30px 12px 25px; color:#fff; background: $dark-color; }
+.app-button .button-items .button:before{ background: $primary-color; }
+.app-button .button-items .button:hover:before{  background: $primary-color; color:#fff;}
+.app-button .button-items .button .btn-icon i { font-size: 26px; padding-left: 0; }
+.app-button .button-items .button .btn-content { border-left: 1px solid rgba(209,209,209,0.5); padding-left: 18px; margin-left: 18px; line-height: normal; }
+.app-button .button-items .button .btn-content .btn-label { display: block; font-size: 12px; }
+.app-button .button-items .button .btn-content .btn-title { font-size: 16px; }
+
+/* Button Theme */
+.app-button .button-item .button.theme {background: $primary-color;}
+.app-button .button-item .button.theme:before {background: $dark-color;}
+
+.app-button .button-item .button.theme2 {background: $primary-color;}
+.app-button .button-item .button.theme2:before {background:#ffffff;}
+.app-button .button-item .button.theme2:hover {color: $primary-color;}
+
+/* Button Theme Hover Light */
+.app-button .button-item.button-theme-light .button {background: $primary-color;}
+.app-button .button-item.button-theme-light .button:hover{color: $primary-color;}
+.app-button .button-item.button-theme-light .button:before {background:#ffffff;}

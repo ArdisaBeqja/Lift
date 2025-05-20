@@ -1,0 +1,102 @@
+import React from 'react';
+
+// Libraries
+import { Col, Container, Row } from 'react-bootstrap';
+
+// Layouts
+import PageHeader from '../../layouts/page-header/PageHeader';
+
+// Components
+import List from '../../component/list';
+
+// Widget
+import SideBar from '../../widget/sidebar';
+
+function PageLeftSideBar() {
+  const listItems = [
+    { id: 1, item: 'Lorem ipsum dolor sit amet, consectetur' },
+    {
+      id: 2,
+      item: 'Quidem error quae illo excepturi nostrum blanditiis laboriosam',
+    },
+    {
+      id: 3,
+      item: 'Molestias, eum nihil expedita dolorum odio dolorem',
+    },
+    { id: 4, item: 'Eum nihil expedita dolorum odio dolorem' },
+    { id: 5, item: ' Explicabo rem illum magni perferendis' },
+  ];
+  return (
+    <>
+      <div className="site-content">
+        <PageHeader
+          title="Page Left Sidebar"
+          breadCrumbItems={[
+            { label: 'Home', path: '/' },
+            { label: 'Pages', path: '#' },
+            { label: 'Page Left Sidebar', path: '#', active: true },
+          ]}
+        />
+        <div className="content-wrapper">
+          <section className="blog section-ptb">
+            <Container>
+              <Row>
+                <Col lg={4} className="mb-5 mb-lg-0">
+                  <SideBar />
+                </Col>
+                <Col lg={8}>
+                  <h5>Page left sidebar</h5>
+                  <p className="mb-4 mb-md-5">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Iste qui impedit, ut dolorem aspernatur mollitia veritatis
+                    quod! Deserunt molestiae distinctio doloremque sequi,
+                    perferendis, temporibus ad autem ab, quos et eos.Lorem ipsum
+                    dolor sit amet, consectetur adipisicing elit. Iste qui
+                    impedit, ut dolorem aspernatur mollitia veritatis quod!
+                    Deserunt molestiae
+                    <br /> <br />
+                    Distinctio doloremque sequi, perferendis, temporibus ad
+                    autem ab, quos et eos.Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit. Iste qui impedit, ut dolorem
+                    aspernatur mollitia veritatis quod! Deserunt molestiae
+                    distinctio doloremque sequi, perferendis, temporibus ad
+                    autem ab, quos et eos.Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit. Iste qui impedit, ut dolorem
+                    aspernatur mollitia veritatis
+                  </p>
+
+                  <List
+                    className="mb-4 mb-md-5 page-sidebar-list"
+                    icon="fa fa-angle-right"
+                    data={listItems}
+                  />
+
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Iste qui impedit, ut dolorem aspernatur mollitia veritatis
+                    quod! Deserunt molestiae distinctio doloremque sequi,
+                    perferendis, temporibus ad autem ab, quos et eos.Lorem ipsum
+                    dolor sit amet, consectetur adipisicing elit. Iste qui
+                    impedit, ut dolorem aspernatur mollitia veritatis quod!
+                    Deserunt molestiae
+                    <br /> <br />
+                    Distinctio doloremque sequi, perferendis, temporibus ad
+                    autem ab, quos et eos.Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit. Iste qui impedit, ut dolorem
+                    aspernatur mollitia veritatis quod! Deserunt molestiae
+                    distinctio doloremque sequi, perferendis, temporibus ad
+                    autem ab, quos et eos.Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit. Iste qui impedit, ut dolorem
+                    aspernatur mollitia veritatis
+                  </p>
+                </Col>
+              </Row>
+            </Container>
+          </section>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default PageLeftSideBar;

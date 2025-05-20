@@ -1,0 +1,176 @@
+@import '../../assets/scss/variable.scss';
+
+/*-----------------------------------------*/
+/* Vehicles Type */
+/*-----------------------------------------*/
+.vehicles-type-inner .sort-filters-tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.vehicles-type-inner .sort-filters-tab .filters-title {
+  margin: 0;
+  margin-right: 30px;
+}
+
+/*-------------------------*/
+/* Filter Tabs */
+/*-------------------------*/
+.vehicles-type-inner .sort-filters-tab .nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.vehicles-type-inner .sort-filters-tab .nav-item .nav-link {
+  font-size: 13px;
+  color: #323232;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  background: #f6f6f6;
+  border-radius: $radius-3;
+}
+.vehicles-type-inner .sort-filters-tab .nav-item .nav-link:hover,
+.vehicles-type-inner .sort-filters-tab .nav-item .nav-link.active {
+  background: $primary-color;
+  color: #ffffff;
+  outline: none;
+}
+
+/*-------------------------*/
+/* Filter Style 1 */
+/*-------------------------*/
+.vehicles-type-inner.vehicles-type-style-1 {
+  padding: 30px;
+  border-radius: 0;
+  border: 0;
+  box-shadow: 0 5px 30px rgb(0 0 0 / 5%);
+}
+.vehicles-type-inner.vehicles-type-style-1 .sort-filters-tab {
+  margin-bottom: 20px;
+}
+.vehicles-type-inner.vehicles-type-style-1 .search-logo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-direction: column-reverse;
+  padding: 25px;
+  text-align: center;
+  box-shadow: none;
+  position: relative;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  min-height: 116px;
+  border-radius: 5px;
+  background: #fff;
+  border: 1px solid #f3f3f3;
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,.06);
+  transition: all .25s ease-in-out;
+}
+.vehicles-type-inner.vehicles-type-style-1 .search-logo-box .type-lable {
+  display: block;
+  width: 100%;
+  position: relative;
+  text-transform: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #323232;
+  margin-bottom: 15px;
+  margin-top: 0;
+  z-index: 1;
+}
+.vehicles-type-inner.vehicles-type-style-1 .search-logo-box span {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  background: #fff;
+  border: 2px solid #f3f3f3;
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 50%;
+  z-index: 2;
+  color: #323232;
+  transition: $transition;
+}
+.vehicles-type-inner.vehicles-type-style-1 .search-logo-box:hover span {
+  background: $primary-color;
+  color: $white-color;
+  border-color: $primary-color;
+}
+
+/*-------------------------*/
+/* Filter Style 2 */
+/*-------------------------*/
+.vehicles-type-inner.vehicles-type-style-2 .search-logo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #e8e8e8;
+  padding: 25px;
+  text-align: center;
+  box-shadow: none;
+  position: relative;
+  margin: 0;
+  margin-top: 30px;
+  min-height: 116px;
+  border-radius: 12px;
+  background: #fff;
+  transition: all .25s ease-in-out;
+}
+.vehicles-type-inner.vehicles-type-style-2 .search-logo-box .type-lable {
+  display: block;
+  width: 100%;
+  position: relative;
+  text-transform: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #323232;
+  margin-top: 15px;
+  margin-bottom: 0;
+  z-index: 1;
+}
+.vehicles-type-inner.vehicles-type-style-2 .search-logo-box span {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: 2px solid #f3f3f3;
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 50%;
+  z-index: 2;
+  color: #323232;
+  transition: $transition;
+}
+.vehicles-type-inner.vehicles-type-style-2 .search-logo-box:hover {
+  border-color: $primary-color;
+}
+.vehicles-type-inner.vehicles-type-style-2 .search-logo-box:hover span {
+  background: $primary-color;
+  color: $white-color;
+  border-color: $primary-color;
+}
+
+/*==========================================================*/
+/* Responsive CSS */
+/*==========================================================*/
+@media only screen and (max-width: 991px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  .vehicles-type-inner .sort-filters-tab {flex-wrap: wrap; justify-content: center;}
+  .vehicles-type-inner .sort-filters-tab .filters-title {width: 100%; text-align: center; margin: 0; margin-bottom: 20px;}
+  .vehicles-type-inner.vehicles-type-style-1 .sort-filters-tab,
+  .vehicles-type-inner.vehicles-type-style-2 .sort-filters-tab {margin-bottom: 10px;}
+}

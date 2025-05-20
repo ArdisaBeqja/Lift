@@ -1,0 +1,44 @@
+@import '../../assets/scss/variable.scss';
+
+/*---------------------------*/
+/* Why Choose Section */
+/*---------------------------*/
+.why-choose-services_section {position: relative;}
+.why-choose-services_section:before {position: absolute; content: ""; top: 0; right: 0; height: 100%; width: 50%; background: url(../../assets/images/modern-demo/video-bg-image-2.webp); background-repeat: no-repeat; background-size: cover; background-position: center center;}
+
+.about-page .why-choose-services_section .car-services {padding-right: 100px; padding-top: 0px;}
+.why-choose-services_section .car-services .section-title-new {margin-bottom: 50px;}
+
+.why-choose-services_section .car-services .infobox_wrapper {margin-bottom: 30px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 30px;}
+.why-choose-services_section .car-services .infobox_wrapper:last-child {margin-bottom: 0px; border-bottom: none; padding-bottom: 0px;}
+.why-choose-services_section .video-box {padding-right: 80px;}
+
+
+/*==========================================================*/
+/* Responsive CSS */
+/*==========================================================*/
+@media only screen and (max-width: 1199px) {
+
+}
+
+@media only screen and (max-width: 992px) {
+    .why-choose-services_section {padding-bottom: 0 !important;}
+    .why-choose-services_section:before {content: normal;}
+    .why-choose-services_section .car-services {padding-right: 0px; padding-bottom: 90px;}
+
+    .why-choose-services_section .section-bg-image {
+        padding: 130px 0;
+        background: url(../../assets/images/modern-demo/video-bg-image-2.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+
+}

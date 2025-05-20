@@ -1,0 +1,168 @@
+@import "../../assets/scss/variable.scss";
+
+/*===========================================*/
+/* Add Car Page */
+/*===========================================*/
+.cdfs-add-car-page {
+  background-color: #f9fbfc;
+}
+.cdfs-car-form .cdfs-av-section .row-gap {
+  gap: 25px 0;
+}
+.cdfs-av-section {
+  background: #ffffff;
+  padding: 50px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0 12px 40px rgba(0,0,0,0.03);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.03);
+  border-radius: 3px;
+}
+.cdfs-av-section .cdfs-av-title {
+  position: relative;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 700;
+  line-height: 30px;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+.cdfs-av-section .cdfs-av-title:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 4px;
+  height: 25px;
+  background: $primary-color;
+}
+
+/*----------------------------*/
+/* Form */
+/*----------------------------*/
+.cdfs-car-form .input-control {
+  position: relative;
+}
+.cdfs-car-form .input-control label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #323232;
+  text-transform: capitalize;
+  margin-bottom: 7px;
+}
+.cdfs-car-form .input-control .form-control {
+  display: inline-block;
+  float: none;
+  background: none;
+  width: 100%;
+  height: auto;
+  color: #323232;
+  padding: 10px 18px;
+  min-height: 50px;
+  border: 2px solid #e8e8e8;
+  border-radius: 3px;
+}
+.cdfs-car-form .request-radio .form-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.cdfs-car-form .request-radio .form-check label {
+  margin: 0;
+  padding: 0;
+}
+
+.cdfs-car-form .input-control .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */  color: #b9b9b9;}
+.cdfs-car-form .input-control .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */  color: #b9b9b9;}
+.cdfs-car-form .input-control .form-control::-ms-input-placeholder { /* Microsoft Edge */  color: #b9b9b9;}
+
+.cdfs-submit-button .button {
+  border: none;
+  font-size: 16px;
+  padding: 17px 40px;
+}
+
+/*----------------------------*/
+/* Form Validation */
+/*----------------------------*/
+.cdfs-car-form .input-control .note {
+  font-style: italic;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.cdfs-car-form .input-control .error {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 14px;
+  color: #ff0000;
+  margin: 0;
+}
+.cdfs-car-form .input-control label ~ .error {
+  top: 48px;
+}
+
+/*----------------------------*/
+/* Vehicle Images Upload */
+/*----------------------------*/
+.cdfs-car-form .input-control label .upload-image-limit {
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 500;
+  color: inherit;
+  margin-left: 3px;
+}
+.cdfs-car-form .cdfs-av-section .cdfs-image-upload {
+  border: 2px dashed #d7d7d7;
+  padding: 60px;
+  position: relative;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  border-radius: 7px;
+}
+.cdfs-car-form .cdfs-av-section .cdfs-image-upload .select-file-note {
+  font-size: 16px;
+  font-weight: 500;
+  color: #bababa;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.cdfs-car-form .cdfs-av-section .cdfs-image-upload .select-file-note span {
+  color: $primary-color;
+}
+.cdfs-car-form .cdfs-av-section .cdfs-image-upload .select-image {
+  font-size: 14px;
+  line-height: 22px;
+  padding: 10px 25px;
+}
+.cdfs-car-form .cdfs-av-section .cdfs-image-upload input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  opacity: 0;
+  margin: 0;
+}
+.cdfs-car-form .cdfs-av-section .cdfs-image-upload-size-limit {
+  font-size: 12px;
+  color: #7d7d7d;
+}
+.cdfs-car-form .cdfs-av-section .input-location iframe {
+  height: 400px;
+  margin-top: 15px;
+}
+
+/*==========================================================*/
+/* Responsive CSS */
+/*==========================================================*/
+@media only screen and (max-width: 767px) {
+
+  .cdfs-av-section {
+    padding: 40px;
+  }
+  .cdfs-car-form .cdfs-av-section .cdfs-image-upload {
+    padding: 50px 40px;
+  }
+}
