@@ -13,7 +13,7 @@ function CarListingSidebar({ onFilteredCars }) {
   useEffect(() => {
     const fetchFilters = async () => {
       try {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/filter`);
+        const res = await axios.get("https://cardealeral.onrender.com/api/filter");
         const data = res.data;
 
         const newSearchListGroup = Object.keys(data).map((key, index) => {
@@ -61,7 +61,7 @@ function CarListingSidebar({ onFilteredCars }) {
         for (const spec of specs) {
           requests.push(
             
-            axios.get(`${process.env.REACT_APP_API_URL}cars/by-attribute`, {
+            axios.get("https://cardealeral.onrender.com/cars/by-attribute", {
               params: {
                 title,
                 spec,

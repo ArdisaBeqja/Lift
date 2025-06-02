@@ -7,7 +7,7 @@ function ExtraFeatureItems() {
   const [loading, setLoading] = useState(true); // Loading state
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/api/cars/${id}`)
+    fetch(`https://cardealeral.onrender.com/api/cars/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setExtraFeatures(data.extraFeatures || []); // Ensure it's an array

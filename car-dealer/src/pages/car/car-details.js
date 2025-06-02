@@ -168,8 +168,8 @@ function CarDetails() {
           {cardata.gallery.map((val, ind) => {
            if (ind < 5) {
           // Ensure there's a slash between the base URL and the image file path
-          const imageUrl = val.image.startsWith('http') ? val.image : `${process.env.REACT_APP_API_URL}/uploads/${val.image}`;
-          console.log(`${process.env.REACT_APP_API_URL}/uploads/${val.image}`);
+          const imageUrl = val.image.startsWith('http') ? val.image : `https://cardealeral.onrender.com/uploads/${val.image}`;
+          console.log(`https://cardealeral.onrender.com/uploads/${val.image}`);
 
           return (
       <SwiperSlide key={ind}>

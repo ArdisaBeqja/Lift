@@ -54,7 +54,7 @@ function CarGrid() {
                           <VehicleShowcase1
                             className="bg-light"
                             key={index}
-                            imgSrc={`${process.env.REACT_APP_API_URL}/uploads/${firstImage}`}
+                            imgSrc={`https://cardealeral.onrender.com/uploads/${firstImage}`}
                             carName={val.carName}
                             carPrice={val.carPrice}
                             carNewPrice={val.carNewPrice}
