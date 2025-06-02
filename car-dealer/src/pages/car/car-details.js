@@ -195,7 +195,7 @@ function CarDetails() {
             if (ind < 5) {
               return (
                 <SwiperSlide key={ind}>
-                  <img className="w-100" src={`http://localhost:8000/uploads/${val.image}`} alt={`Thumbnail image ${ind}`} />
+                  <img className="w-100" src={`${process.env.REACT_APP_API_URL}/uploads/${val.image}`} alt={`Thumbnail image ${ind}`} />
                 </SwiperSlide>
               );
             }

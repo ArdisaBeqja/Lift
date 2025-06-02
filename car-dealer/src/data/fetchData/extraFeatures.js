@@ -7,7 +7,6 @@ function ExtraFeatureItems() {
   const [loading, setLoading] = useState(true); // Loading state
 
   useEffect(() => {
-    // fetch(`http://localhost:8000/api/cars/${id}`)
     fetch(`${process.env.REACT_APP_API_URL}/api/cars/${id}`)
       .then((response) => response.json())
       .then((data) => {
