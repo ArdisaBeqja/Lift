@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-
-// Component
+import { NavLink, useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import LogoDarkImg from '../../assets/images/logo-dark.png';
 import MainMenu from './MainMenu';
 
-function OffCanvasMenu({ position, onLoginClick, adminUser }) {
+function OffCanvasMenu({ position, onLoginClick, adminUser, onLogout }) {
   const [show, setShow] = useState(false);
+  const navigate = useNavigate();
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -20,6 +19,21 @@ function OffCanvasMenu({ position, onLoginClick, adminUser }) {
       return;
     }
     setShow(true);
+  };
+
+  const handleLogoutClick = () => {
+    onLogout();
+    setShow(false);
+    navigate('/');
+  };
+
+  const handleAddCarClick = () => {
+    if (adminUser) {
+      navigate('/add-car');
+    } else {
+      navigate('/');
+    }
+    setShow(false);
   };
 
   return (
@@ -48,15 +62,23 @@ function OffCanvasMenu({ position, onLoginClick, adminUser }) {
               <MainMenu />
             </div>
 
-            <div className="header-button">
+            <div className="header-button" style={{ marginTop: '1rem' }}>
               {!adminUser ? (
-                <button className="button flat" onClick={onLoginClick}>
+                <button className="button flat" onClick={() => {
+                  setShow(false);
+                  onLoginClick();
+                }}>
                   Login
                 </button>
               ) : (
-                <NavLink className="button flat" to="/add-car">
-                  Add Car
-                </NavLink>
+                <>
+                  <button className="button flat" onClick={handleAddCarClick}>
+                    Add Car
+                  </button>
+                  <button className="button flat" onClick={handleLogoutClick}>
+                    Logout
+                  </button>
+                </>
               )}
             </div>
           </Offcanvas.Body>
@@ -67,3 +89,4 @@ function OffCanvasMenu({ position, onLoginClick, adminUser }) {
 }
 
 export default OffCanvasMenu;
+
