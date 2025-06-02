@@ -12,7 +12,7 @@ const __dirname = path.dirname(__filename);
 
 
 const app = express();
-const port = 8000;  // Use Render's assigned port, fallback to 8000 locally
+const port = process.env.PORT || 8000;
 
 
 // app.use(cors({
