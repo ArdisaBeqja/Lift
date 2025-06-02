@@ -76,6 +76,7 @@ app.post("/add", async (req, res) => {
   }
 });
 
+app.use('/uploads', express.static('uploads')); // to serve image files
 
 app.use(express.static(path.join(__dirname, '../car-dealer/build')));
 
@@ -90,4 +91,3 @@ app.listen(port, () => {
 app.get("/", (req, res) => {
   res.send("Server is up and running!");
 });
-app.use('/uploads', express.static('uploads')); // to serve image files
