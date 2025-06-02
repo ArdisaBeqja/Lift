@@ -57,17 +57,29 @@ function OffCanvasMenu({ position, onLoginClick, adminUser, onLogout }) {
               <NavLink className="logo-link" to="/"></NavLink>
             </div>
           </Offcanvas.Header>
-          <Offcanvas.Body>
+          <Offcanvas.Body
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              height: 'calc(100vh - 90px)',
+              justifyContent: 'space-between',
+              overflow: 'auto',
+              padding: '96px 13px',
+            }}
+          >
             <div className="mobile-menu">
               <MainMenu />
             </div>
 
             <div className="header-button" style={{ marginTop: '1rem' }}>
               {!adminUser ? (
-                <button className="button flat" onClick={() => {
-                  setShow(false);
-                  onLoginClick();
-                }}>
+                <button
+                  className="button flat"
+                  onClick={() => {
+                    setShow(false);
+                    onLoginClick();
+                  }}
+                >
                   Login
                 </button>
               ) : (
@@ -89,4 +101,3 @@ function OffCanvasMenu({ position, onLoginClick, adminUser, onLogout }) {
 }
 
 export default OffCanvasMenu;
-
