@@ -6,6 +6,7 @@ const useOneC = () => {
 
   useEffect(() => {
     fetch("http://localhost:8000/api/cars")
+    
       .then((response) => response.json())
       .then((data) => {
         setCars(data);

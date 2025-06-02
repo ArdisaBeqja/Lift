@@ -44,11 +44,7 @@ mongoose.connect(uri)
   .catch(error => console.error("❌ MongoDB connection error:", error));
 
 // --- Serve React frontend ---
-app.use(express.static(path.join(__dirname, '../car-dealer/build')));
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../car-dealer/build', 'index.html'));
-});
 
 
 // Use auth routes
@@ -80,6 +76,11 @@ app.post("/add", async (req, res) => {
   }
 });
 
+app.use(express.static(path.join(__dirname, '../car-dealer/build')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../car-dealer/build', 'index.html'));
+});
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
