@@ -14,9 +14,27 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const port = 8000;
 
+// app.use(cors({
+//   origin: 'http://localhost:3000'  // Allow frontend to communicate with backend
+// }));
+const allowedOrigins = [
+  'http://localhost:3000',             // local dev frontend
+  'https://cardealeral.onrender.com'  // deployed frontend URL
+];
+
 app.use(cors({
-  origin: 'http://localhost:3000'  // Allow frontend to communicate with backend
+  origin: function(origin, callback) {
+    // allow requests with no origin (like Postman or curl)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
+  credentials: true // if you need cookies or authentication headers
 }));
+
 
 app.use(express.json());
 
