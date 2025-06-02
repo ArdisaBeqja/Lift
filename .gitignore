@@ -5,8 +5,8 @@ backend/.env
 backend/node_modules/
 car-dealer/node_modules/
 
-# Ignore build output for frontend
-car-dealer/build/
+# # Ignore build output for frontend
+# car-dealer/build/
 
 # Optional: logs
 *.log
