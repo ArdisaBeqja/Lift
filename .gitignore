@@ -1,5 +1,6 @@
 # Ignore environment files
 backend/.env
+car-dealer/ .env
 # Ignore node_modules
 backend/node_modules/
 car-dealer/node_modules/
