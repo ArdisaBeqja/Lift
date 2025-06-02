@@ -41,7 +41,6 @@ function OffCanvasMenu(props) {
           <Offcanvas.Header closeButton>
             <div className="site-logo">
               <NavLink className="logo-link" to="/">
-                <img className="img-fluid" src={LogoDarkImg} alt="logo" />
               </NavLink>
             </div>
           </Offcanvas.Header>
@@ -50,7 +49,7 @@ function OffCanvasMenu(props) {
               <MainMenu />
             </div>
             <div className="header-button">
-              <NavLink className="button flat" to="/add-car">Add Car</NavLink>
+              <NavLink className="button flat" to="/ad">Login</NavLink>
             </div>
           </Offcanvas.Body>
         </div>
