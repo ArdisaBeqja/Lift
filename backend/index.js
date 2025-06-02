@@ -37,7 +37,9 @@ app.use(cors({
 }));
 
 
-app.use(express.json());
+// app.use(express.json());
+app.use(express.static(path.join(__dirname, '../car-dealer/build')));
+
 
 const uri = "mongodb+srv://beqjaardisa:ardisa123@cluster0.nz6yp6f.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 mongoose.connect(uri)
