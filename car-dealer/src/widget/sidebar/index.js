@@ -15,7 +15,7 @@ function SideBar(props) {
   return (
     <>
       <div className={`sidebar ${props.className || ''}`}>
-        <SearchWidget className="search-2" title="Search Here" />
+        {/* <SearchWidget className="search-2" title="Search1 Here" /> */}
         <ArchivesWidget className="widget-links" title="Archives" />
         <CategoriesWidget className="widget-links" title="Categories" />
         <RecentPostWidget title="Recent Posts" totalPost="4" />

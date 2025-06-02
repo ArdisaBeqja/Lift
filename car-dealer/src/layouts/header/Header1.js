@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Outlet, NavLink } from 'react-router-dom';
+import { Outlet, NavLink, useNavigate } from 'react-router-dom';
 
 // Components
 import MainMenu from './MainMenu';
@@ -72,8 +72,9 @@ const Header1 = (props) => {
   const [isSticky] = useHeaderSticky();
   const [showLogin, setShowLogin] = useState(false);
   const [adminUser, setAdminUser] = useState(null);
+  const [showWelcome, setShowWelcome] = useState(false); // <-- NEW
+  const navigate = useNavigate();
 
-  // Load user from localStorage on mount
   useEffect(() => {
     const savedUser = localStorage.getItem('adminUser');
     if (savedUser) {
@@ -86,7 +87,8 @@ const Header1 = (props) => {
   const handleLoginSuccess = (user) => {
     if (user.role === 'admin') {
       setAdminUser(user);
-      localStorage.setItem('adminUser', JSON.stringify(user));  // Save user
+      localStorage.setItem('adminUser', JSON.stringify(user));
+      setShowWelcome(true); // <-- NEW
     } else {
       alert('Access denied. Only admin can add cars.');
     }
@@ -94,7 +96,8 @@ const Header1 = (props) => {
 
   const handleLogout = () => {
     setAdminUser(null);
-    localStorage.removeItem('adminUser');  // Clear user on logout
+    localStorage.removeItem('adminUser');
+    navigate('/'); // Redirect to home page after logout
   };
 
   return (
@@ -116,7 +119,6 @@ const Header1 = (props) => {
                       fontFamily: 'sans-serif',
                     }}
                   >
-                    Dis Dealer
                   </h1>
                 </NavLink>
               </div>
@@ -133,7 +135,6 @@ const Header1 = (props) => {
                     </ul>
                   </div>
 
-                  {/* Conditionally show Add Car and Logout buttons */}
                   {adminUser && (
                     <>
                       <div className="header-button d-none d-lg-block">
@@ -149,7 +150,6 @@ const Header1 = (props) => {
                     </>
                   )}
 
-                  {/* Login Button */}
                   {!adminUser && (
                     <div className="header-button d-none d-lg-block">
                       <button className="button flat" onClick={toggleLogin}>
@@ -168,8 +168,34 @@ const Header1 = (props) => {
         </div>
       </header>
 
-      {/* Show login modal */}
-      {showLogin && <LoginPopup onClose={toggleLogin} onLoginSuccess={handleLoginSuccess} />}
+      {showLogin && (
+        <LoginPopup
+          onClose={toggleLogin}
+          onLoginSuccess={handleLoginSuccess}
+        />
+      )}
+
+      {/* Welcome popup after successful login */}
+      {showWelcome && (
+        <div className="modal show d-block" tabIndex="-1" role="dialog">
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title">Welcome</h5>
+                <button
+                  type="button"
+                  className="btn-close btn btn-danger"
+                  onClick={() => setShowWelcome(false)}
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div className="modal-body">
+                <p>Welcome, {adminUser?.name || 'Admin'}!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       <Outlet />
     </>

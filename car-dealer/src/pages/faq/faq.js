@@ -50,10 +50,10 @@ function Faq() {
                       tabActive="0"
                       tabsTitle={[
                         { id: 1, title: 'General Information' },
-                        {
-                          id: 2,
-                          title: 'Features & Options',
-                        },
+                        // {
+                        //   id: 2,
+                        //   title: 'Features & Options',
+                        // },
                         {
                           id: 3,
                           title: 'Vehicle Overview',

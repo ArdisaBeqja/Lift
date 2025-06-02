@@ -10,7 +10,7 @@ import { CarSlider } from '../../component/car-list';
 
 // Site Data
 import { CarSliderList } from '../../data/car-list';
-
+import Value2 from './values2.avif';
 function WelcomeBlockFour(props) {
   return (
     <>
@@ -118,9 +118,9 @@ function AboutWelcomeBlock(props) {
               <SectionTitle
                 extraClass="text-center"
                 subtitle="Welcome to"
-                title="The Cardealer Online"
+                title="Our Values"
                 separator="separator"
-                content="Car Dealer is the best premium HTML5 Template. We provide everything you need to build an Amazing dealership website developed especially for car sellers, dealers or auto motor retailers. You can use this template for creating website based on any framework language."
+                content="We believe in honesty, transparency, and exceptional customer service. These values guide every decision we make and every car we help connect with the right owner. Our commitment to quality and trust is what drives us forward."
               />
             </Col>
           </Row>
@@ -157,25 +157,25 @@ function AboutWelcomeBlock(props) {
                   className="feature-box-style-01"
                   icon="glyph-icon flaticon-beetle"
                   title="All brands"
-                  content="Printin k a galley of type lorem Ipsum is simply dummy text of the and"
+                  content="We offer a wide selection of products from all major brands to ensure quality and variety for our customers."
                 />
                 <FeatureInfo
                   className="feature-box-style-01"
                   icon="glyph-icon flaticon-interface-1"
                   title="Free Support"
-                  content="Simply dummy text of the printin k a galley of type and lorem Ipsum is"
+                  content="Our dedicated team provides free customer support to help you with any questions or issues—anytime you need it."
                 />
                 <FeatureInfo
                   className="feature-box-style-01"
                   icon="glyph-icon flaticon-key"
                   title="Dealership"
-                  content="Text of the printin lorem Ipsum is simply dummy k a galley of type and"
+                  content="As a trusted dealership, we guarantee authentic products and professional service that meet the highest industry standards."
                 />
                 <FeatureInfo
                   className="feature-box-style-01"
                   icon="glyph-icon flaticon-wallet"
-                  title="affordable"
-                  content="The printin Lorem Ipsum is simply dummy text of k a galley of type and"
+                  title="Affordable"
+                  content="We deliver top-quality products and services at prices that are budget-friendly and accessible for everyone."
                 />
               </div>
             </Col>

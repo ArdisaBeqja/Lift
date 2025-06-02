@@ -11,7 +11,7 @@ function TagsWidget(props) {
   return (
     <>
       <div className={`widget widget-tags ${props.className || '' }`}>
-        {props?.title && <h3 className="widget-title">{props.title}</h3>}
+        {props?.title && <h3 className="widget-title">Maintance Tips</h3>}
         <div className="tags-list">
           {TagsList.map((item) => (
             <Link key={item.id} to={item.url}>

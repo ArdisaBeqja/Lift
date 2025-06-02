@@ -94,7 +94,7 @@ function SocialInfo02(props) {
 function SocialInfo03(props) {
   return (
     <>
-      <div className={`widget widget-social-info ${props.className || ''}`}>
+      {/* <div className={`widget widget-social-info ${props.className || ''}`}>
         {props?.title && <h3 className="widget-title">{props.title}</h3>}
         <ul
           className={`social-list ${props.sociallistclass || ''} ${
@@ -132,7 +132,7 @@ function SocialInfo03(props) {
             </Link>
           </li>
         </ul>
-      </div>
+      </div> */}
     </>
   );
 }

@@ -18,7 +18,7 @@ import RecentPostWidget from '../../widget/recent-post';
 import LogoLightImg from '../../assets/images/logo-light.png';
 import AppleBtn from '../../assets/images/modern-demo/appstore.webp';
 import GoogleBtn from '../../assets/images/modern-demo/google-play-store.webp';
-import FooterBG from '../../assets/images/bg/footer-bg.webp';
+import FooterBG from '../../assets/images/bg/footer2.avif';
 
 // SCSS
 import './footer.scss';
@@ -26,13 +26,26 @@ import './footer.scss';
 function FooterNew01() {
   return (
     <>
-      <footer className="site-footer footer-new-01" style={{backgroundImage: `url(${FooterBG})`}}>
-        <div className="section-overlay bg-black" data-overlay-opacity="0.9"></div>
+    <footer
+  className="site-footer footer-new-01"
+  style={{
+    backgroundImage: `url(${FooterBG})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center'
+  }}
+>
+
+<div
+  className="section-overlay"
+  style={{ backgroundColor: 'rgba(0, 0, 0, 0.76)' }}
+></div>
+
         <div className="footer-top">
             <Container>
               <Row className="footer-top-inner">
                 <Col lg={4} md={4} sm={4} className="text-center text-md-start">
-                    <img className="img-fluid footer-logo"  src={LogoLightImg} alt="logo" />
+                    <img className="img-fluid footer-logo"   alt="" />
                 </Col>
                 <Col lg={8} md={8} sm={8} className="text-center text-md-end">
                     <SocialInfo className="mt-4 mt-sm-0 mb-0" theme="text-lg-end" />
@@ -52,22 +65,22 @@ function FooterNew01() {
                   label="hide"
                 />
               </Col>
-              <Col md={6} lg={3}>
+              {/* <Col md={6} lg={3}>
                 <FooterMenu title="Useful Links" data={servicesMenu} />
-              </Col>
+              </Col> */}
               <Col md={6} lg={3}>
                 <RecentPostWidget title="Recent Posts" />
               </Col>
               <Col md={6} lg={3}>
 
-                <div className="widget widget-download-app">
+                {/* <div className="widget widget-download-app">
                   <h3 className="widget-title">Download App</h3>
                   <div className="about-text">Download Our Car Dealer Mobile Application.</div>
                   <div className="app-buttons">
                     <Link to="#"><img className="img-fluid" src={AppleBtn} alt="Apple Store" /></Link>
                     <Link to="#"><img className="img-fluid" src={GoogleBtn} alt="Google Play Store" /></Link>
                   </div>
-                </div>
+                </div> */}
               </Col>
             </Row>
           </Container>

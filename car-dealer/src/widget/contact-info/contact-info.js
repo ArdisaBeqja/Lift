@@ -26,7 +26,7 @@ function ContactInfo(props) {
               : props.theme === 'contact-info-style-02' && (
                   <label>Address :</label>
                 )}
-            {props?.address ? <span>{props.address}</span> : <span>1635 Franklin Street Montgomery, Near Sherwood Mall. AL 36104</span>}
+            {props?.address ? <span>{props.address}</span> : <span>Tirane, Albania</span>}
           </li>
           <li key="item2">
             {props.theme === 'contact-info-style-01' && (
@@ -38,7 +38,7 @@ function ContactInfo(props) {
                   <label>Phone :</label>
                 )}
             <Link to="/contact" className="phone-number">
-              (007) 123 456 7890
+              +355 68 8012 853
             </Link>
           </li>
           <li key="item3">
@@ -50,7 +50,8 @@ function ContactInfo(props) {
               : props.theme === 'contact-info-style-02' && (
                   <label>Email :</label>
                 )}
-            <Link to="mailto:support@website.com">support@website.com</Link>
+                 <a href="mailto:cardealeral@gmail.com">cardealeral@gmail.com</a>
+
           </li>
         </ul>
       </div>

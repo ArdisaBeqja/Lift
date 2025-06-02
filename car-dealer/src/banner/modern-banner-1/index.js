@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { FaVolumeMute, FaVolumeUp } from 'react-icons/fa'; // ✅ Import icons
 import Vid from '../../assets/images/1.mp4';
 
 function ModernBanner1() {
@@ -13,7 +14,7 @@ function ModernBanner1() {
         paddingTop: '230px',
         paddingBottom: '130px',
         position: 'relative',
-        height: '600px', // you need to set an explicit height
+        height: '600px',
         overflow: 'hidden',
       }}
     >
@@ -36,23 +37,26 @@ function ModernBanner1() {
       <Container style={{ position: 'relative', zIndex: 1 }}>
         <Row>
           <Col lg={12}>
-            {/* Button to toggle mute just above the bottom */}
             <button
               onClick={() => setIsMuted(!isMuted)}
               style={{
                 position: 'absolute',
-                bottom: '-259px',  // Adjust this value to position it just above the bottom
+                bottom: '-340px',
                 left: '50%',
                 transform: 'translateX(-50%)',
                 backgroundColor: 'transparent',
+
                 color: 'white',
                 border: 'none',
+                borderRadius: '50%',
                 cursor: 'pointer',
-                fontSize: '18px',
-                padding: '10px 20px',
+                fontSize: '22px',
+                padding: '12px',
               }}
+              aria-label={isMuted ? 'Unmute video' : 'Mute video'}
+              title={isMuted ? 'Unmute' : 'Mute'}
             >
-              {isMuted ? 'Unmute' : 'Mute'}
+              {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
             </button>
           </Col>
         </Row>

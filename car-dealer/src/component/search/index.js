@@ -22,7 +22,7 @@ function Search() {
 
   return (
     <>
-      <div className={`header-search ${isActive ? 'search-active' : ''}`}>
+      {/* <div className={`header-search ${isActive ? 'search-active' : ''}`}>
         <button className="search-btn" onClick={handleClick}>
           <i className="fa fa-search not-click"></i>
         </button>
@@ -57,7 +57,7 @@ function Search() {
           </div>
           <div className="search-bg-overlay" onClick={handleClick}></div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

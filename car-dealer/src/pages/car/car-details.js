@@ -89,16 +89,11 @@ function CarDetails() {
                 </Col>
                 <Col lg={4} md={5} className="text-lg-end">
                   <div className="car-price">
-                    <span className="old-price">
-                      <i className="fa-solid fa-dollar-sign"></i>
+                   
+                    <span className="new-price">
                       {cardata.carPrice}
                     </span>
-                    <span className="new-price">
-                      <i className="fa-solid fa-dollar-sign"></i>
-                      {cardata.carNewPrice}
-                    </span>
                   </div>
-                  <span>Plus Taxes & Licensing</span>
                 </Col>
               </Row>
               <Row>
@@ -218,8 +213,8 @@ function CarDetails() {
       tabActive="0"
       tabsTitle={[
         { id: 1, title: 'General Information' },
-        { id: 2, title: 'Features & Options' },
-        { id: 3, title: 'Vehicle Overview' },
+        // { id: 2, title: 'Features & Options' },
+        // { id: 3, title: 'Vehicle Overview' },
       ]}
       tabsContent={[
         { id: 31, content: <CarDetailsGeneralInformation /> },
@@ -270,7 +265,7 @@ function CarDetails() {
 
                     </div>
                     <div className="details-social details-weight">
-                      <h5 className="weight-title">Share now</h5>
+                      {/* <h5 className="weight-title">Share now</h5> */}
                       <SocialInfo03 />
                     </div>
                     <div className="details-form details-weight">
@@ -281,7 +276,7 @@ function CarDetails() {
                       <FeatureInfo
                         className="feature-box-style-03 grey-border"
                         icon="fa fa-headphones"
-                        title="1-888-345-888"
+                        title="+355 68 8012 853"
                         content="Call our seller to get the best price "
                       />
                     </div>

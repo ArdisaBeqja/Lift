@@ -10,7 +10,7 @@ import PageHeader from '../../layouts/page-header/PageHeader';
 // Widget
 import SideBar from '../../widget/sidebar';
 import { BlogSocialInfo } from '../../widget/social-info/social-info';
-import BlogForm from '../../form/blog-form';
+// import BlogForm from '../../form/blog-form';
 
 // Site Data
 import BlogList from '../../data/blog-list';
@@ -55,7 +55,7 @@ function BlogSingle() {
                     </div>
                     <div className="entry-content">
                       <h5 className="entry-title">{blogdata.title}</h5>
-                      <div className="entry-meta">
+                      {/* <div className="entry-meta">
                         <ul>
                           <li className="entry-meta-bydealer">
                             <Link to="#">
@@ -82,41 +82,26 @@ function BlogSingle() {
                             </Link>
                           </li>
                         </ul>
-                      </div>
+                      </div> */}
                       <div className="entry-description">
                         <p>{blogdata.description}</p>
                         <p>{blogdata.mainDescription}</p>
                       </div>
                       <blockquote className="blockquote mt-5">
-                        xxxxxxxxxxxxxxCupiditate veritatis lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit. autem nobis magni alias
-                        dolorum ad maxime inventore! Hic voluptate temporibus
-                        maxime obcaecati qui iusto, nulla dolorem corrupti
-                        voluptatibus sequi.
-                        <cite> – John Doe</cite>
-                      </blockquote>
+  {blogdata.quote}
+  <cite> {blogdata.quoteAuthor}</cite>
+</blockquote>
 
-                      <p>
-                        Sagittis sem nibh lorem ipsum dolor sit amet of Lorem
-                        Ipsum. Proin graelit consequat ipsum, nec id elit. Duis
-                        sed odio sit amet nibh vulputate cursus a sit amet
-                        mauris. Morbi accumsan ipsum velit. Nam nec tellus a
-                        odio tincidunt pharetra.
-                      </p>
-                      <p>
-                        Aenean sollicitudin lorem ipsum dolor sit amet of Lorem
-                        Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                        lorem quis bibendum auctor, nisi elit consequat ipsum,
-                        nec sagittis sem nibh id elit. Duis sed odio sit amet
-                        nibh vulputate cursus a sit amet mauris. Morbi accumsan
-                        ipsum velit. Nam nec tellus a odio tincidunt pharetra.
-                      </p>
+{blogdata.extraParagraphs?.map((para, index) => (
+  <p key={index}>{para}</p>
+))}
+
                     </div>
 
                     <div className="entry-share">
-                      <Link to="#" className="button">
+                      {/* <Link to="#" className="button">
                         Read More
-                      </Link>
+                      </Link> */}
 
                       <div className="share">
                         <Link to="#">
@@ -171,7 +156,7 @@ function BlogSingle() {
                       </div>
                     </div>
 
-                    <BlogForm />
+                    {/* <BlogForm /> */}
                   </article>
                 </Col>
                 <Col lg={{span: 4, order: '1'}}>

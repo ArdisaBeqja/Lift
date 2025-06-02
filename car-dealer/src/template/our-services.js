@@ -2,24 +2,24 @@
 import { Col, Container, Row } from 'react-bootstrap';
 
 // Site Data
-import ServicesImg from '../assets/images/services/services-img2.webp';
+import ServicesImg from '../assets/images/a111.avif';
 
 const ServicesList = [
   {
     id: 1,
-    item: ' Dynamicus, qui sequitur mutationem consuetudium lectorum.',
+    item: 'Wide Selection of Vehicles: Choose from the latest models and high-quality used cars from trusted brands.',
   },
   {
     id: 2,
-    item: 'Sequitur dynamicus, qui mutationem consuetudium lectorum.',
+    item: 'Financing & Leasing Options: Flexible financing plans tailored to your needs, with competitive interest rates and transparent terms.',
   },
   {
     id: 3,
-    item: 'Mutationem dynamicus, qui sequitur consuetudium lectorum.',
+    item: 'Trade-In Assistance: Get a fair market value for your current vehicle and put it toward your new purchase.',
   },
   {
     id: 4,
-    item: 'Consuetudium dynamicus, qui sequitur mutationem lectorum.',
+    item: 'Professional Customer Service: Our knowledgeable and friendly team is here to guide you every step of the way—from your first visit to final delivery.',
   },
 ];
 
@@ -31,15 +31,10 @@ function OurServices(props) {
           <Row>
             <Col lg={6}>
               <h5>
-                We provide best services processus dynamicus qui sequitur
-                mutationem co mutationem.
+                We Provide Premium Car Dealership Services You Can Trust
               </h5>
               <p>
-                Dynamicus qui sequitur mutationem consuetudium lectorum. Mirum
-                est notare quam littera gothica, quam nunc putamus parum
-                claram.dynamicus, qui sequitur mutationem consuetudium lectorum.
-                Mirum est notare quam littera gothica, quam nunc putamus parum
-                claram.dynamicus, qui sequitur mutationem consuetudium lectorum.
+                At our dealership, we are dedicated to helping you find the perfect vehicle that suits your lifestyle and budget. Whether you're looking for a brand-new car, a certified pre-owned vehicle, or expert advice, we offer a full range of services designed to make your car buying experience smooth, transparent, and enjoyable.
               </p>
               <ul className="list-unstyled mb-0">
                 {ServicesList.map((list, index) => (

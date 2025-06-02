@@ -1,29 +1,26 @@
 
 const CategoriesList = [
-  { id: 1, item: 'Test Drives', url: '#'},
-  { id: 2, item: 'Video Reviews', url: '#'},
-  { id: 3, item: 'Analysis & Features', url: '#'},
-  { id: 4, item: 'Pre-purchase Car Inspection', url: '#' },
-  { id: 5, item: 'Analysis & Features', url: '#' },
+  { id: 1, item: 'Regularly Check Tire Pressure and Tread Depth' },
+  { id: 2, item: 'Always Wear Your Seatbelt' },
+  { id: 3, item: 'Avoid Distractions While Driving' },
+  { id: 4, item: 'Maintain Safe Following Distances' },
+  { id: 5, item: 'Use Headlights Properly in Low Visibility' },
 ];
 
 const ArchivesList = [
-  { id: 1, item: 'June', url: '#', number: '12'},
-  { id: 2, item: 'January', url: '#', number: '28'},
-  { id: 3, item: 'March', url: '#', number: '08' },
-  { id: 4, item: 'November', url: '#', number: '04' },
-  { id: 5, item: 'December', url: '#', number: '13' },
+  { id: 1, item: 'Certified Pre-Owned Vehicles' },
+  { id: 2, item: 'Transparent Pricing' },
+  { id: 3, item: 'Flexible Financing Options' },
+  { id: 4, item: 'Friendly Multilingual Staff' },
+  { id: 5, item: 'Trusted by 100+ Customers' },
 ];
 
 const TagsList = [
-  { id: 1, item: 'Bootstrap', url: '#'},
-  { id: 2, item: 'HTML5', url: '#'},
-  { id: 3, item: 'Wordpress', url: '#'},
-  { id: 4, item: 'CSS3', url: '#' },
-  { id: 5, item: 'Creative', url: '#' },
-  { id: 6, item: 'Multipurpose', url: '#' },
-  { id: 7, item: 'Scss', url: '#' },
-  { id: 8, item: 'React', url: '#' },
+   { id: 1, item: 'When to Change Your Oil' },
+  { id: 2, item: 'Battery Maintenance 101' },
+  { id: 3, item: 'Winter Tire Checklist' },
+  { id: 4, item: 'How to Extend Your Car’s Life' },
+  { id: 5, item: 'Signs Your Brakes Need Attention' },
 ];
 
 // export default CategoriesList;

@@ -40,7 +40,7 @@ function AboutSection(props) {
                 content="Driving Excellence: Your Ultimate Destination for Premium Vehicles and Services."
               />
               <List className="list-new mb-3 pb-2" icon="fas fa-check" data={listItems} />
-              <Button btnClass="btn-lg me-3" btnText="Our Services" btnURL="/about-us" />
+              {/* <Button btnClass="btn-lg me-3" btnText="Our Services" btnURL="/about-us" /> */}
               <div className="call-box call-box-custom d-inline-flex align-items-center">
                 <div className="icon"><i className="fas fa-phone"></i></div>
                 <div className="call-box-text">

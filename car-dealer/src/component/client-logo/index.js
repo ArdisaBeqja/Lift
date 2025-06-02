@@ -8,7 +8,7 @@ function ClientLogo(props) {
         className={`our-clients ${props.className || ''} ${props.theme || ''}`}
       >
         <div className="our-clients-img">
-          <img className="img-fluid" src={props.data} alt="" />
+          {/* <img className="img-fluid" src={props.data} alt="" /> */}
         </div>
       </div>
     </>

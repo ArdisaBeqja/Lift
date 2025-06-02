@@ -11,7 +11,7 @@ function CategoriesWidget(props) {
   return (
     <>
       <div className={`widget widget-categories ${props.className || '' }`}>
-        {props?.title && <h3 className="widget-title">{props.title}</h3>}
+        {props?.title && <h3 className="widget-title">Safty Tips</h3>}
         <div className="items-list">
           <ul>
             {CategoriesList.map((item, index) => (

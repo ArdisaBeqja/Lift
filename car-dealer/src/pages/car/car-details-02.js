@@ -83,13 +83,13 @@ function CarDetailsTwo() {
                 </Col>
                 <Col lg={4} md={5} className="text-lg-end">
                   <div className="car-price">
-                    <span className="old-price">
+                    {/* <span className="old-price">
                       <i className="fa-solid fa-dollar-sign"></i>
                       {cardata.carPrice}
-                    </span>
+                    </span> */}
                     <span className="new-price">
                       <i className="fa-solid fa-dollar-sign"></i>
-                      {cardata.carNewPrice}
+                      {cardata.carPrice}
                     </span>
                   </div>
                   <span>Plus Taxes & Licensing</span>
@@ -224,10 +224,10 @@ function CarDetailsTwo() {
                       tabActive="0"
                       tabsTitle={[
                         { id: 1, title: 'General Information' },
-                        {
-                          id: 2,
-                          title: 'Features & Options',
-                        },
+                        // {
+                        //   id: 2,
+                        //   title: 'Features & Options',
+                        // },
                         {
                           id: 3,
                           title: 'Vehicle Overview',

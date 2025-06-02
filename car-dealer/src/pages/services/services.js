@@ -15,6 +15,7 @@ import OpeningHours from '../../component/openinghours';
 import OurServices from '../../template/our-services';
 import ServiceForm from '../../form/service-form';
 import FeatureServices from './feature-services';
+import EnquiryForm from '../../form/enquiry-form';
 
 function Service() {
   const OpeningHoursItems = [
@@ -98,7 +99,7 @@ function Service() {
               </Row>
               <Row>
                 <Col lg={8} md={7}>
-                  <ServiceForm />
+                  <EnquiryForm/>
                 </Col>
                 <Col lg={4} md={5}>
                   <div className="opening-hours bg-light mt-4 mt-md-0">

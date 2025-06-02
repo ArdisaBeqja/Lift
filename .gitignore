@@ -1,0 +1,12 @@
+# Ignore environment files
+backend/.env
+
+# Ignore node_modules
+backend/node_modules/
+car-dealer/node_modules/
+
+# Ignore build output for frontend
+car-dealer/build/
+
+# Optional: logs
+*.log

@@ -11,7 +11,7 @@ function ArchivesWidget(props) {
   return (
     <>
       <div className={`widget widget-archives ${props.className || '' }`}>
-        {props?.title && <h3 className="widget-title">{props.title}</h3>}
+        {props?.title && <h3 className="widget-title">Why Choose us</h3>}
         <div className="items-list">
           <ul>
             {ArchivesList.map((item, index) => (

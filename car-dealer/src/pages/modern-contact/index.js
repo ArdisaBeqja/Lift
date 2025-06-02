@@ -108,7 +108,7 @@ function ModernContact() {
                     <h5 className="text-white mb-4">Contact Details</h5>
                     <div className="contact-information">
                       <div className="contact-info-item">
-                        <p>1635 Franklin Street Montgomery, Near Sherwood Mall. AL 36104</p>
+                        <p>Tirane, Albania</p>
                       </div>
                       <div className="contact-info-item">
                         <span>Send email</span>
@@ -116,7 +116,7 @@ function ModernContact() {
                       </div>
                       <div className="contact-info-item">
                         <span>Call anytime</span>
-                        <h6>(007) 123 456 7890</h6>
+                        <h6>(+355) ...</h6>
                       </div>
                     </div>
                     <div className="social-icon">

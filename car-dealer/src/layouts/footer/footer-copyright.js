@@ -20,16 +20,16 @@ function FooterCopyright() {
           <Row>
             <Col lg="6" md="12">
               <div className="copyright-text">
-                ©Copyright {currentYear} <Link to="/">Car Dealer</Link>{' '}
-                Developed by{' '}
-                <Link to="http://www.potenzaglobalsolutions.com/">
-                  Potenzaglobalsolutions
-                </Link>
-              </div>
+  © Copyright {currentYear}{' '}
+  <a href="https://distech-solutions.com/" target="_blank" rel="noopener noreferrer">
+    Developed by distech-solutions
+  </a>
+</div>
+
             </Col>
-            <Col lg="6" md="12">
+            {/* <Col lg="6" md="12">
               <FooterMenu className="copyright-menu m-0" data={supportMenu} />
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </div>

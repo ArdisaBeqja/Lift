@@ -33,7 +33,7 @@ function AboutUsTwo() {
           breadCrumbItems={[
             { label: 'Home', path: '/' },
             { label: 'Pages', path: '#' },
-            { label: 'About Us 02', path: '#', active: true },
+            { label: 'About Us', path: '#', active: true },
           ]}
         />
         <div className="content-wrapper">

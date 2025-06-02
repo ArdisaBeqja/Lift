@@ -90,7 +90,7 @@ function App() {
   const hideFooter = location.pathname !== '';
 
   return (
-    <Suspense fallback={<Loader />}>
+    <Suspense fallback>
       <div className="main-wrapper">
         <Routes>
           <Route path="/" element={<Header1 className="header-transprent" siteLogo={LogoWhite} />}>

@@ -5,7 +5,9 @@ import authorImg4 from '../assets/images/avatar/04.webp';
 import authorImg5 from '../assets/images/avatar/05.webp';
 import authorImg6 from '../assets/images/avatar/06.webp';
 import authorImg7 from '../assets/images/avatar/07.webp';
-
+import men1 from '../assets/images/avatar/men1.jpg';
+import men2 from '../assets/images/avatar/men2.jpg';
+import men3 from '../assets/images/avatar/men3.jpg';
 import testimonialImg1 from '../assets/images/testimonial/01.webp';
 import testimonialImg2 from '../assets/images/testimonial/02.webp';
 import testimonialImg3 from '../assets/images/testimonial/03.webp';
@@ -97,34 +99,34 @@ const TestimonialList3 = [
   {
     id: 1,
     testimonialImg: testimonialImg1,
-    authorImg: authorImg1,
-    authorName: 'Alice Williams',
+    authorImg: men1,
+    authorName: 'Mark L.',
     authorPosition: 'Auto Dealer',
     iconLeft: 'fa fa-quote-left',
     description:
-      'Type and bled it to make lorem Ipsum is simply dummy text of the printin a galley of a type specimen book. It has survived not only five centuries, but also the leap into electronictting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.',
+      'I’ve purchased several cars in my life, but this was by far the smoothest experience. The team made financing easy, explained everything clearly, and never pressured me. I love my new ride and will definitely come back for my next car!',
     icon: 'fa fa-quote-right',
   },
   {
     id: 2,
     testimonialImg: testimonialImg2,
-    authorImg: authorImg2,
-    authorName: 'Michael Bean',
+    authorImg: men2,
+    authorName: 'Daniel H.',
     authorPosition: 'Car Dealer',
     iconLeft: 'fa fa-quote-left',
     description:
-      'It was popularised in the 1960s lorem Ipsum is simply dummy text of the printin a galley of type and bled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronictting, remaining essentially unchanged. with the release of Letraset sheets containing Lorem Ipsum passages.',
+      'From start to finish, the experience was incredible! The staff was knowledgeable, patient, and truly cared about helping me find the perfect car for my budget. I drove away in a reliable used SUV that feels like new. Highly recommend this place for anyone looking for great service and honest deals!',
     icon: 'fa fa-quote-right',
   },
   {
     id: 3,
     testimonialImg: testimonialImg3,
-    authorImg: authorImg3,
-    authorName: 'Felica Queen',
+    authorImg: men3,
+    authorName: 'Andi M.',
     authorPosition: 'Auto Dealer',
     iconLeft: 'fa fa-quote-left',
     description:
-      'Remaining essentially unchanged lorem Ipsum is simply dummy text of the printin   a galley of type and bled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronictting. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.',
+      'What impressed me most was the transparency and professionalism. They gave me a fair trade-in offer and helped me get a fantastic deal on a fuel-efficient sedan. Even after the sale, the customer service has been top-notch. I’ve already recommended them to friends and family.',
     icon: 'fa fa-quote-right',
   },
 ];
