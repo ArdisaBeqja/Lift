@@ -159,7 +159,13 @@ const Header1 = (props) => {
                   )}
 
                   <div className="mobile-menu-btn d-lg-none">
-                    <OffCanvasMenu position="end" />
+                    {/* <OffCanvasMenu position="end" /> */}
+                    <OffCanvasMenu 
+  position="end" 
+  onLoginClick={toggleLogin} 
+  adminUser={adminUser}
+/>
+
                   </div>
                 </div>
               </div>

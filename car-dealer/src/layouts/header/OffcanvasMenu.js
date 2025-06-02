@@ -7,7 +7,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import LogoDarkImg from '../../assets/images/logo-dark.png';
 import MainMenu from './MainMenu';
 
-function OffCanvasMenu(props) {
+function OffCanvasMenu({ position, onLoginClick, adminUser }) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -35,21 +35,29 @@ function OffCanvasMenu(props) {
         onHide={handleClose}
         onClick={menuHide}
         responsive="lg"
-        placement={props.position}
+        placement={position}
       >
         <div className="offcanvas-mobile-menu">
           <Offcanvas.Header closeButton>
             <div className="site-logo">
-              <NavLink className="logo-link" to="/">
-              </NavLink>
+              <NavLink className="logo-link" to="/"></NavLink>
             </div>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <div className="mobile-menu">
               <MainMenu />
             </div>
+
             <div className="header-button">
-              <NavLink className="button flat" to="/ad">Login</NavLink>
+              {!adminUser ? (
+                <button className="button flat" onClick={onLoginClick}>
+                  Login
+                </button>
+              ) : (
+                <NavLink className="button flat" to="/add-car">
+                  Add Car
+                </NavLink>
+              )}
             </div>
           </Offcanvas.Body>
         </div>
