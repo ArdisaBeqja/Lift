@@ -13,7 +13,7 @@ function CarListingSidebar({ onFilteredCars }) {
   useEffect(() => {
     const fetchFilters = async () => {
       try {
-        const res = await axios.get('http://localhost:8000/api/filter');
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/filter`);
         const data = res.data;
 
         const newSearchListGroup = Object.keys(data).map((key, index) => {
@@ -60,7 +60,8 @@ function CarListingSidebar({ onFilteredCars }) {
       for (const [title, specs] of filterEntries) {
         for (const spec of specs) {
           requests.push(
-            axios.get('http://localhost:8000/api/cars/by-attribute', {
+            
+            axios.get(`${process.env.REACT_APP_API_URL}cars/by-attribute`, {
               params: {
                 title,
                 spec,

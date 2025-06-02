@@ -5,7 +5,9 @@ const useOneC = () => {
   const [loading, setLoading] = useState(true); // Loading state
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/cars")
+        fetch(`${process.env.REACT_APP_API_URL}/api/cars`)
+
+    // fetch("http://localhost:8000/api/cars")
     
       .then((response) => response.json())
       .then((data) => {

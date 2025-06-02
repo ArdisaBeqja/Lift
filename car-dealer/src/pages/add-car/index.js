@@ -158,7 +158,7 @@ function AddCar() {
     });
 
     try {
-      const response = await axios.post('http://localhost:8000/api/addcar', formData, {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/addcar`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       console.log('Response:', response.data);
