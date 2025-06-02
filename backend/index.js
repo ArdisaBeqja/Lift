@@ -77,6 +77,11 @@ app.post("/add", async (req, res) => {
 });
 
 
+app.use(express.static(path.join(__dirname, '../car-dealer/build')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../car-dealer/build', 'index.html'));
+});
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
@@ -86,8 +91,3 @@ app.get("/", (req, res) => {
   res.send("Server is up and running!");
 });
 app.use('/uploads', express.static('uploads')); // to serve image files
-app.use(express.static(path.join(__dirname, '../car-dealer/build')));
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../car-dealer/build', 'index.html'));
-});

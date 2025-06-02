@@ -2,7 +2,6 @@ import { getCars, getCarById, createCar } from '../services/carService.js'; // I
 import Car from '../models/Car.js';  // Adjust path as needed
 
 const getCarList = async (req, res) => {
-  console.log("hadfag");
     try {
         const cars = await getCars();  // No need for carService.getCars()
         res.status(200).json(cars);
@@ -29,11 +28,9 @@ const getCarDetails = async (req, res) => {
 
 const createCar0 = async (req, res) => {
   try {
-    console.log("Request Body:", req.body);
-    console.log("Request Files:", req.files);  // Files should be available here
+    
 
     const carData = JSON.parse(req.body.carData); // Parse carData
-    console.log("Parsed carData:", carData);
 
     if (req.files && req.files.length > 0) {
       carData.gallery = req.files.map(file => ({
