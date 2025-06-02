@@ -4,6 +4,12 @@ import Car from "./models/Car.js"; // ✅ Ensure ".js" extension
 import carRouter from './routes/carRoutes.js'
 import cors from "cors";  // Import the cors package
 import authRouter from "./routes/userRoutes.js"; // <-- use import not require
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 
 const app = express();
 const port = 8000;
@@ -19,14 +25,19 @@ mongoose.connect(uri)
   .then(() => console.log("✅ Successfully connected to MongoDB!"))
   .catch(error => console.error("❌ MongoDB connection error:", error));
 
+// --- Serve React frontend ---
+app.use(express.static(path.join(__dirname, '../car-dealer/build')));
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../car-dealer/build', 'index.html'));
+});
 
 
 // Use auth routes
 app.use('/api', authRouter);  // <-- here is your /api/register and /api/login
 app.post('/api/login', (req, res) => {
 });
-
+app.use("/api", carRouter); // Prefix '/api' for the car routes
 app.post("/add", async (req, res) => {
   try {
     const { id, imgSrc, carName, description, carPrice, carNewPrice, attributes, review, leadForm, gallery } = req.body;
@@ -51,7 +62,6 @@ app.post("/add", async (req, res) => {
   }
 });
 
-app.use("/api", carRouter); // Prefix '/api' for the car routes
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);

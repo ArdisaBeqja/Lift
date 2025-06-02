@@ -1,5 +1,6 @@
 import express from 'express';
-import { getCarList, getCarDetails, createCar0 } from '../controllers/carController.js';
+import { getCarList, getCarDetails, createCar0,getFilteredCars,getCarsByAttribute } from '../controllers/carController.js';
+import { getFilterOptions } from '../controllers/carController.js';
 import path from 'path';
 import multer from 'multer';
 
@@ -17,12 +18,16 @@ const upload = multer({ storage: storage }); // 'images' corresponds to the form
 const router = express.Router();
 
 // Route to get all cars
+router.get('/filter', getFilterOptions);
+
 router.get('/cars', getCarList);
+router.get('/cars/by-attribute', getCarsByAttribute);
+
 
 // Route to get car details by ID
 router.get('/cars/:id', getCarDetails);
+router.get('/car/filter', getFilteredCars);
 
-// Route to create a car
 // router.post("/addcar", upload, async (req, res) => {
 //   try {
 //     const { id, carName, description, carPrice, carNewPrice, attributes, review, leadForm } = req.body;
@@ -56,5 +61,6 @@ router.post("/addcar", upload.array('images'), (req, res) => {
   console.log(req.files);  // Logs uploaded files
   createCar0(req, res);
 });
+
 
 export default router;
