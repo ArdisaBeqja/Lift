@@ -4,6 +4,8 @@ const useCarList = () => {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
+    console.log("API URL:", process.env.REACT_APP_API_URL);
+
       fetch(`${process.env.REACT_APP_API_URL}/api/cars`)
 
       .then((response) => response.json())
