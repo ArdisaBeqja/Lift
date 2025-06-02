@@ -19,7 +19,7 @@ const port = process.env.PORT || 8000;  // Use Render's assigned port, fallback 
 //   origin: 'http://localhost:3000'  // Allow frontend to communicate with backend
 // }));
 const allowedOrigins = [
-  'http://localhost:3000',             // local dev frontend
+  // 'http://localhost:3000',             // local dev frontend
   'https://cardealeral.onrender.com'  // deployed frontend URL
 ];
 
