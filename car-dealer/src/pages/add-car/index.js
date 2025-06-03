@@ -120,8 +120,10 @@ function AddCar() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    console.log("the form is submited2");
 
+    e.preventDefault();
+    console.log("the form is submited");
     if (!validate()) {
       return;
     }
