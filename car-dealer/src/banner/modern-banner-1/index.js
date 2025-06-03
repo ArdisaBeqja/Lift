@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { FaVolumeMute, FaVolumeUp } from 'react-icons/fa'; // ✅ Import icons
-import Vid from '../../assets/images/1.mp4';
+import { FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
 
 function ModernBanner1() {
   const [isMuted, setIsMuted] = useState(true);
+
+  // Extract YouTube video ID from the link
+  const videoId = 'fdBr1tBC7n8';
+
+  // YouTube embed URL with mute control using URL params (note: not all browsers support autoplay + mute toggle perfectly)
+  const youtubeURL = `https://www.youtube.com/embed/${videoId}?autoplay=1&loop=1&mute=${isMuted ? 1 : 0}&playlist=${videoId}`;
 
   return (
     <section
@@ -18,19 +23,19 @@ function ModernBanner1() {
         overflow: 'hidden',
       }}
     >
-      <video
-        src={Vid}
-        autoPlay
-        loop
-        muted={isMuted}
-        playsInline
+      <iframe
+        src={youtubeURL}
+        title="Promotional Video"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
         style={{
           position: 'absolute',
           top: 0,
           left: 0,
           width: '100%',
           height: '100%',
-          objectFit: 'cover',
+          pointerEvents: 'none', // disables interaction with iframe
           zIndex: 0,
         }}
       />
@@ -45,7 +50,6 @@ function ModernBanner1() {
                 left: '50%',
                 transform: 'translateX(-50%)',
                 backgroundColor: 'transparent',
-
                 color: 'white',
                 border: 'none',
                 borderRadius: '50%',
