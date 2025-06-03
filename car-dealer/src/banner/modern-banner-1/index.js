@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { FaVolumeMute, FaVolumeUp } from 'react-icons/fa'; // ✅ Import icons
-import Vid from '../../assets/images/1.mp4';
+import Vid from './1.mp4';
 
 function ModernBanner1() {
   const [isMuted, setIsMuted] = useState(true);
@@ -24,6 +24,7 @@ function ModernBanner1() {
         loop
         muted={isMuted}
         playsInline
+        preload="metadata"
         style={{
           position: 'absolute',
           top: 0,
