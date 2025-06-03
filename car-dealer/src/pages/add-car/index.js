@@ -158,7 +158,7 @@ function AddCar() {
     });
 
     try {
-      const response = await axios.post("https://cardealeral.onrender.com/addcar", formData, {
+      const response = await axios.post("https://cardealeral.onrender.com/add-car", formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       console.log('Response:', response.data);
