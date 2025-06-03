@@ -40,7 +40,7 @@ function EnquiryForm(props) {
           'uFfAcMpmRPfwD6I_j'
         )
         .then((response) => {
-          console.log('SUCCESS!', response.status, response.text);
+          // console.log('SUCCESS!', response.status, response.text);
           setShowModal(true); // Show modal
           actions.resetForm();
         })

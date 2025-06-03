@@ -82,7 +82,7 @@ function ElementsVehicleShowcase() {
                   />
                   <div className="grid-wrapper grid-lg-3 grid-md-2 grid-sm-1 grid-xs-1">
                     {CarList.map((val, index) => {
-                          console.log('*********attributes:', val.attributes);  // Log the attributes here
+                          // console.log('*********attributes:', val.attributes);  // Log the attributes here
 
                       if (index < 3) {
                         return (
@@ -124,7 +124,7 @@ function ElementsVehicleShowcase() {
                   />
                   <div className="grid-wrapper grid-lg-3 grid-md-2 grid-sm-1 grid-xs-1">
                     {CarList.map((val, index) => {
-                       console.log('*********attributes:', val.attributes);  // Log the attributes here
+                      //  console.log('*********attributes:', val.attributes);  // Log the attributes here
  
                       if (index < 3) {
                         return (
@@ -163,7 +163,7 @@ function ElementsVehicleShowcase() {
                   />
                   <div className="grid-wrapper grid-lg-1 grid-md-1 grid-sm-1 grid-xs-1">
                     {CarList.map((val, index) => {
-                    console.log('*********attributes:', val.attributes);  // Log the attributes here
+                    // console.log('*********attributes:', val.attributes);  // Log the attributes here
 
                       if (index < 3) {
                         return (

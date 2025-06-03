@@ -20,9 +20,8 @@ function VehicleShowcase1(props) {
             <ul>
               <li>
                 <Link to={{ pathname: `/car-details/${props.id}` }}>
-                {console.log("sertfyuhijok")}
-                {console.log(`${props.id ? props.id : 'xx'}`)}
-                {console.log(props)}
+                {/* {console.log(`${props.id ? props.id : 'xx'}`)}
+                {console.log(props)} */}
                   <i className="fas fa-link"></i>
                 </Link>
               </li>

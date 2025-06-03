@@ -29,7 +29,7 @@ function CareerForm(props) {
     initialValues: initialValues,
     validationSchema: CareerFormSchema,
     onSubmit: (values, action) => {
-      console.log(values);
+      // console.log(values);
       action.resetForm();
     },
   });

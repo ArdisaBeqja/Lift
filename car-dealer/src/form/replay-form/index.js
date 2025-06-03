@@ -16,7 +16,7 @@ function ReplayForm(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     //alert(inputs);
-    console.log(inputs);
+    // console.log(inputs);
   };
 
   return (

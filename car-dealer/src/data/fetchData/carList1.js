@@ -4,7 +4,7 @@ const useCarList = () => {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
-    console.log("API URL:", process.env.REACT_APP_API_URL);
+    // console.log("API URL:", process.env.REACT_APP_API_URL);
 
       fetch("https://cardealeral.onrender.com/api/cars")
 

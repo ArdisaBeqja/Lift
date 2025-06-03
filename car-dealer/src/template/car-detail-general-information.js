@@ -5,7 +5,7 @@ function CarDetailsGeneralInformation() {
   const { id } = useParams();
   const [details, setDetails] = useState(null);
 
-  console.log("id:", id);
+  // console.log("id:", id);
 
   useEffect(() => {
     const fetchCarDetails = async () => {

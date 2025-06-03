@@ -28,7 +28,7 @@ function ContactForm(props) {
     initialValues: initialValues,
     validationSchema: ContactFormSchema,
     onSubmit: (values, action) => {
-      console.log(values);
+      // console.log(values);
       action.resetForm();
     },
   });
