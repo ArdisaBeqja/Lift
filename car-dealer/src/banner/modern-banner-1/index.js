@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { FaVolumeMute, FaVolumeUp } from 'react-icons/fa'; // ✅ Import icons
 import Vid from './1.mp4';
-import Poster from './vidd.png'
 function ModernBanner1() {
   const [isMuted, setIsMuted] = useState(true);
 
@@ -25,7 +24,6 @@ function ModernBanner1() {
         muted={isMuted}
         playsInline
         preload="auto"
-        poster={Poster}
 
         style={{
           position: 'absolute',
