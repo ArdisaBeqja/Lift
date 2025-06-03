@@ -162,7 +162,7 @@ function AddCar() {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       console.log('Response:', response.data);
-      setShowModal(true); // Show modal
+      setShowModal(true); // Show modall
     } catch (error) {
       console.error('Error:', error);
       if (error.response) {
