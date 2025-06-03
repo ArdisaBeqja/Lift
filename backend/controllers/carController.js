@@ -27,6 +27,7 @@ const getCarDetails = async (req, res) => {
 
 
 const createCar0 = async (req, res) => {
+  console.log("gadfa");
   try {
     
 

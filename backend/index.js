@@ -41,17 +41,17 @@ mongoose.connect(uri)
 app.use('/api', authRouter);
 app.use('/api', carRouter);
 
-// ✅ Add Car Route
-app.post("/add", async (req, res) => {
-  try {
-    const { id, imgSrc, carName, description, carPrice, carNewPrice, attributes, review, leadForm, gallery } = req.body;
-    const newCar = new Car({ id, imgSrc, carName, description, carPrice, carNewPrice, attributes, review, leadForm, gallery });
-    await newCar.save();
-    res.status(201).json({ message: "✅ Car added successfully!", car: newCar });
-  } catch (error) {
-    res.status(500).json({ message: "❌ Error saving car data", error });
-  }
-});
+// // ✅ Add Car Route
+// app.post("/add", async (req, res) => {
+//   try {
+//     const { id, imgSrc, carName, description, carPrice, carNewPrice, attributes, review, leadForm, gallery } = req.body;
+//     const newCar = new Car({ id, imgSrc, carName, description, carPrice, carNewPrice, attributes, review, leadForm, gallery });
+//     await newCar.save();
+//     res.status(201).json({ message: "✅ Car added successfully!", car: newCar });
+//   } catch (error) {
+//     res.status(500).json({ message: "❌ Error saving car data", error });
+//   }
+// });
 
 // ✅ Static file serving (e.g. images)
 app.use('/uploads', express.static('uploads'));
