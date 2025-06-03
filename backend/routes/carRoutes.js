@@ -56,7 +56,7 @@ router.get('/car/filter', getFilteredCars);
 //     res.status(500).json({ message: "❌ Error saving car data", error });
 //   }
 // });
-router.post("/addcar", upload.array('images'), (req, res) => {
+router.post("/add-car", upload.array('images'), (req, res) => {
   console.log(req.body);  // Logs form data
   console.log(req.files);  // Logs uploaded files
   createCar0(req, res);
