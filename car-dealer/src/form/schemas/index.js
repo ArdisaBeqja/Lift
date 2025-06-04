@@ -8,14 +8,14 @@ export const ServiceFormSchema = Yup.object({
   Username: Yup.string().min(2).max(45).required('Name is required'),
   Email: Yup.string().email().required('Email is required'),
   PhoneNumber: Yup.string().required('Phone number is required'),
-  Message: Yup.string().min(2).required('Description is required'),
+  Message: Yup.string().min(2).required('Message is required'),
 });
 
 export const CareerFormSchema = Yup.object({
   Email: Yup.string().email().required('Email is required'),
   PhoneNumber: Yup.string().required('Phone number is required'),
   Password: Yup.string().min(6).required('please enter your password'),
-  Message: Yup.string().min(2).required('Description is required'),
+  Message: Yup.string().min(2).required('Message is required'),
 });
 
 export const ContactFormSchema = Yup.object({
@@ -23,27 +23,27 @@ export const ContactFormSchema = Yup.object({
   Email: Yup.string().email().required('Email is required'),
   Subject: Yup.string().min(2).required('Subject is required'),
   PhoneNumber: Yup.string().required('Phone number is required'),
-  Message: Yup.string().min(2).required('Description is required'),
+  Message: Yup.string().min(2).required('Message is required'),
 });
 
 export const BlogFormSchema = Yup.object({
   Email: Yup.string().email().required('Email is required'),
   PhoneNumber: Yup.string().required('Phone number is required'),
   Password: Yup.string().min(6).required('please enter your password'),
-  Message: Yup.string().min(2).required('Description is required'),
+  Message: Yup.string().min(2).required('Message is required'),
 });
 
 export const EnquiryFormSchema = Yup.object({
   Username: Yup.string().min(2).max(45).required('Name is required'),
   Email: Yup.string().email().required('Email is required'),
-  Message: Yup.string().min(2).required('Description is required'),
+  Message: Yup.string().min(2).required('Message is required'),
 });
 
 export const RequestMoreInfoFormSchema = Yup.object({
   Username: Yup.string().min(2).max(45).required('Name is required'),
   Email: Yup.string().email().required('Email is required'),
   PhoneNumber: Yup.string().required('Phone number is required'),
-  Message: Yup.string().min(2).required('Description is required'),
+  Message: Yup.string().min(2).required('Message is required'),
   group1: Yup.bool().oneOf(
     [true],
     'You need to accept the terms and conditions'
@@ -79,7 +79,7 @@ export const EmailToAFriendFormSchema = Yup.object({
   Username: Yup.string().min(2).max(45).required('Name is required'),
   Email: Yup.string().email().required('Email is required'),
   FriendsEmail: Yup.string().email().required('Friends Email is required'),
-  Message: Yup.string().min(2).required('Description is required'),
+  Message: Yup.string().min(2).required('Message is required'),
 });
 
 export const TradeInAppraisalSchema = Yup.object({
@@ -88,7 +88,7 @@ export const TradeInAppraisalSchema = Yup.object({
   Email: Yup.string().email().required('Email is required'),
   PhoneNumber: Yup.string().required('Phone number is required'),
   WorkPhoneNumber: Yup.string().required('Work Phone Number is required'),
-  Comments: Yup.string().min(2).required('Description is required'),
+  Comments: Yup.string().min(2).required('Comments is required'),
   CarOptions: Yup.bool().oneOf([true], 'You need to checked the Car Options'),
 });
 

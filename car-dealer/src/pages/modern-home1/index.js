@@ -225,7 +225,7 @@ function ModernHome1() {
           </section> */}
 
           {/* Latest news  section*/}
-          <section className="section-pb latest-news-section"  style={{ marginTop: '55px' }} >
+          <section className="section-pb latest-news-section"  style={{ marginTop: '45px' }} >
             <Container>
               <Row className="row justify-content-center">
                 <Col md={8}>

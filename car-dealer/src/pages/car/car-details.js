@@ -224,9 +224,13 @@ function CarDetails() {
     />
   </div>
   <div className="extra-feature">
-    <h6>Extra feature</h6>
+    <h6>Extra features</h6>
     <List icon="fas fa-check" data={extraFeatures} />
   </div>
+   <div className="details-form details-weight">
+                      <h5 className="weight-title">Send Enquiry</h5>
+                      <EnquiryForm />
+                    </div>
 </Col>
 
 
@@ -268,10 +272,10 @@ function CarDetails() {
                       {/* <h5 className="weight-title">Share now</h5> */}
                       <SocialInfo03 />
                     </div>
-                    <div className="details-form details-weight">
+                    {/* <div className="details-form details-weight">
                       <h5 className="weight-title">Send Enquiry</h5>
                       <EnquiryForm />
-                    </div>
+                    </div> */}
                     <div className="details-phone details-weight">
                       <FeatureInfo
                         className="feature-box-style-03 grey-border"
