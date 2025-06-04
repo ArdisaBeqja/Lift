@@ -46,7 +46,7 @@ function OurServices(props) {
               </ul>
             </Col>
             <Col lg={6} className="mt-4 mt-lg-0">
-              <img className="img-fluid" src={ServicesImg} alt=""  style={{ marginTop: '65px' }}/>
+              <img className="img-fluid" src={ServicesImg} alt=""  style={{ marginTop: '77px' }}/>
             </Col>
           </Row>
         </Container>

@@ -102,7 +102,7 @@ function Service() {
                   <EnquiryForm/>
                 </Col>
                 <Col lg={4} md={5}>
-                  <div className="opening-hours bg-light mt-4 mt-md-0" style={{ marginTop: '50px' }}>
+                  <div className="opening-hours bg-light mt-4 mt-md-0" >
                     <h6 className="title">opening hours</h6>
                     <OpeningHours data={OpeningHoursItems} />
                   </div>
