@@ -20,12 +20,12 @@ import EnquiryForm from '../../form/enquiry-form';
 function Service() {
   const OpeningHoursItems = [
     { id: 1, day: 'Sunday', time: ' closed' },
-    { id: 2, day: 'Monday', time: ' 9:00 AM to 9:00 PM' },
-    { id: 3, day: 'Tuesday', time: ' 9:00 AM to 9:00 PM' },
-    { id: 4, day: 'Wednesday', time: ' 9:00 AM to 9:00 PM' },
-    { id: 5, day: 'Thursday', time: ' 9:00 AM to 9:00 PM' },
-    { id: 6, day: 'Friday', time: ' 9:00 AM to 9:00 PM' },
-    { id: 7, day: 'Saturday', time: ' 9:00 AM to 9:00 PM' },
+    { id: 2, day: 'Monday', time: ' 9:00 AM to 5:00 PM' },
+    { id: 3, day: 'Tuesday', time: ' 9:00 AM to 5:00 PM' },
+    { id: 4, day: 'Wednesday', time: ' 9:00 AM to 5:00 PM' },
+    { id: 5, day: 'Thursday', time: ' 9:00 AM to 5:00 PM' },
+    { id: 6, day: 'Friday', time: ' 9:00 AM to 5:00 PM' },
+    { id: 7, day: 'Saturday', time: ' 9:00 AM to 5:00 PM' },
   ];
   return (
     <>
@@ -102,7 +102,7 @@ function Service() {
                   <EnquiryForm/>
                 </Col>
                 <Col lg={4} md={5}>
-                  <div className="opening-hours bg-light mt-4 mt-md-0">
+                  <div className="opening-hours bg-light mt-4 mt-md-0" style={{ marginTop: '50px' }}>
                     <h6 className="title">opening hours</h6>
                     <OpeningHours data={OpeningHoursItems} />
                   </div>
