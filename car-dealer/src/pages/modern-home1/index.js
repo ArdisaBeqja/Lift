@@ -97,7 +97,7 @@ function ModernHome1() {
                       icontype="default"
                       iconshape="default"
                       icon="glyph-icon flaticon-wallet"
-                      title="Reliable Inspections & Services"
+                      title="Reliable Services"
                       description="Keep your car in top condition with our expert checks and maintenance."
                       // linktext="Read More"
                       // linkurl="#"
@@ -225,7 +225,7 @@ function ModernHome1() {
           </section> */}
 
           {/* Latest news  section*/}
-          <section className="section-pb latest-news-section">
+          <section className="section-pb latest-news-section"  style={{ marginTop: '60px' }} >
             <Container>
               <Row className="row justify-content-center">
                 <Col md={8}>
