@@ -10,7 +10,7 @@ import '../widget.scss';
 function TagsWidget(props) {
   return (
     <>
-      <div className={`widget widget-tags ${props.className || '' }`}>
+      {/* <div className={`widget widget-tags ${props.className || '' }`}>
         {props?.title && <h3 className="widget-title">Maintance Tips</h3>}
         <div className="tags-list">
           {TagsList.map((item) => (
@@ -19,7 +19,7 @@ function TagsWidget(props) {
             </Link>
           ))}
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

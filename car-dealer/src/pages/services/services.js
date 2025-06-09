@@ -2,7 +2,6 @@ import React from 'react';
 
 // Libraries
 import { Col, Container, Row } from 'react-bootstrap';
-
 // Layouts
 import PageHeader from '../../layouts/page-header/PageHeader';
 
@@ -10,7 +9,7 @@ import PageHeader from '../../layouts/page-header/PageHeader';
 import { CounterstyleThree } from '../../component/counter/counter';
 import SectionTitle from '../../component/section-title/section-title';
 import OpeningHours from '../../component/openinghours';
-
+import InspectionCalendar from './calendar';
 // Page Section
 import OurServices from '../../template/our-services';
 import ServiceForm from '../../form/service-form';
@@ -48,18 +47,16 @@ function Service() {
                   <CounterstyleThree
                     className="counterstyle-03 mb-4 mb-lg-0"
                     countStart="0"
-                    countEnd="561"
-                    countIcon="glyph-icon flaticon-beetle"
-                    countTitle="Vehicles in Stock"
+                    countEnd="300"
+                    countTitle="Stock"
                   />
                 </Col>
                 <Col lg={3} sm={6}>
                   <CounterstyleThree
                     className="counterstyle-03 mb-4 mb-lg-0"
                     countStart="0"
-                    countEnd="856"
-                    countIcon="glyph-icon flaticon-interface"
-                    countTitle="Dealer Reviews"
+                    countEnd="80"
+                    countTitle="Reviews"
                   />
                 </Col>
                 <Col lg={3} sm={6}>
@@ -67,7 +64,6 @@ function Service() {
                     className="counterstyle-03 mb-4 mb-sm-0"
                     countStart="0"
                     countEnd="120"
-                    countIcon="glyph-icon flaticon-circle"
                     countTitle="Happy Customer"
                   />
                 </Col>
@@ -75,41 +71,28 @@ function Service() {
                   <CounterstyleThree
                     className="counterstyle-03"
                     countStart="0"
-                    countEnd="520"
+                    countEnd="220"
                     countIcon="glyph-icon flaticon-cup"
-                    countTitle="Awards"
+                    countTitle="Modernizations Completed"
                   />
                 </Col>
               </Row>
             </Container>
           </section>
-          <OurServices />
           <hr className="gray" />
-          <section className="section-ptb">
-            <Container>
-              <Row>
-                <Col md={12}>
-                  <SectionTitle
-                    extraClass="text-center"
-                    subtitle="This is what we do and we do it perfectly"
-                    title="Service Schedule"
-                    separator="separator"
-                  />
-                </Col>
-              </Row>
-              <Row>
-                <Col lg={8} md={7}>
-                  <EnquiryForm/>
-                </Col>
-                <Col lg={4} md={5}>
-                  <div className="opening-hours bg-light mt-5 mt-md-0"  >
-                    <h6 className="title" >opening hours</h6>
-                    <OpeningHours data={OpeningHoursItems} />
-                  </div>
-                </Col>
-              </Row>
-            </Container>
-          </section>
+       <section className="section-ptb">
+  <Container fluid> {/* fluid to span full width */}
+    <Row className="justify-content-center">
+      <Col xs={12}> {/* full width on all devices */}
+        <div className="d-flex justify-content-center">
+          <InspectionCalendar />
+        </div>
+      </Col>
+    </Row>
+  </Container>
+</section>
+
+
         </div>
       </div>
     </>

@@ -46,7 +46,7 @@ function ModernService() {
               <section className="section-mtb download-application">
                 <div className="section-overlay" data-overlay-opacity="0.2" style={{backgroundImage: `url(${appBG})`, backgroundSize: 'inherit'}}></div>
                 <DownloadApp />
-                <div className="section-pt"><ClientLogoSection /></div>
+                {/* <div className="section-pt"><ClientLogoSection /></div> */}
               </section>
                                       
             </div>

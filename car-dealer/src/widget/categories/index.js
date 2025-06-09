@@ -16,7 +16,7 @@ function CategoriesWidget(props) {
           <ul>
             {CategoriesList.map((item, index) => (
               <li key={index}>
-                <Link key={item.id} to={item.url}>
+                <Link key={item.id} to={item.url} style={{ textDecoration: 'none' }}>
                   <i className="fa fa-angle-right"></i>
                   {item.item}
                 </Link>

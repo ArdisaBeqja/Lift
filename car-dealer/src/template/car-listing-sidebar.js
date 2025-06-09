@@ -13,7 +13,7 @@ function CarListingSidebar({ onFilteredCars }) {
   useEffect(() => {
     const fetchFilters = async () => {
       try {
-        const res = await axios.get("https://cardealeral.onrender.com/api/filter");
+        const res = await axios.get("http://localhost:8000/api/filter");
         const data = res.data;
 
         const newSearchListGroup = Object.keys(data).map((key, index) => {
@@ -61,7 +61,7 @@ function CarListingSidebar({ onFilteredCars }) {
         for (const spec of specs) {
           requests.push(
             
-            axios.get("https://cardealeral.onrender.com/cars/by-attribute", {
+            axios.get("http://localhost:8000/api/cars/by-attribute", {
               params: {
                 title,
                 spec,
@@ -147,9 +147,7 @@ function CarListingSidebar({ onFilteredCars }) {
         </div>
       </div>
 
-      {/* <div className="widget-banner">
-        <img className="img-fluid" src={bannerImg} alt="Banner" />
-      </div> */}
+     
     </div>
   );
 }

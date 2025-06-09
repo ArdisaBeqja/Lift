@@ -5,7 +5,7 @@ const useOneC = () => {
   const [loading, setLoading] = useState(true); // Loading state
 
   useEffect(() => {
-        fetch("https://cardealeral.onrender.com/api/cars")
+        fetch("http://localhost:8000/api/cars")
 
     
       .then((response) => response.json())

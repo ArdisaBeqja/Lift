@@ -10,18 +10,19 @@ function CarDetailsGeneralInformation() {
   useEffect(() => {
     const fetchCarDetails = async () => {
       try {
-        const response = await fetch(`https://cardealeral.onrender.com/api/cars/${id}`);
+        const response = await fetch(`http://localhost:8000/api/cars/${id}`);
         if (!response.ok) {
           throw new Error('Car not found');
         }
         const data = await response.json();
         
         // Find the Details attribute inside the attributes array
-        const detailsAttribute = data.attributes.find(attr => attr.title === "Details");
+        const detailsAttribute = data.attributes.find(attr => attr.title === "Detajet");
+        console.log("detajettt", detailsAttribute)
         if (detailsAttribute) {
           setDetails(detailsAttribute.specification);  // Store the specification (details) in state
         } else {
-          setDetails("No details available.");
+          setDetails("No details availableee.");
         }
       } catch (error) {
         console.error(error);

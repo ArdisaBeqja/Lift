@@ -23,7 +23,7 @@ function RecentPostWidget(props) {
                     </div>
                     <div className="recent-post-info">
                       <h4 className="entry-title">
-                        <Link to={{ pathname: `/blog-details/${item.id}` }}>{item.title}</Link>
+                        <Link to={{ pathname: `/blog-details/${item.id}` }}  style={{ textDecoration: 'none' ,color:"white"}}>{item.title}</Link>
                       </h4>
                       <div className="entry-meta">
                         <i className="fa-regular fa-calendar-days"></i>

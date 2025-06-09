@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Container, Row } from 'react-bootstrap';
 
 // Site Data
-import PagaHeaderImg from './pageHeader.avif';
+import PagaHeaderImg from './aaheader.jpg';
 
 // SCSS
 import './page-header.scss';

@@ -3,59 +3,59 @@ import axios from 'axios';
 import { Container, Col, Row, Modal, Button } from 'react-bootstrap';
 import PageHeader from '../../layouts/page-header/PageHeader';
 import './style.scss';
+import ExtraFeatureItems from '../../data/fetchData/extraFeatures';
+
+const attributeTitleMap = {
+  numriserik: "Numri Serik",
+  vendndodhjaeinstalimit: "Vendndodhja e Instalimit",
+  emriindërtesës: "Emri i Ndërtesës",
+ 
+  gjendjaoperacionale: "Gjendja Operacionale",
+  kapacitetiKg: "Kapaciteti (kg)",
+  numrimaksimalipasagjerëve: "Numri Maksimal i Pasagjerëve",
+  shpejtësia: "Shpejtësia ",
+  llojiimotorrit: "Lloji i Motorrit",
+  llojiidyerve: "Lloji i Dyerve",
+  detajet: "Detajet"
+};
 
 function AddCar() {
+  const [item, setItem] = useState('');
+  const [items, setItems] = useState([]);
+  const [inspectionDate, setInspectionDate] = useState('');
+
   const [formValues, setFormValues] = useState({
-    VehicleTitle: '',
-    Make: '',
-    Model: '',
-    RegistrationDate: '',
-    Mileage: '',
-    Horsepower: '',
-    Condition: '',
-    ExteriorColor: '',
-    InteriorColor: '',
-    Transmission: '',
-    Engine: '',
-    Drivetrain: '',
-    RequestPrice: '',
-    Description: '',
-    Details: '',
+    liftName: '',
+    description: '',
+    liftPrice: '',
+    ...Object.fromEntries(Object.keys(attributeTitleMap).map(k => [k, '']))
   });
+const handleChangeItem = (e) => {
+  setItem(e.target.value);
+};
+
+const handleAddItem = () => {
+  if (item.trim() !== '') {
+    setItems([...items, item.trim()]);
+    setItem('');
+  }
+};
 
   const [image, setImage] = useState([]);
   const [errors, setErrors] = useState({});
-  const [items, setItems] = useState([]);
-  const [item, setItem] = useState('');
   const [showModal, setShowModal] = useState(false);
-
-  // const handleImageChange = (e) => {
-  //   const files = Array.from(e.target.files);
-  //   Promise.all(files.map(resizeImage))
-  //     .then(resizedImages => {
-  //       setImage(resizedImages);
-  //     })
-  //     .catch(err => {
-  //       console.error('Image resize error:', err);
-  //     });
-  // };
-
-  const handleImageChange = (e) => {
-  const files = Array.from(e.target.files);
-  Promise.all(files.map(resizeImage))
-    .then(resizedImages => {
-      setImage((prevImages) => [...prevImages, ...resizedImages]);
-    })
-    .catch(err => {
-      console.error('Image resize error:', err);
-    });
-};
-
 
   const resizeImage = (file) => {
     return new Promise((resolve, reject) => {
+      // Validate file type before reading
+      if (!file.type.startsWith('image/')) {
+        reject(new Error('File is not an image'));
+        return;
+      }
+
       const reader = new FileReader();
       reader.readAsDataURL(file);
+
       reader.onload = (event) => {
         const img = new Image();
         img.src = event.target.result;
@@ -77,76 +77,91 @@ function AddCar() {
           }, file.type);
         };
 
-        img.onerror = reject;
+        img.onerror = () => {
+          reject(new Error('Image loading error - invalid image file'));
+        };
       };
-      reader.onerror = reject;
+
+      reader.onerror = () => {
+        reject(new Error('FileReader error'));
+      };
     });
   };
 
-  const handleAddItem = () => {
-    if (item.trim() !== '') {
-      setItems([...items, item]);
-      setItem('');
-    }
-  };
+  const handleImageChange = (e) => {
+    const files = Array.from(e.target.files);
 
-  const handleChangeItem = (e) => setItem(e.target.value);
+    // Filter to only images
+    const validImageFiles = files.filter(f => f.type.startsWith('image/'));
+    if (validImageFiles.length !== files.length) {
+      setErrors(prev => ({ ...prev, image: 'Only image files are allowed' }));
+      return;
+    } else {
+      setErrors(prev => {
+        const newErrors = { ...prev };
+        delete newErrors.image;
+        return newErrors;
+      });
+    }
+
+    Promise.all(validImageFiles.map(resizeImage))
+      .then(resizedImages => {
+        setImage(resizedImages);
+      })
+      .catch(err => {
+        console.error('Image resize error:', err);
+        setErrors(prev => ({ ...prev, image: err.message }));
+      });
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormValues((prevValues) => ({
-      ...prevValues,
-      [name]: value,
+    setFormValues(prev => ({
+      ...prev,
+      [name]: value
     }));
   };
 
   const validate = () => {
     const newErrors = {};
-    Object.keys(formValues).forEach((field) => {
+    ['liftName', 'description', 'liftPrice', ...Object.keys(attributeTitleMap)].forEach(field => {
       if (!formValues[field]) {
-        newErrors[field] = `${field.replace(/([A-Z])/g, ' $1')} is required`;
+        newErrors[field] = `${attributeTitleMap[field] || field} is required`;
       }
+      if (!inspectionDate) {
+  newErrors.inspectionDate = 'Dita e kontrollit është e detyrueshme';
+}
+
     });
     if (!image || image.length === 0) {
       newErrors.image = 'At least one image is required';
     }
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const generateUniqueId = () => {
-    return Math.floor(100000000 + Math.random() * 900000000); // 9-digit number
+    return Math.floor(100000000 + Math.random() * 900000000);
   };
 
   const handleSubmit = async (e) => {
-    console.log("the form is submited2");
-
     e.preventDefault();
-    console.log("the form is submited");
-    if (!validate()) {
-      return;
-    }
+    if (!validate()) return;
+
+    const attributes = Object.keys(attributeTitleMap).map((key, index) => ({
+      id: index + 1,
+      title: attributeTitleMap[key],
+      specification: formValues[key],
+      icon: `${key}Icon`
+    }));
 
     const carData = {
       id: generateUniqueId(),
-      carName: formValues.VehicleTitle,
-      description: formValues.Description,
-      carPrice: formValues.RequestPrice,
-      attributes: [
-        { id: 1, title: 'Make', specification: formValues.Make, icon: 'makeIcon' },
-        { id: 2, title: 'Model', specification: formValues.Model, icon: 'modelIcon' },
-        { id: 3, title: 'registrationDate', specification: formValues.RegistrationDate, icon: 'registrationDateIcon' },
-        { id: 4, title: 'Mileage', specification: formValues.Mileage, icon: 'mileageIcon' },
-        { id: 5, title: 'Horsepower', specification: formValues.Horsepower, icon: 'horsepowerIcon' },
-        { id: 6, title: 'Condition', specification: formValues.Condition, icon: 'conditionIcon' },
-        { id: 7, title: 'exteriorColor', specification: formValues.ExteriorColor, icon: 'exteriorColorIcon' },
-        { id: 8, title: 'interiorColor', specification: formValues.InteriorColor, icon: 'interiorColorIcon' },
-        { id: 9, title: 'Transmission', specification: formValues.Transmission, icon: 'transmissionIcon' },
-        { id: 10, title: 'Engine', specification: formValues.Engine, icon: 'engineIcon' },
-        { id: 11, title: 'Drivetrain', specification: formValues.Drivetrain, icon: 'drivetrainIcon' },
-        { id: 12, title: 'Details', specification: formValues.Details, icon: 'detailsIcon' },
-      ],
+      liftName: formValues.liftName,
+      inspectionDate, //
+      description: formValues.description,
+      liftPrice: formValues.liftPrice,
+      attributes,
       extraFeatures: items.map((feature, index) => ({
         id: index + 1,
         item: feature,
@@ -155,16 +170,17 @@ function AddCar() {
 
     const formData = new FormData();
     formData.append('carData', JSON.stringify(carData));
+
     image.forEach((img) => {
       formData.append('images', img);
     });
 
     try {
-      const response = await axios.post("https://cardealeral.onrender.com/api/addcar", formData, {
+      const response = await axios.post("http://localhost:8000/api/addcar", formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       console.log('Response:', response.data);
-      setShowModal(true); // Show modall
+      setShowModal(true);
     } catch (error) {
       console.error('Error:', error);
       if (error.response) {
@@ -176,10 +192,10 @@ function AddCar() {
   return (
     <div className="site-content">
       <PageHeader
-        title="Add Car"
+        title="Add Lift"
         breadCrumbItems={[
           { label: 'Home', path: '/' },
-          { label: 'Add Car', path: '#', active: true },
+          { label: 'Add Lift', path: '#', active: true },
         ]}
       />
       <div className="content-wrapper cdfs-add-car-page">
@@ -189,23 +205,20 @@ function AddCar() {
               <Col sm={12}>
                 <div className="cdfs-add-car-form-wrapper">
                   <form className="cdfs-car-form" onSubmit={handleSubmit}>
-                    <h4 className="cdfs-av-title">Vehicle Description</h4>
+                    <h4 className="cdfs-av-title">Përshkrimi i Ashensorit</h4>
 
-                    {['VehicleTitle', 'Details', 'Make', 'Model', 'RegistrationDate', 'Mileage', 'Horsepower', 'Condition', 'ExteriorColor', 'InteriorColor', 'Transmission', 'Engine', 'Drivetrain', 'RequestPrice', 'Description'].map((field, idx) => (
-                      <div className="form-group" key={idx}>
-                        <label>{field.replace(/([A-Z])/g, ' $1')}*</label>
-                        <input
-                          className="form-control"
-                          type="text"
-                          name={field}
-                          value={formValues[field]}
-                          onChange={handleInputChange}
-                          placeholder={`Enter ${field}`}
-                        />
-                        {errors[field] && <p className="error">{errors[field]}</p>}
-                      </div>
-                    ))}
-
+                    <div className="form-group">
+                      <label>Emri i Ashensorit*</label>
+                      <input
+                        className="form-control"
+                        type="text"
+                        name="liftName"
+                        value={formValues.liftName}
+                        onChange={handleInputChange}
+                        placeholder="Shkruani emrin"
+                      />
+                      {errors.liftName && <p className="error">{errors.liftName}</p>}
+                    </div>
                     <div className="form-group">
                       <label>Extra Features</label>
                       <input
@@ -225,23 +238,73 @@ function AddCar() {
                         ))}
                       </ul>
                     </div>
+                    <div className="form-group">
+                      <label>Përshkrimi*</label>
+                      <input
+                        className="form-control"
+                        type="text"
+                        name="description"
+                        value={formValues.description}
+                        onChange={handleInputChange}
+                        placeholder="Shkruani përshkrimin"
+                      />
+                      {errors.description && <p className="error">{errors.description}</p>}
+                    </div>
+                    <div className="form-group">
+  <label>Dita e kontrollit*</label>
+  <input
+    className="form-control"
+    type="date"
+    value={inspectionDate}
+    onChange={(e) => setInspectionDate(e.target.value)}
+  />
+  {errors.inspectionDate && <p className="error">{errors.inspectionDate}</p>}
+</div>
 
                     <div className="form-group">
-                      <label>Upload Image*</label>
+                      <label>Çmimi*</label>
+                      <input
+                        className="form-control"
+                        type="text"
+                        name="liftPrice"
+                        value={formValues.liftPrice}
+                        onChange={handleInputChange}
+                        placeholder="Shkruani çmimin"
+                      />
+                      {errors.liftPrice && <p className="error">{errors.liftPrice}</p>}
+                    </div>
+
+                    {Object.keys(attributeTitleMap).map((field, idx) => (
+                      <div className="form-group" key={idx}>
+                        <label>{attributeTitleMap[field]}*</label>
+                        <input
+                          className="form-control"
+                          type="text"
+                          name={field}
+                          value={formValues[field]}
+                          onChange={handleInputChange}
+                          placeholder={`Shkruani ${attributeTitleMap[field].toLowerCase()}`}
+                        />
+                        {errors[field] && <p className="error">{errors[field]}</p>}
+                      </div>
+                    ))}
+
+                    <div className="form-group">
+                      <label>Ngarko Imazhe*</label>
                       <input
                         className="form-control"
                         type="file"
-                        name="images"
                         accept="image/*"
-                        onChange={handleImageChange}
                         multiple
+                        onChange={handleImageChange}
                       />
                       {errors.image && <p className="error">{errors.image}</p>}
                     </div>
 
-<button type="submit" className="btn btn-danger mt-3">
-  Submit
-</button>                  </form>
+                    <button type="submit" className="btn btn-danger mt-3">
+                      Shto Ashensorin
+                    </button>
+                  </form>
                 </div>
               </Col>
             </Row>
@@ -249,17 +312,16 @@ function AddCar() {
         </section>
       </div>
 
-      {/* Bootstrap Modal */}
       <Modal show={showModal} onHide={() => setShowModal(false)} centered>
         <Modal.Header closeButton>
-          <Modal.Title>Success</Modal.Title>
+          <Modal.Title>Sukses</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p className="text-danger">Car has been added successfully!</p>
+          <p className="text-success">Ashensori u shtua me sukses!</p>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={() => setShowModal(false)}>
-            Close
+            Mbyll
           </Button>
         </Modal.Footer>
       </Modal>

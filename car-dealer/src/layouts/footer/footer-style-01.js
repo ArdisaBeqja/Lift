@@ -17,7 +17,7 @@ import RecentPostWidget from '../../widget/recent-post';
 
 // Site Data
 import LogoLightImg from '../../assets/images/logo-light.png';
-import FooterBG from '../../assets/images/bg/footer-bg.webp';
+import FooterBG from './a.avif';
 
 // SCSS
 import './footer.scss';
@@ -26,7 +26,7 @@ function FooterStyle01() {
   return (
     <>
       <footer className="site-footer footer-style-01" style={{backgroundImage: `url(${FooterBG})`}}>
-        <div className="section-overlay bg-black" data-overlay-opacity="0.9"></div>
+        <div className="section-overlay bg-black" data-overlay-opacity="0.2"></div>
         <div className="footer-top">
           <Container>
             <Row>
@@ -39,28 +39,27 @@ function FooterStyle01() {
         <div className="footer-main">
           <Container>
             <Row>
-              <Col md={6} lg={3}>
-                <div className="widget widget-image"><img className="img-fluid footer-logo" src={LogoLightImg} alt="logo" /></div>
-                <ContactInfo
-                  content="We provide everything you need to build an amazing dealership."
-                  contentclass="about-content"
-                  theme="contact-info-style-01"
-                  label="hide"
-                />
-              </Col>
-              <Col md={6} lg={3}>
-                <FooterMenu title="Useful Links" data={servicesMenu} />
-              </Col>
-              <Col md={6} lg={3}>
-                <RecentPostWidget title="Recent Posts" />
-              </Col>
-              <Col md={6} lg={3}>
-                <NewsletterWidget
-                  title="Subscribe Our Newsletter"
-                  content="Keep up on our always evolving products features and technology. Enter your e-mail and subscribe to our newsletter."
-                />
-              </Col>
-            </Row>
+  <Col md={6} lg={3} style={{ paddingRight: '20px' }}>
+    <div className="widget widget-image">
+      <img
+        className="img-fluid footer-logo"
+        src={LogoLightImg}
+        alt="logo"
+        style={{ maxWidth: '180px' }}
+      />
+    </div>
+    <ContactInfo
+      content="We provide everything you need to build an amazing dealership."
+      contentclass="about-content"
+      theme="contact-info-style-01"
+      label="hide"
+    />
+  </Col>
+  <Col md={6} lg={3} style={{ marginTop: '20px', minHeight: '350px', paddingLeft: '20px' }}>
+    <RecentPostWidget title="Recent Posts" />
+  </Col>
+</Row>
+
             <hr />
           </Container>
         </div>

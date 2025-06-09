@@ -29,14 +29,16 @@ const BackTop = () => {
   };
 
   return (
-    <div
-      className={`car-top  ${isActive ? 'show' : 'car-run'}`}
-      onClick={handleScrollTop}
-    >
-      <span>
-        <img src={backtoptopImg} alt="" />
-      </span>
-    </div>
+    // <div
+    //   className={`car-top  ${isActive ? 'show' : 'car-run'}`}
+    //   onClick={handleScrollTop}
+    // >
+    //   <span>
+    //     <img src={backtoptopImg} alt="" />
+    //   </span>
+    // </div>
+    <>
+    </>
   );
 };
 

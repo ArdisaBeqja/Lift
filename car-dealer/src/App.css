@@ -1,5 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
+
+a {
+  text-decoration: none;
+}
+.navbar a {
+  text-decoration: none;
+}
+
+.footer a {
+  text-decoration: none;
+}
+ul a {
+  text-decoration: none;
+}
+.widget-categories .items-list ul li a {
+  text-decoration: none !important;
+}
+
+
 .video-section:before {
-    /* background-color: #16181e; */
+    /* background-cojlor: #16181e; */
     opacity: 0.6;
     content: "";
     height: 100%;

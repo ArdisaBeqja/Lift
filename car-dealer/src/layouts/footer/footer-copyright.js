@@ -21,7 +21,7 @@ function FooterCopyright() {
             <Col lg="6" md="12">
               <div className="copyright-text">
   © Copyright {currentYear}{' '}
-  <a href="https://distech-solutions.com/" target="_blank" rel="noopener noreferrer">
+  <a href="https://distech-solutions.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
     Developed by distech-solutions
   </a>
 </div>

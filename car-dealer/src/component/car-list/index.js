@@ -20,8 +20,8 @@ function VehicleShowcase1(props) {
             <ul>
               <li>
                 <Link to={{ pathname: `/car-details/${props.id}` }}>
-                {/* {console.log(`${props.id ? props.id : 'xx'}`)}
-                {console.log(props)} */}
+                {console.log(`${props.id ? props.id : 'xx'}`)}
+                {console.log(props)}
                   <i className="fas fa-link"></i>
                 </Link>
               </li>
@@ -48,24 +48,25 @@ function VehicleShowcase1(props) {
               {props.list.map((list, index) => (
                 <li key={index}>
                   <i className={list.icon}></i>
+
                 </li>
               ))}
             </ul>
           </div>
           <div className="car-title">
             <Link to={{ pathname: `/car-details/${props.id}` }}>
-              {props.carName}
+              {props.liftName}
             </Link>
           </div>
           <div className="separator"></div>
           <div className="price">
             {/* <span className="old-price">
               <i className="fa-solid fa-dollar-sign"></i>
-              {props.carPrice}
+              {props.liftPrice}
             </span> */}
             <span className="new-price">
               {/* <i className="fa-solid fa-dollar-sign"></i> */}
-              {props.carPrice}
+              {props.liftPrice}
             </span>
           </div>
         </div>
@@ -74,7 +75,7 @@ function VehicleShowcase1(props) {
         <Lightbox
           imagePadding={50}
           mainSrc={props.lightboxImages[photoIndex].image}
-          imageTitle={props.lightboxImages[photoIndex].carName}
+          imageTitle={props.lightboxImages[photoIndex].liftName}
           nextSrc={
             props.lightboxImages[(photoIndex + 1) % props.lightboxImages.length]
           }
@@ -135,7 +136,7 @@ function VehicleShowcase2(props) {
           <div className="car-content">
             <div className="car-title">
               <Link to={{ pathname: `/car-details/${props.id}` }}>
-                {props.carName}
+                {props.liftName}
               </Link>
             </div>
 
@@ -160,7 +161,7 @@ function VehicleShowcase2(props) {
               <div className="price">
                 <span className="old-price">
                   <i className="fa-solid fa-dollar-sign"></i>
-                  {props.carPrice}
+                  {props.liftPrice}
                 </span>
                 <span className="new-price">
                   <i className="fa-solid fa-dollar-sign"></i>
@@ -175,7 +176,7 @@ function VehicleShowcase2(props) {
         <Lightbox
           imagePadding={50}
           mainSrc={props.lightboxImages[photoIndex].image}
-          imageTitle={props.lightboxImages[photoIndex].carName}
+          imageTitle={props.lightboxImages[photoIndex].liftName}
           nextSrc={
             props.lightboxImages[(photoIndex + 1) % props.lightboxImages.length]
           }
@@ -239,7 +240,7 @@ function VehicleShowcase3(props) {
               <div className="price">
                 <span className="old-price">
                   <i className="fa-solid fa-dollar-sign"></i>
-                  {props.carPrice}
+                  {props.liftPrice}
                 </span>
                 <span className="new-price">
                   <i className="fa-solid fa-dollar-sign"></i>
@@ -252,7 +253,7 @@ function VehicleShowcase3(props) {
           <div className="car-content">
             <div className="car-title">
               <Link to={{ pathname: `/car-details/${props.id}` }}>
-                {props.carName}
+                {props.liftName}
               </Link>
             </div>
 
@@ -281,7 +282,7 @@ function VehicleShowcase3(props) {
         <Lightbox
           imagePadding={50}
           mainSrc={props.lightboxImages[photoIndex].image}
-          imageTitle={props.lightboxImages[photoIndex].carName}
+          imageTitle={props.lightboxImages[photoIndex].liftName}
           nextSrc={
             props.lightboxImages[(photoIndex + 1) % props.lightboxImages.length]
           }
@@ -342,7 +343,7 @@ function CarItemList(props) {
           <div className="car-content">
             <div className="car-title">
               <Link to={{ pathname: `/car-details/${props.id}` }}>
-                {props.carName}
+                {props.liftName}
               </Link>
               {props?.description && <p>{props.description}</p>}
             </div>
@@ -350,7 +351,7 @@ function CarItemList(props) {
               <div className="price">
                 <span className="old-price">
                   <i className="fa-solid fa-dollar-sign"></i>
-                  {props.carPrice}
+                  {props.liftPrice}
                 </span>
                 <span className="new-price">
                   <i className="fa-solid fa-dollar-sign"></i>
@@ -388,7 +389,7 @@ function CarItemList(props) {
         <Lightbox
           imagePadding={50}
           mainSrc={props.lightboxImages[photoIndex].image}
-          imageTitle={props.lightboxImages[photoIndex].carName}
+          imageTitle={props.lightboxImages[photoIndex].liftName}
           nextSrc={
             props.lightboxImages[(photoIndex + 1) % props.lightboxImages.length]
           }

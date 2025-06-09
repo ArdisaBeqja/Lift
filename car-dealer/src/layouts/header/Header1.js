@@ -17,7 +17,7 @@ const LoginPopup = ({ onClose, onLoginSuccess }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("https://cardealeral.onrender.com/api/login", {
+      const res = await fetch("http://localhost:8000/api/login", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username: email, password }),
@@ -72,6 +72,8 @@ const Header1 = (props) => {
   const [isSticky] = useHeaderSticky();
   const [showLogin, setShowLogin] = useState(false);
   const [adminUser, setAdminUser] = useState(null);
+  const [servUser, setServUser] = useState(null);
+
   const [showWelcome, setShowWelcome] = useState(false); // <-- NEW
   const navigate = useNavigate();
 
@@ -81,6 +83,17 @@ const Header1 = (props) => {
       setAdminUser(JSON.parse(savedUser));
     }
   }, []);
+  useEffect(() => {
+  const savedAdminUser = localStorage.getItem('adminUser');
+  if (savedAdminUser) {
+    setAdminUser(JSON.parse(savedAdminUser));
+  }
+
+  const savedServUser = localStorage.getItem('servUser');
+  if (savedServUser) {
+    setServUser(JSON.parse(savedServUser));
+  }
+}, []);
 
   const toggleLogin = () => setShowLogin(!showLogin);
 
@@ -89,14 +102,24 @@ const Header1 = (props) => {
       setAdminUser(user);
       localStorage.setItem('adminUser', JSON.stringify(user));
       setShowWelcome(true); // <-- NEW
-    } else {
+    }
+    else if(user.role === "serv"){
+      console.log("rolee",user.role);
+      setServUser(user);
+      localStorage.setItem('servUser', JSON.stringify(user));
+            setShowWelcome(true); // <-- NEW
+
+    }
+    else {
       alert('Access denied. Only admin can add cars.');
     }
   };
 
   const handleLogout = () => {
     setAdminUser(null);
+    setServUser(null)
     localStorage.removeItem('adminUser');
+    localStorage.removeItem('servUser');
     navigate('/'); // Redirect to home page after logout
   };
 
@@ -138,8 +161,13 @@ const Header1 = (props) => {
                   {adminUser && (
                     <>
                       <div className="header-button d-none d-lg-block">
-                        <NavLink className="button flat" to="/add-car">
-                          Add Car
+                        <NavLink className="button flat" to="/add-car" style={{textDecoration:"none"}}>
+                          Add Lift
+                        </NavLink>
+                      </div>
+                      <div className="header-button d-none d-lg-block">
+                        <NavLink className="button flat" to="/service"  style={{textDecoration:"none"}}>
+                          Dashboard
                         </NavLink>
                       </div>
                       <div className="header-button d-none d-lg-block">
@@ -147,10 +175,33 @@ const Header1 = (props) => {
                           Logout
                         </button>
                       </div>
+
+                      
                     </>
                   )}
+{servUser && (
+  <>
+    <div className="header-button d-none d-lg-block">
+      <NavLink className="button flat" to="/car-grid">Service Dashboard</NavLink>
+    </div>
+    {/* <div className="header-button d-none d-lg-block">
+      <button className="button flat" onClick={() => {
+        setServUser(null);
+        localStorage.removeItem('servUser');
+        navigate('/car-grid');
+      }}>
+        Logout
+      </button>
+    </div> */}
+    <div className="header-button d-none d-lg-block">
+                        <button className="button flat" onClick={handleLogout}>
+                          Logout
+                        </button>
+                      </div>
+  </>
+)}
 
-                  {!adminUser && (
+                  {!adminUser && !servUser && (
                     <div className="header-button d-none d-lg-block">
                       <button className="button flat" onClick={toggleLogin}>
                         Login
@@ -198,7 +249,8 @@ const Header1 = (props) => {
                 ></button>
               </div>
               <div className="modal-body">
-                <p>Welcome, {adminUser?.name || 'Admin'}!</p>
+                <p>Loged Successfully!</p>
+                
               </div>
             </div>
           </div>

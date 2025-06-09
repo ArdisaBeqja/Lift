@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcar_dealer=self.webpackChunkcar_dealer||[]).push([[1697],{16333:(e,r,s)=>{s.r(r),s.d(r,{default:()=>a});var t=s(27565);s.p;var n=s(27929);const a=()=>{const[e,r]=(0,t.useState)(!1);(0,t.useEffect)((()=>{const e=()=>{window.scrollY>200?r(!0):r(!1)};return window.addEventListener("scroll",e),()=>{window.removeEventListener("scroll",e)}}),[]);return(0,n.jsx)(n.Fragment,{})}}}]);
+//# sourceMappingURL=1697.e8afc066.chunk.js.map

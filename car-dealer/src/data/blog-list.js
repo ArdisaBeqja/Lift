@@ -1,8 +1,8 @@
-import blogImg1 from '../assets/images/article/101.avif';
-import blogImg2 from '../assets/images/article/11.avif';
-import blogImg3 from '../assets/images/article/031.avif';
-import blogImg4 from '../assets/images/article/04.avif';
-import blogImg5 from '../assets/images/article/05.avif';
+import blogImg1 from './bloglift.avif';
+import blogImg2 from './bloglift2.avif';
+import blogImg3 from './bloglift3.avif';
+import blogImg4 from './bloglift4.avif';
+import blogImg5 from './bloglift5.avif';
 import blogImg6 from '../assets/images/blog/blog-img6.webp';
 import blogImg7 from '../assets/images/blog/blog-img7.webp';
 import blogImg8 from '../assets/images/blog/blog-img8.webp';
@@ -24,22 +24,22 @@ const BlogList = [
     imgSrc: blogImg1,
     authorImg: authorImg1,
     authorName: 'Emily Carter',
-    bydealer: 'By AutoBuzz',
+    bydealer: 'By LiftTech',
     category: 'Technology',
-    title: 'AI Integration in Next-Gen Vehicles',
+    title: 'Smart Elevators',
     comments: 8,
     like: 25,
     news: '',
     metaDate: [{ date: '12', month: 'May', year: '2025' }],
     shortDescription:
-      'Discover how artificial intelligence is transforming safety, navigation, and personalization in the latest car models.',
+      'Explore how smart elevator systems are improving safety, efficiency, and user experience in modern buildings.',
     mainDescription:
-      'Artificial intelligence in vehicles is no longer futuristic. From adaptive cruise control to fully autonomous driving, AI is shaping how we interact with our cars. Explore key innovations and what the next five years may look like for smart vehicles.',
-    quote: 'AI is not just changing how we drive, it’s changing how we live.',
+      'Smart elevators integrate AI and IoT to optimize travel routes, reduce wait times, and enhance passenger safety. From predictive maintenance to voice control, learn how technology is transforming vertical transportation.',
+    quote: 'Smart elevators are not just moving people — they’re moving cities upward.',
     quoteAuthor: '– Emily Carter',
     extraParagraphs: [
-      'AI-driven sensors provide a 360-degree safety net that not only reduces the likelihood of accidents but also enhances real-time decision-making on the road. These systems process massive datasets from cameras, radar, and lidar to identify pedestrians, obstacles, and road conditions faster than any human driver could. As AI evolves, we’re moving toward predictive driving systems that anticipate hazards before they appear — a leap that can save countless lives and revolutionize traffic dynamics.',
-      'Soon, your vehicle will not only drive itself but also become an active participant in your daily routine. It will sync with your calendar, recommend optimal departure times based on real-time traffic conditions, and even reserve charging slots along your route. Additionally, AI-powered systems will enable cars to perform self-diagnostics, automatically schedule repairs, and notify drivers of minor issues before they become costly breakdowns — all without lifting a finger.'
+      'With real-time data and AI algorithms, smart elevators can predict traffic flows in buildings and adjust their operation accordingly, reducing congestion during peak hours. This innovation improves energy efficiency by limiting unnecessary stops and conserving power during low usage periods.',
+      'Future elevators will offer personalized experiences, recognizing passengers and adjusting settings like lighting and music preferences. Integration with building security systems ensures authorized access and enhanced safety, making elevators a critical part of smart building ecosystems.'
     ]
   },
   {
@@ -47,22 +47,22 @@ const BlogList = [
     imgSrc: blogImg2,
     authorImg: authorImg2,
     authorName: 'Liam Nguyen',
-    bydealer: 'By CarTalk',
-    category: 'Electric Vehicles',
-    title: 'Top 5 EVs in 2025 Worth the Hype',
+    bydealer: 'By Elevator Insights',
+    category: 'Innovation',
+    title: 'Top 5 Elevator Innovations',
     comments: 14,
     like: 32,
     news: 'News 2025',
     metaDate: [{ date: '06', month: 'Apr', year: '2025' }],
     shortDescription:
-      'We review the most impressive electric cars of 2025 in terms of range, design, and innovation.',
+      'From ultra-fast lifts to eco-friendly designs, discover the top elevator innovations revolutionizing the industry.',
     mainDescription:
-      'Electric Vehicles (EVs) are dominating the 2025 car market. We break down the top five models you should keep your eye on this year — including battery life, tech features, and driving performance.',
-    quote: 'The future is electric – and the future is now.',
+      'Elevator technology is evolving rapidly. This article highlights breakthroughs such as magnetic levitation, regenerative braking, and AI-powered predictive maintenance that are setting new standards for performance and sustainability.',
+    quote: 'Elevators of tomorrow are faster, greener, and smarter.',
     quoteAuthor: '– Liam Nguyen',
     extraParagraphs: [
-      'Each vehicle we reviewed represents a significant leap in performance, with many offering over 500 miles of range on a single charge and ultra-fast charging capabilities that minimize downtime. Today’s EVs are equipped with state-of-the-art thermal management systems to extend battery life, while some offer wireless charging and bidirectional energy flow — allowing your car to power your home during outages or sell energy back to the grid. These innovations are pushing EVs beyond mere transportation into essential components of our smart energy ecosystems.',
-      'In addition to high-tech features, manufacturers have made notable improvements in sustainability and materials. Interiors now use recycled fabrics, organic compounds, and vegan leather sourced from sustainable processes. Lightweight aluminum and carbon fiber materials improve efficiency without compromising safety. Meanwhile, sleek minimalist dashboards powered by AI assistants make driving not just efficient but luxurious, proving that eco-conscious choices no longer require sacrificing comfort or style.'
+      'Magnetic levitation (maglev) technology eliminates the need for cables, allowing elevators to move both vertically and horizontally, opening new architectural possibilities. Regenerative braking systems capture energy during descent, feeding it back into the building’s power grid, reducing overall energy consumption.',
+      'AI-powered maintenance platforms detect potential issues before they cause downtime, increasing safety and reliability. These innovations not only improve ride quality but also contribute significantly to reducing the carbon footprint of high-rise buildings.'
     ]
   },
   {
@@ -70,22 +70,22 @@ const BlogList = [
     imgSrc: blogImg3,
     authorImg: authorImg3,
     authorName: 'Sophia Martínez',
-    bydealer: 'By GreenDrive',
+    bydealer: 'By GreenLift',
     category: 'Sustainability',
-    title: 'How Car Dealerships Are Going Green',
+    title: 'Eco-Friendly Elevatorst',
     comments: 6,
     like: 18,
     news: 'News 2025',
     metaDate: [{ date: '22', month: 'Mar', year: '2025' }],
     shortDescription:
-      'Dealerships are shifting to more sustainable practices. Learn how they’re reducing their carbon footprint.',
+      'Learn how elevator manufacturers and building managers are adopting greener technologies.',
     mainDescription:
-      'From solar-powered showrooms to offering EV-exclusive inventories, auto dealerships are embracing sustainability. This article dives into the biggest green transformations in the auto retail world.',
-    quote: 'Sustainability isn’t just a trend — it’s the future of the auto industry.',
+      'Sustainability is key in elevator design and operation. From energy-efficient motors to smart lighting and recycled materials, the elevator industry is stepping up its commitment to the environment.',
+    quote: 'Green elevators are lifting us toward a more sustainable future.',
     quoteAuthor: '– Sophia Martínez',
     extraParagraphs: [
-      'Dealerships are investing in eco-friendly infrastructure such as rooftop solar panels, rainwater harvesting systems, and electric vehicle charging stations. These changes not only reduce their operating costs but also demonstrate a commitment to environmental responsibility to consumers. Some are even installing energy storage systems to store solar energy for overnight use, pushing them closer to energy self-sufficiency and reducing reliance on traditional power grids.',
-      'Training staff on sustainable practices and offering incentives for eco-conscious vehicle purchases are also becoming industry norms. Dealerships are forming partnerships with recycling companies to properly dispose of batteries and electronics, further closing the loop in the product lifecycle. With the auto industry facing increasing scrutiny from both regulators and consumers, green business models are proving to be both an ethical and profitable path forward.'
+      'Modern elevators use regenerative drives that convert kinetic energy into electricity, which is then reused in the building, dramatically cutting energy usage. LED lighting and standby modes reduce power consumption when elevators are idle.',
+      'Using recycled and sustainable materials for cab interiors and parts helps reduce environmental impact. Additionally, manufacturers are exploring biodegradable lubricants and eco-friendly hydraulic fluids, further decreasing harmful emissions.'
     ]
   },
   {
@@ -93,49 +93,47 @@ const BlogList = [
     imgSrc: blogImg4,
     authorImg: authorImg4,
     authorName: 'Marcus Lee',
-    bydealer: 'By AutoMarket News',
+    bydealer: 'By Elevate Marketing',
     category: 'Marketing',
-    title: 'Effective Digital Marketing for Car Dealers',
+    title: 'Marketing Strategies',
     comments: 11,
     like: 20,
     news: 'News 2025',
     metaDate: [{ date: '03', month: 'Mar', year: '2025' }],
     shortDescription:
-      'Boost your dealership’s visibility and sales with cutting-edge digital marketing strategies.',
+      'Discover effective ways elevator companies can grow their brand and reach customers online.',
     mainDescription:
-      'From TikTok ads to Google My Business optimization, car dealerships are leveraging new marketing tools to drive more traffic and convert leads. Explore the most successful strategies dealerships are using in 2025.',
-    quote: 'The dealership with the best digital presence is the one that sells the most cars.',
+      'From targeted ads to social media campaigns, elevator companies are using digital marketing to boost sales and build trust in a competitive market.',
+    quote: 'The elevator company with the best online presence rises above the rest.',
     quoteAuthor: '– Marcus Lee',
     extraParagraphs: [
-      'Modern dealerships are focusing heavily on data-driven advertising, where campaigns are tailored based on user behavior, location, and purchase intent. AI analytics can track customer interactions across social media and websites to predict buying behavior, allowing marketers to serve ads at the perfect time. Additionally, CRM integrations allow seamless follow-ups, ensuring that no lead falls through the cracks, and conversion rates are consistently optimized.',
-      'Live virtual showrooms, influencer collaborations, and short-form video content have become key pillars in engaging younger audiences. Instagram Reels, YouTube Shorts, and TikTok car tours showcase vehicles in action and build trust through authentic engagement. In 2025, car dealerships are investing in content creation teams, marketing automation tools, and AR/VR experiences to create immersive and interactive digital journeys that extend far beyond the dealership lot.'
+      'Data-driven marketing helps companies identify potential clients based on building projects, geographic location, and industry demand. Combining SEO with content marketing positions companies as thought leaders, attracting architects, engineers, and developers.',
+      'Interactive 3D models, video tours, and virtual demos on websites and social platforms engage prospects effectively. Partnering with influencers in the construction and architecture sectors amplifies reach and creates authentic endorsements.'
     ]
   },
   {
     id: 5,
-    imgSrc: blogImg5,
+    imgSrc: blogImg2,
     authorImg: authorImg5,
     authorName: 'Isabella Rossi',
-    bydealer: 'By AutoFinance Weekly',
+    bydealer: 'By Lift Finance Journal',
     category: 'Finance',
-    title: 'EV Financing Tips for First-Time Buyers',
+    title: 'Financing Needs',
     comments: 7,
     like: 15,
     news: 'News 2025',
     metaDate: [{ date: '28', month: 'Feb', year: '2025' }],
     shortDescription:
-      'Thinking of switching to electric? Here’s a financial guide to make your transition smart and affordable.',
+      'A practical guide to financing elevator installations for commercial and residential buildings.',
     mainDescription:
-      'Electric vehicles can come with unique financing challenges. Learn about tax credits, leasing options, and long-term savings for EV owners — all tailored to new buyers.',
-    quote: 'Smart financing is the first step toward smart driving.',
+      'Elevator installation can be costly, but with the right financial planning, incentives, and leasing options, upgrading your building is more affordable than ever.',
+    quote: 'Smart financing lifts your building to new heights.',
     quoteAuthor: '– Isabella Rossi',
     extraParagraphs: [
-      'With federal and state incentives, first-time EV buyers can save thousands through tax rebates, grants, and manufacturer discounts. Understanding eligibility criteria for these incentives is crucial when planning your purchase. Additionally, some regions offer HOV lane access, free parking, and toll exemptions for EVs, which can translate into hundreds of dollars in annual savings and a more convenient daily commute.',
-      'Additionally, EV-specific leasing programs now offer more flexible terms, lower interest rates, and bundled maintenance packages. These leases often include benefits like home charger installation, free software updates, and roadside assistance tailored to EV needs. Over a vehicle’s lifetime, EV owners benefit from lower fuel costs, minimal mechanical repairs due to fewer moving parts, and longer warranty periods — making electric vehicles not only eco-friendly but also financially sound investments.'
+      'Many regions offer grants and tax incentives for installing energy-efficient elevators, helping offset upfront costs. Leasing options provide flexible payment plans that reduce financial strain and include maintenance packages.',
+      'Understanding the total cost of ownership—including installation, maintenance, and energy savings—helps building owners make informed decisions. Collaborating with financial advisors ensures you select the best funding strategy tailored to your project’s scale and timeline.'
     ]
   }
 ];
-
-
 
 export default BlogList;

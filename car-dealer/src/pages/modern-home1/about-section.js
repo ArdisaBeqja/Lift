@@ -8,16 +8,16 @@ import List from '../../component/list';
 import Button from '../../component/button/button';
 
 // Site Data
-import aboutImg from '../../assets/images/modern-demo/reddd.avif';
+import aboutImg from './lift.avif';
 
 function AboutSection(props) {
 
   const listItems = [
-    { id: 1, item: 'Regularly check the battery health and software updates for your electric car.', url: '/'},
-    { id: 2, item: 'Make sure the right users have secure access to important systems.', url: '/blog',},
-    { id: 3, item: 'Inspect each tire to ensure even wear and proper inflation levels.', url: '/about-us',},
-    { id: 4, item: 'Your brain processes information even when you’re not actively aware.', url: '/team'},
-    { id: 5, item: 'Carefully monitor tire condition to prevent safety issues on the road.', url: '/404'},
+    { id: 1, item: 'Regularly inspect elevator cables and safety brakes for optimal performance.', url: '/' },
+    { id: 2, item: 'Ensure authorized personnel have secure access to elevator control systems.', url: '/blog' },
+    { id: 3, item: 'Schedule routine maintenance to prevent unexpected downtime.', url: '/about-us' },
+    { id: 4, item: 'Keep elevator software updated to comply with safety standards.', url: '/team' },
+    { id: 5, item: 'Monitor elevator load limits to guarantee passenger safety.', url: '/404' },
   ];
 
   return (
@@ -27,8 +27,8 @@ function AboutSection(props) {
           <Col lg={6}>
             <div className="section-col-left col-image">
               <div className="image-overlay-text">
-                <img className="img-fluid" src={aboutImg} alt="" />
-                <h3 className="overlay-textbox">We Create Health Programs For Everyone</h3>
+                <img className="img-fluid" src={aboutImg} alt="Modern elevator" />
+                <h3 className="overlay-textbox">Innovative Lift Solutions for Every Building</h3>
               </div>
             </div>
           </Col>
@@ -36,19 +36,15 @@ function AboutSection(props) {
             <div className="section-col-right col-content">
               <SectionTitle
                 extraClass="section-title-new"
-                title="We Provides Best Solution Vehicles"
-                content="Driving Excellence: Your Ultimate Destination for Premium Vehicles and Services."
+                title="We Provide Advanced Elevator Solutions"
+                content="Elevating Safety and Efficiency: Your Trusted Partner for Modern Lift Systems."
               />
               <List className="list-new mb-3 pb-2" icon="fas fa-check" data={listItems} />
               {/* <Button btnClass="btn-lg me-3" btnText="Our Services" btnURL="/about-us" /> */}
               <div className="call-box call-box-custom d-inline-flex align-items-center">
-                <div className="icon"><i className="fas fa-phone"></i></div>
                 <div className="call-box-text">
-                  <div className="content">Call Anytime</div>
-                  <Link to="#"><h6>+ 88 ( 9800 ) 6802</h6></Link>
                 </div>
               </div>
-
             </div>
           </Col>
         </Row>
@@ -56,4 +52,5 @@ function AboutSection(props) {
     </>
   );
 }
+
 export default AboutSection;

@@ -1,0 +1,88 @@
+.bg-green {
+  background-color: rgb(140, 217, 179) !important; /* green-400 */
+  color: white !important;
+  border-radius: 8px;
+}
+
+.bg-blue{
+   background-color: rgb(140, 186, 217) !important; /* green-400 */
+  color: white !important;
+  border-radius: 8px;
+}
+.bg-red {
+  background-color: #dc3545 !important; /* red-400 */
+  color: white !important;
+  border-radius: 8px;
+}
+
+/* .calendar-wrapper {
+  max-width: 100%;
+  min-width: 850px;
+  transform: scale(1.4);
+}
+
+.react-calendar {
+  width: 100% !important;
+}
+
+@media (min-width: 768px) {
+  .calendar-wrapper {
+    max-width: 500px;
+  }
+} */
+.calendar-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.bg-grey {
+  background-color: #d3d3d3 !important;
+  border-radius: 8px;
+
+  color: black !important;
+}
+
+
+.react-calendar {
+  width: 100% !important;
+}
+
+
+.modal-content {
+  background-color: #f7f2f2;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width:3000px;
+  position: relative;
+  transform: translateY(-20px);
+  opacity: 0;
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+@media (max-width: 992px) {
+  .calendar-wrapper {
+    max-width: 90%;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .calendar-wrapper {
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+}

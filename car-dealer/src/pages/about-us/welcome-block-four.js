@@ -6,184 +6,166 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Components
 import SectionTitle from '../../component/section-title/section-title';
 import FeatureInfo from '../../component/feature-info';
-import { CarSlider } from '../../component/car-list';
+import { CarSlider } from '../../component/car-list'; // Assuming it's a generic slider
+import { CarSliderList } from '../../data/car-list'; // You might rename this to LiftSliderList
 
-// Site Data
-import { CarSliderList } from '../../data/car-list';
+// Images
 import Value2 from './values2.avif';
+
 function WelcomeBlockFour(props) {
   return (
-    <>
-      <section className="section-ptb welcome-4">
-        <Container>
-          <Row className="justify-content-center">
-            <Col md={10}>
-              <SectionTitle
-                extraClass="text-center mb-5"
-                subtitle="Welcome to"
-                title="The Cardealer Online"
-                separator="separator"
-                content="Car Dealer is the best premium HTML5 Template. We provide everything you need to build an Amazing dealership website developed especially for car sellers, dealers or auto motor retailers. You can use this template for creating website based on any framework language."
+    <section className="section-ptb welcome-4">
+      <Container>
+        <Row className="justify-content-center">
+          <Col md={10}>
+            <SectionTitle
+              extraClass="text-center mb-5"
+              subtitle="Welcome to"
+              title="Elevate Solutions"
+              separator="separator"
+              content="Elevate Solutions is a premium lift installation and maintenance provider. We specialize in high-quality elevator systems for residential, commercial, and industrial buildings. Whether you're installing a new lift or maintaining an existing one, our expert team ensures safety, efficiency, and reliability."
+            />
+          </Col>
+        </Row>
+        <Row>
+          <Col md={6}>
+            <Swiper
+              modules={[Navigation, A11y]}
+              navigation
+              spaceBetween={30}
+              slidesPerView={1}
+              loop={true}
+            >
+              {CarSliderList.map((val, index) => {
+                if (index < 3) {
+                  return (
+                    <SwiperSlide key={index}>
+                      <CarSlider key={index} imgSrc={val.imgSrc} id={val.id} />
+                    </SwiperSlide>
+                  );
+                }
+                return null;
+              })}
+            </Swiper>
+          </Col>
+          <Col md={6}>
+            <p>
+              At Elevate Solutions, we prioritize innovation and safety. Our team is dedicated to delivering lift systems that enhance mobility and accessibility across all environments.
+            </p>
+            <p>
+              With decades of experience, we’ve earned the trust of clients through reliable service and expert craftsmanship. From design to aftercare, we support your vertical transportation needs.
+            </p>
+            <p>
+              Whether you're upgrading a current system or building new, Elevate Solutions delivers excellence in every project. Let us help you move smarter and safer.
+            </p>
+          </Col>
+        </Row>
+        <Row>
+          <Col sm={12}>
+            <div className="feature-wrapper grid-wrapper grid-lg-4 grid-md-2 grid-sm-2 grid-xs-1">
+              <FeatureInfo
+                className="feature-box-style-03"
+                icon="glyph-icon flaticon-beetle"
+                title="All Building Types"
+                content="We provide lift solutions for residential, commercial, and industrial buildings."
               />
-            </Col>
-          </Row>
-          <Row>
-            <Col md={6}>
-              <Swiper
-                modules={[Navigation, A11y]}
-                navigation
-                spaceBetween={30}
-                slidesPerView={1}
-                loop={true}
-              >
-                {CarSliderList.map((val, index) => {
-                  if (index < 3) {
-                    return (
-                      <SwiperSlide key={index}>
-                        <CarSlider
-                          key={index}
-                          imgSrc={val.imgSrc}
-                          id={val.id}
-                        />
-                      </SwiperSlide>
-                    );
-                  }
-                  return null;
-                })}
-              </Swiper>
-            </Col>
-            <Col md={6}>
-              <p>
-                Dealer obcaecati adipisci vero lorem ipsum dolor sit amet,
-                consectetur adipisicing elit. dolorum pariatur aut consectetur.
-                Sit quisquam rerum corporis neque atque inventore nulla,
-                quibusdam, ipsa suscipit aperiam reiciendis, ea odio?
-              </p>
-              <p>
-                Adipisicing ipsum dolor sit amet, consectetur elit. Obcaecati
-                adipisci vero dolorum pariatur aut consectetur. Sit quisquam
-                rerum corporis neque atque inventore nulla, quibusdam, ipsa
-                suscipit aperiam reiciendis, ea odio?
-              </p>
-              <p>
-                Obcaecati adipisci vero dolorum pariatur aut consectetur. lorem
-                ipsum dolor sit amet, consectetur adipisicing elit. Sit quisquam
-                rerum corporis neque atque inventore nulla, quibusdam, ipsa
-                suscipit aperiam reiciendis, ea odio?
-              </p>
-            </Col>
-          </Row>
-          <Row>
-            <Col sm={12}>
-              <div className="feature-wrapper grid-wrapper grid-lg-4 grid-md-2 grid-sm-2 grid-xs-1">
-                <FeatureInfo
-                  className="feature-box-style-03"
-                  icon="glyph-icon flaticon-beetle"
-                  title="All brands"
-                  content="Obcaecati adipisci vero dolorum pariatur "
-                />
-                <FeatureInfo
-                  className="feature-box-style-03"
-                  icon="glyph-icon flaticon-interface-1"
-                  title="Free Support"
-                  content="lorem ipsum dolor sit amet, consectetur"
-                />
-                <FeatureInfo
-                  className="feature-box-style-03"
-                  icon="glyph-icon flaticon-key"
-                  title="Dealership"
-                  content="Sit quisquam rerum corporis neque"
-                />
-                <FeatureInfo
-                  className="feature-box-style-03"
-                  icon="glyph-icon flaticon-wallet"
-                  title="affordable"
-                  content="Suscipit aperiam reiciendis, ea odio?"
-                />
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-    </>
+              <FeatureInfo
+                className="feature-box-style-03"
+                icon="glyph-icon flaticon-interface-1"
+                title="24/7 Support"
+                content="Reliable technical support and emergency service, available whenever you need it."
+              />
+              <FeatureInfo
+                className="feature-box-style-03"
+                icon="glyph-icon flaticon-key"
+                title="Certified Technicians"
+                content="Our licensed experts ensure installations meet the highest safety standards."
+              />
+              <FeatureInfo
+                className="feature-box-style-03"
+                icon="glyph-icon flaticon-wallet"
+                title="Cost-Effective"
+                content="Top-quality service tailored to your budget and project scope."
+              />
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </section>
   );
 }
+
 function AboutWelcomeBlock(props) {
   return (
-    <>
-      <section className="section-ptb welcome-4">
-        <Container>
-          <Row className="justify-content-center">
-            <Col md={10}>
-              <SectionTitle
-                extraClass="text-center"
-                subtitle="Welcome to"
-                title="Our Values"
-                separator="separator"
-                content="We believe in honesty, transparency, and exceptional customer service. These values guide every decision we make and every car we help connect with the right owner. Our commitment to quality and trust is what drives us forward."
+    <section className="section-ptb welcome-4">
+      <Container>
+        <Row className="justify-content-center">
+          <Col md={10}>
+            <SectionTitle
+              extraClass="text-center"
+              subtitle="Welcome to"
+              title="Our Core Values"
+              separator="separator"
+              content="At Elevate Solutions, our mission is grounded in integrity, innovation, and exceptional service. We aim to provide safe, reliable, and efficient lift systems backed by unwavering customer support."
+            />
+          </Col>
+        </Row>
+        <Row className="mb-4 mb-md-5">
+          <Col md={12}>
+            <Swiper
+              modules={[Navigation, A11y]}
+              navigation
+              spaceBetween={30}
+              slidesPerView={1}
+              loop={true}
+            >
+              {CarSliderList.map((val, index) => {
+                if (index > 2) {
+                  return (
+                    <SwiperSlide key={index}>
+                      <CarSlider key={index} imgSrc={val.imgSrc} id={val.id} />
+                    </SwiperSlide>
+                  );
+                }
+                return null;
+              })}
+            </Swiper>
+          </Col>
+        </Row>
+        <Row>
+          <Col sm={12}>
+            <div className="feature-wrapper grid-wrapper grid-lg-4 grid-md-2 grid-sm-2 grid-xs-1">
+              <FeatureInfo
+                className="feature-box-style-01"
+                icon="glyph-icon flaticon-beetle"
+                title="Custom Solutions"
+                content="Tailored lift designs for every architecture and use case."
               />
-            </Col>
-          </Row>
-          <Row className="mb-4 mb-md-5">
-            <Col md={12}>
-              <Swiper
-                modules={[Navigation, A11y]}
-                navigation
-                spaceBetween={30}
-                slidesPerView={1}
-                loop={true}
-              >
-                {CarSliderList.map((val, index) => {
-                  if (index > 2) {
-                    return (
-                      <SwiperSlide key={index}>
-                        <CarSlider
-                          key={index}
-                          imgSrc={val.imgSrc}
-                          id={val.id}
-                        />
-                      </SwiperSlide>
-                    );
-                  }
-                  return null;
-                })}
-              </Swiper>
-            </Col>
-          </Row>
-          <Row>
-            <Col sm={12}>
-              <div className="feature-wrapper grid-wrapper grid-lg-4 grid-md-2 grid-sm-2 grid-xs-1">
-                <FeatureInfo
-                  className="feature-box-style-01"
-                  icon="glyph-icon flaticon-beetle"
-                  title="All brands"
-                  content="We offer a wide selection of products from all major brands to ensure quality and variety for our customers."
-                />
-                <FeatureInfo
-                  className="feature-box-style-01"
-                  icon="glyph-icon flaticon-interface-1"
-                  title="Free Support"
-                  content="Our dedicated team provides free customer support to help you with any questions or issues—anytime you need it."
-                />
-                <FeatureInfo
-                  className="feature-box-style-01"
-                  icon="glyph-icon flaticon-key"
-                  title="Dealership"
-                  content="As a trusted dealership, we guarantee authentic products and professional service that meet the highest industry standards."
-                />
-                <FeatureInfo
-                  className="feature-box-style-01"
-                  icon="glyph-icon flaticon-wallet"
-                  title="Affordable"
-                  content="We deliver top-quality products and services at prices that are budget-friendly and accessible for everyone."
-                />
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-    </>
+              <FeatureInfo
+                className="feature-box-style-01"
+                icon="glyph-icon flaticon-interface-1"
+                title="24/7 Customer Care"
+                content="Our dedicated support team is always ready to assist you."
+              />
+              <FeatureInfo
+                className="feature-box-style-01"
+                icon="glyph-icon flaticon-key"
+                title="Licensed Installers"
+                content="Every lift is installed by fully certified professionals."
+              />
+              <FeatureInfo
+                className="feature-box-style-01"
+                icon="glyph-icon flaticon-wallet"
+                title="Affordable Service"
+                content="We offer transparent pricing and flexible packages."
+              />
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </section>
   );
 }
+
 export default WelcomeBlockFour;
 export { AboutWelcomeBlock };

@@ -11,13 +11,14 @@ import SectionTitle from '../../component/section-title/section-title';
 import FeatureInfo from '../../component/feature-info';
 import OpeningHours from '../../component/openinghours';
 import Googlemap from '../../component/googlemap/googlemap';
+import EnquiryForm from '../../form/enquiry-form';
 
 // Form
 import ContactForm from '../../form/contact-form';
 
 function ContactUs() {
   const OpeningHoursItems = [
-    { id: 1, day: 'Sunday', time: ' closed' },
+    { id: 1, day: 'Sunday', time: ' Closed' },
     { id: 2, day: 'Monday', time: ' 9:00 AM to 9:00 PM' },
     { id: 3, day: 'Tuesday', time: ' 9:00 AM to 9:00 PM' },
     { id: 4, day: 'Wednesday', time: ' 9:00 AM to 9:00 PM' },
@@ -25,6 +26,7 @@ function ContactUs() {
     { id: 6, day: 'Friday', time: ' 9:00 AM to 9:00 PM' },
     { id: 7, day: 'Saturday', time: ' 9:00 AM to 9:00 PM' },
   ];
+
   return (
     <>
       <div className="site-content">
@@ -50,37 +52,40 @@ function ContactUs() {
                   />
                 </Col>
                 <Col sm={12}>
-                  <div className="feature-wrapper grid-wrapper grid-lg-4 grid-md-2 grid-sm-2 grid-xs-1">
+                  <div
+                    className="feature-wrapper grid-wrapper grid-lg-4 grid-md-2 grid-sm-2 grid-xs-1"
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      gap: '20px',
+                      flexWrap: 'wrap',
+                    }}
+                  >
                     <FeatureInfo
                       className="feature-box-hover contact-box text-center"
                       icon="fa-solid fa-location-dot"
                       title="Address"
-                      content="220E Front St. Burlington NC 215"
+                      content="Rruga Dritan Hoxha, Tirana, Albania"
                     />
                     <FeatureInfo
                       className="feature-box-hover contact-box text-center"
                       icon="fa-solid fa-phone"
                       title="Phone"
-                      content="(007) 123 456 7890"
+                      content="+355 68 202 7948"
                     />
                     <FeatureInfo
                       className="feature-box-hover contact-box text-center"
                       icon="fa-regular fa-envelope"
                       title="Email"
-                      content="support@website.com"
-                    />
-                    <FeatureInfo
-                      className="feature-box-hover contact-box text-center"
-                      icon="fa-solid fa-fax"
-                      title="Fax"
-                      content="(007) 123 456 7890"
+                      content="classashenssor@gmail.com"
                     />
                   </div>
                 </Col>
               </Row>
               <Row className="section-ptb">
                 <Col lg={8} md={7}>
-                  <ContactForm />
+                  <EnquiryForm />
                 </Col>
                 <Col lg={4} md={5}>
                   <div className="opening-hours bg-light mt-4 mt-md-0">
@@ -95,20 +100,20 @@ function ContactUs() {
                     <FeatureInfo
                       className="feature-box-style-03 grey-border"
                       icon="fa-regular fa-clock"
-                      title="opening hours"
-                      content="Voluptatem accusanoremque sed ut perspiciatis unde omnis iste natus error sit laudantium, totam rem aperiam. "
+                      title="Opening Hours"
+                      content="We're open Monday to Saturday from 9:00 AM to 9:00 PM. Contact us anytime during these hours for inquiries or support."
                     />
                     <FeatureInfo
                       className="feature-box-style-03 grey-border"
                       icon="fa-solid fa-life-ring"
                       title="Our Support Center"
-                      content="Iste natus error sit sed ut perspiciatis unde omnis voluptatem laudantium, totam rem aperiam."
+                      content="Our support team is here to assist with elevator installations, maintenance, and emergency services across Albania."
                     />
                     <FeatureInfo
                       className="feature-box-style-03 grey-border"
                       icon="fa-solid fa-info"
-                      title="Some Information"
-                      content="Totam rem aperiam sed ut perspiciatis unde omnis iste natus error sit voluptatem laudantium."
+                      title="About Class Ashensor"
+                      content="Class Ashensore specializes in elevator installation, modernization, and maintenance. With over 10 years of experience, we ensure top-tier safety and service."
                     />
                   </div>
                 </Col>

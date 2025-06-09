@@ -1,57 +1,62 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 import '../widget.scss';
 
 function ContactInfo(props) {
+  const textStyle = { color: 'white' };
+  const linkStyle = { color: 'white', textDecoration: 'none' };
+
   return (
     <>
       <div
         className={`widget widget-contact-info ${props.theme || ''} ${
           props.className || ''
         }`}
+        style={textStyle}
       >
-        {props?.title && <h3 className="widget-title">{props.title}</h3>}
+        {props?.title && <h3 className="widget-title" style={textStyle}>{props.title}</h3>}
         {props?.content && (
-          <p className={`${props.contentclass || ''}`}>{props.content}</p>
+          <p className={`${props.contentclass || ''}`} style={textStyle}>
+            {props.content}
+          </p>
         )}
         <ul className="info-list">
-          <li key="item1">
+          <li key="item1" style={textStyle}>
             {props.theme === 'contact-info-style-01' && (
               <i className="fa fa-location-dot"></i>
             )}
-            {/* {props.theme === "contact-info-style-02" && <label>Address :</label>} */}
             {props.theme === 'contact-info-style-02' && props.label
               ? null
               : props.theme === 'contact-info-style-02' && (
-                  <label>Address :</label>
+                  <label style={textStyle}>Address :</label>
                 )}
             {props?.address ? <span>{props.address}</span> : <span>Tirane, Albania</span>}
           </li>
-          <li key="item2">
+          <li key="item2" style={textStyle}>
             {props.theme === 'contact-info-style-01' && (
               <i className="fa-solid fa-phone"></i>
             )}
             {props.theme === 'contact-info-style-02' && props.label
               ? null
               : props.theme === 'contact-info-style-02' && (
-                  <label>Phone :</label>
+                  <label style={textStyle}>Phone :</label>
                 )}
-            <Link to="/contact" className="phone-number">
-              +355 68 8012 853
+            <Link to="/contact" className="phone-number" style={linkStyle}>
+              +355 68 202 7948
             </Link>
           </li>
-          <li key="item3">
+          <li key="item3" style={textStyle}>
             {props.theme === 'contact-info-style-01' && (
               <i className="far fa-envelope"></i>
             )}
             {props.theme === 'contact-info-style-02' && props.label
               ? null
               : props.theme === 'contact-info-style-02' && (
-                  <label>Email :</label>
+                  <label style={textStyle}>Email :</label>
                 )}
-                 <a href="mailto:cardealeral@gmail.com">cardealeral@gmail.com</a>
-
+            <a href="mailto:classashenssor@gmail.com" style={linkStyle}>
+              classashenssor@gmail.com
+            </a>
           </li>
         </ul>
       </div>

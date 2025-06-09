@@ -1,7 +1,7 @@
 // Libraries
 import { Col, Container, Row } from 'react-bootstrap';
-import Vid from './audi.mp4';
-import Thumb from './thumb.avif';
+import Vid from './igvid.mp4';
+import Thumbp from './ui.avif';
 // Components
 import VideoPopup from '../../component/video';
 
@@ -16,11 +16,11 @@ function VideoCounter(params) {
                 theme="video-style-2"
                 size="lg"
                 videoURL={Vid}
-                videoImage={Thumb}
+                videoImage={Thumbp}
               />
             </div>
             <div className="section-title-new text-center">
-              <h3 className="title text-white mt-4">Want To Know More About? Play Our Promotional Video Now!</h3>
+              <h3 className="title text-white mt-4">Wandt To Know More About? Play Our Promotional Video Now!</h3>
             </div>
           </Col>
         </Row>

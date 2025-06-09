@@ -59,13 +59,30 @@ function MainMenu() {
           <li>
             <NavLink to="/about-02">About Us</NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/service">Service</NavLink>
-          </li>
+          </li> */}
         </ul>
       </li>
 
       {/* Blog */}
+      <li className={`has-dropdown ${activeItems.includes(2) ? 'menu-active' : ''}`}>
+        <Link to="#">
+          Contact us
+          {showLink ? (
+            <span onClick={() => toggleItem(2)} className="submenu-trigger">
+              <i className="fa-solid fa-angle-down"></i>
+            </span>
+          ) : (
+            <i className="fa-solid fa-angle-down"></i>
+          )}
+        </Link>
+        <ul className="submenu">
+          <li>
+            <NavLink to="/contact">Contact</NavLink>
+          </li>
+        </ul>
+      </li>
       <li className={`has-dropdown ${activeItems.includes(2) ? 'menu-active' : ''}`}>
         <Link to="#">
           Blog
@@ -84,24 +101,7 @@ function MainMenu() {
         </ul>
       </li>
 
-      {/* Car Listing */}
-      <li className={`has-dropdown ${activeItems.includes(3) ? 'menu-active' : ''}`}>
-        <Link to="#">
-          Car Listing
-          {showLink ? (
-            <span onClick={() => toggleItem(3)} className="submenu-trigger">
-              <i className="fa-solid fa-angle-down"></i>
-            </span>
-          ) : (
-            <i className="fa-solid fa-angle-down"></i>
-          )}
-        </Link>
-        <ul className="submenu">
-          <li>
-            <NavLink to="/car-grid">Listing</NavLink>
-          </li>
-        </ul>
-      </li>
+     
 
     </ul>
   );

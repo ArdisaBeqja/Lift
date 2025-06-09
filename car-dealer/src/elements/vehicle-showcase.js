@@ -61,6 +61,7 @@ function ElementsVehicleShowcase() {
                             id={val.id}
                             lightboxImages={val.gallery}
                           />
+                          
                         );
                       }
                       return null;

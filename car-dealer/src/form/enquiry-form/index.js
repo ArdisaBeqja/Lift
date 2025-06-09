@@ -27,17 +27,19 @@ function EnquiryForm(props) {
     validationSchema: EnquiryFormSchema,
     onSubmit: (values, actions) => {
       const templateParams = {
-        from_name: values.Username,
-        from_email: values.Email,
+        name: values.Username,
+        email: values.Email,
         message: values.Message,
+        time: new Date().toLocaleString(), // optional
+
       };
 
       emailjs
         .send(
-          'service_hy5p5di',
-          'template_20t6bhk',
+          'service_3pw4r7n',
+          'template_ctef3zs',
           templateParams,
-          'uFfAcMpmRPfwD6I_j'
+          'oDD9UL73-g3hpyab1'
         )
         .then((response) => {
           // console.log('SUCCESS!', response.status, response.text);
