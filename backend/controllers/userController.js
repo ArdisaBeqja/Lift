@@ -2,7 +2,8 @@ import User from '../models/User.js';
 
 export const register = async (req, res, body) => {
   try {
-    const { username, password } = JSON.parse(body);
+    const { username, password } = JSON.parse(body); // include role here
+    console.log(role);
     const existingUser = await User.findOne({ username });
 
     if (existingUser) {
@@ -21,11 +22,13 @@ export const register = async (req, res, body) => {
   }
 };
 
+
 export const login = async (req, res) => {
     try {
       const { username, password } = req.body;
   
       const user = await User.findOne({ username });
+      console.log("creddentiallsss", username,password);
       if (!user || !(await user.comparePassword(password))) {
         return res.status(401).json({ message: 'Invalid credentials' });
       }

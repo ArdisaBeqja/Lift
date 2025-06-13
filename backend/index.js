@@ -5,7 +5,13 @@ import carRouter from './routes/carRoutes.js';
 import cors from "cors";
 import authRouter from "./routes/userRoutes.js";
 import path from 'path';
+import dotenv from "dotenv";
+
 import { fileURLToPath } from 'url';
+
+
+dotenv.config(); // ✅ Load env variables
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -13,12 +19,14 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const port = process.env.PORT || 8000;
 
+// const port = 8000;
+
 // ✅ Middleware to parse JSON
 app.use(express.json());
 
 // ✅ CORS Configuration
 const allowedOrigins = [
-  'https://cardealeral.onrender.com'
+  'http://localhost:3000'
 ];
 app.use(cors({
   origin: function(origin, callback) {
@@ -41,19 +49,7 @@ mongoose.connect(uri)
 app.use('/api', authRouter);
 app.use('/api', carRouter);
 
-// // ✅ Add Car Route
-// app.post("/add", async (req, res) => {
-//   try {
-//     const { id, imgSrc, carName, description, carPrice, carNewPrice, attributes, review, leadForm, gallery } = req.body;
-//     const newCar = new Car({ id, imgSrc, carName, description, carPrice, carNewPrice, attributes, review, leadForm, gallery });
-//     await newCar.save();
-//     res.status(201).json({ message: "✅ Car added successfully!", car: newCar });
-//   } catch (error) {
-//     res.status(500).json({ message: "❌ Error saving car data", error });
-//   }
-// });
 
-// ✅ Static file serving (e.g. images)
 app.use('/uploads', express.static('uploads'));
 
 // ✅ Serve React frontend (AFTER API routes)
@@ -67,6 +63,9 @@ app.get("/", (req, res) => {
   res.send("Server is up and running!");
 });
 
-app.listen(port, () => {
-  console.log(`🚀 Server running at http://localhost:${port}`);
+// app.listen(port, () => {
+//   console.log(`🚀 Server running at http://localhost:${port}`);
+// });
+app.listen(port, '0.0.0.0', () => {
+  console.log(`🚀 Server running on port ${port}`);
 });

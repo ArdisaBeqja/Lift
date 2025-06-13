@@ -3,23 +3,25 @@ import mongoose from "mongoose";
 const carSchema = new mongoose.Schema({
   id: { type: Number, required: true },
   imgSrc: { type: String, required: false },
-  carName: { type: String, required: true },
+  liftName: { type: String, required: true },
   description: { type: String, required: true },
-  carPrice: { type: String, required: true },
-  carNewPrice: { type: String, required: false },
+  liftPrice: { type: String, required: true },
+  inspectionDate: { type: Date, required: true },
+
+
   attributes: [
     {
       id: { type: Number, required: true },
       title: { type: String, required: true },
       specification: { type: String, required: true },
-      icon: { type: String, required: true }
-    }
+      icon: { type: String, required: true },
+    },
   ],
   review: [
     {
       id: { type: Number, required: true },
-      icon: { type: String, required: true }
-    }
+      icon: { type: String, required: true },
+    },
   ],
   leadForm: [
     {
@@ -27,8 +29,8 @@ const carSchema = new mongoose.Schema({
       title: { type: String, required: true },
       icon: { type: String, required: true },
       form: { type: String, required: true },
-      size: { type: String }
-    }
+      size: { type: String },
+    },
   ],
   gallery: [
     {
@@ -36,17 +38,8 @@ const carSchema = new mongoose.Schema({
       image: { type: String, required: true }
     }
   ],
-  extraFeatures: [
-    {
-      id: { type: Number, required: true },
-      item: { type: String, required: true }
-    }
-  ]
+  inspectionChecked: { type: Boolean, default: false },  // NEW FIELD
+
 });
 
-
-
-
-const Car = mongoose.model("Car", carSchema);
-
-export default Car; // ✅ Export as ES module
+export default mongoose.model("Car", carSchema);
