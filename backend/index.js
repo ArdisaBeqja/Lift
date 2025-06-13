@@ -26,7 +26,8 @@ app.use(express.json());
 
 // ✅ CORS Configuration
 const allowedOrigins = [
-  'http://localhost:3000'
+  'http://localhost:3000',
+  'https://lift-2tmr.onrender.com'
 ];
 app.use(cors({
   origin: function(origin, callback) {
