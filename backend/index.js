@@ -62,10 +62,6 @@ app.get('*', (req, res) => {
 app.get("/", (req, res) => {
   res.send("Server is up and running!");
 });
-
-// app.listen(port, () => {
-//   console.log(`🚀 Server running at http://localhost:${port}`);
-// });
-app.listen(port, '0.0.0.0', () => {
-  console.log(`🚀 Server running on port ${port}`);
+app.listen(port, () => {
+  console.log(`🚀 Server running at http://localhost:${port}`);
 });
