@@ -87,16 +87,12 @@ function OffCanvasMenu({ position, onLoginClick, adminUser, onLogout }) {
                   {/* <button className="button flat" onClick={handleAddCarClick}>
                     Add Lift
                   </button> */}
-                    <div className="header-button d-none d-lg-block">
-                                          <NavLink className="button flat" to="/add-car" style={{textDecoration:"none"}}>
+                   <NavLink className="button flat" to="/add-car" style={{textDecoration:"none"}}>
                                             Add Lift
                                           </NavLink>
-                                        </div>
-                                        <div className="header-button d-none d-lg-block">
                                           <NavLink className="button flat" to="/service"  style={{textDecoration:"none"}}>
-                                            Dashboard
-                                          </NavLink>
-                                        </div>
+                                                                    Dashboard
+                                                                  </NavLink>
                   <button className="button flat" onClick={handleLogoutClick}>
                     Logout
                   </button>
