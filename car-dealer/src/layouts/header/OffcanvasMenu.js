@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import MainMenu from './MainMenu';
 
-function OffCanvasMenu({ position, onLoginClick, adminUser, servUser,onLogout }) {
+function OffCanvasMenu({ position, onLoginClick, adminUser, servUser, onLogout }) {
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
 
@@ -27,15 +27,6 @@ function OffCanvasMenu({ position, onLoginClick, adminUser, servUser,onLogout })
     navigate('/');
   };
 
-  const handleAddCarClick = () => {
-    if (adminUser) {
-      navigate('/add-car');
-    } else {
-      navigate('/');
-    }
-    setShow(false);
-  };
-
   return (
     <>
       <Button onClick={handleShow} className="mobile-menu-trigger d-lg-none">
@@ -43,6 +34,7 @@ function OffCanvasMenu({ position, onLoginClick, adminUser, servUser,onLogout })
         <span></span>
         <span></span>
       </Button>
+
       <Offcanvas
         className="offcanvas-menu"
         show={show}
@@ -72,38 +64,31 @@ function OffCanvasMenu({ position, onLoginClick, adminUser, servUser,onLogout })
             </div>
 
             <div className="header-button" style={{ marginTop: '1rem' }}>
-              {!adminUser ? (
-                <button
-                  className="button flat"
-                  onClick={() => {
-                    setShow(false);
-                    onLoginClick();
-                  }}
-                >
-                  Login
-                </button>
-              ) : (
+              {adminUser ? (
                 <>
-                  {/* <button className="button flat" onClick={handleAddCarClick}>
+                  <NavLink className="button flat" to="/add-car" style={{ textDecoration: 'none' }}>
                     Add Lift
-                  </button> */}
-                   <NavLink className="button flat" to="/add-car" style={{textDecoration:"none"}}>
-                                            Add Lift
-                                          </NavLink>
-                                          <hr>
-                                          </hr>
-                                          <NavLink className="button flat" to="/service"  style={{textDecoration:"none"}}>
-                                                                    Dashboard
-                                                                  </NavLink>
-                <hr>
-                                          </hr>
+                  </NavLink>
+                  <hr />
+                  <NavLink className="button flat" to="/service" style={{ textDecoration: 'none' }}>
+                    Dashboard
+                  </NavLink>
+                  <hr />
                   <button className="button flat" onClick={handleLogoutClick}>
                     Logout
                   </button>
                 </>
-              )}
-
-              {!servUser ?(
+              ) : servUser ? (
+                <>
+                  <NavLink className="button flat" to="/car-grid" style={{ textDecoration: 'none' }}>
+                    Service Dashboard
+                  </NavLink>
+                  <hr />
+                  <button className="button flat" onClick={handleLogoutClick}>
+                    Logout
+                  </button>
+                </>
+              ) : (
                 <button
                   className="button flat"
                   onClick={() => {
@@ -113,18 +98,6 @@ function OffCanvasMenu({ position, onLoginClick, adminUser, servUser,onLogout })
                 >
                   Login
                 </button>
-              ) :  (
-                <>
-                 
-                        <NavLink className="button flat" to="/car-grid" style={{textDecoration:"none"}}>Service Dashboard</NavLink>
-                  
-                 
-                <hr>
-                </hr>
-                  <button className="button flat" onClick={handleLogoutClick}>
-                    Logout
-                  </button>
-                </>
               )}
             </div>
           </Offcanvas.Body>
