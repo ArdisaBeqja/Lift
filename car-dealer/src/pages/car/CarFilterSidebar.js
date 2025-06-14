@@ -16,11 +16,11 @@ function CarFilterSidebar({ onFilteredCars }) {
   };
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/filter')
+    axios.get('https://lift-2tmr.onrender.com/api/filter')
       .then(res => setFilterOptions(res.data))
       .catch(err => console.error('Error fetching filters:', err));
 
-    axios.get('http://localhost:8000/api/car/filter')
+    axios.get('https://lift-2tmr.onrender.com/api/car/filter')
       .then(res => {
         setAllCars(res.data);
         onFilteredCars(res.data);

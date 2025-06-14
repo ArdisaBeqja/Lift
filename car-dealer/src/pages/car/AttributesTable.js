@@ -39,7 +39,7 @@ const AttributesTable = ({ attributes, carId }) => {
 
   const handleSave = async (attrId) => {
     try {
-      await axios.put(`http://localhost:8000/api/cars/${carId}/attributes/${attrId}`, editedAttr);
+      await axios.put(`https://lift-2tmr.onrender.com/api/cars/${carId}/attributes/${attrId}`, editedAttr);
 
       const changedAttributeName = Object.keys(editedAttr)[0];
       const changedAttributeValue = editedAttr[changedAttributeName];

@@ -18,7 +18,7 @@ const InspectionCalendar = () => {
   useEffect(() => {
     const fetchInspections = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/api/inspections");
+        const res = await axios.get("https://lift-2tmr.onrender.com/api/inspections");
         setInspectionData(res.data);
       } catch (err) {
         console.error("Failed to fetch inspections:", err);
@@ -54,7 +54,7 @@ const InspectionCalendar = () => {
     const formatted = formatDate(clickedDate);
 
     try {
-      const { data } = await axios.get(`http://localhost:8000/api/cars/by-date/${formatted}`);
+      const { data } = await axios.get(`https://lift-2tmr.onrender.com/api/cars/by-date/${formatted}`);
       const filteredData = data.map((car) => ({
         id: car._id || car.id,
         liftName: car.liftName,

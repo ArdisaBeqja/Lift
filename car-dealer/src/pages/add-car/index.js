@@ -176,7 +176,7 @@ const handleAddItem = () => {
     });
 
     try {
-      const response = await axios.post("http://localhost:8000/api/addcar", formData, {
+      const response = await axios.post("https://lift-2tmr.onrender.com/api/addcar", formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       console.log('Response:', response.data);

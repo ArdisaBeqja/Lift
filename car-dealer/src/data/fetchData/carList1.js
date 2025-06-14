@@ -6,7 +6,7 @@ const useCarList = () => {
   useEffect(() => {
     // console.log("API URL:", process.env.REACT_APP_API_URL);
 
-      fetch("http://localhost:8000/api/cars")
+      fetch("https://lift-2tmr.onrender.com/api/cars")
 
       .then((response) => response.json())
       .then((data) => setCars(data))
