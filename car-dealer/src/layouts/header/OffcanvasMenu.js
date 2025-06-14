@@ -94,6 +94,9 @@ function OffCanvasMenu({ position, onLoginClick, adminUser, onLogout }) {
                                                                     Dashboard
                                                                   </NavLink>
                   <button className="button flat" onClick={handleLogoutClick}>
+                    Loogout
+                  </button>
+                  <button className="button flat" onClick={handleLogoutClick}>
                     Logout
                   </button>
                 </>
