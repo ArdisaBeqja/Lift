@@ -179,7 +179,7 @@ const Header1 = (props) => {
                       
                     </>
                   )}
-{servUser && (
+                   {servUser && (
   <>
     <div className="header-button d-none d-lg-block">
       <NavLink className="button flat" to="/car-grid">Service Dashboard</NavLink>
@@ -215,6 +215,8 @@ const Header1 = (props) => {
   position="end"
   onLoginClick={toggleLogin}
   adminUser={adminUser}
+  servUser={servUser}
+
   onLogout={handleLogout}
 />
 
