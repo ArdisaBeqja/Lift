@@ -9,7 +9,7 @@ import Search from '../../component/search';
 import LogoDark from '../../assets/images/logo-dark.png';
 import LogoLight from '../../assets/images/logo-light.png';
 
-// SCSS
+// SCSSs
 import './style.scss';
 
 const Header2 = (props) => {
