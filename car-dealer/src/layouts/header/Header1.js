@@ -184,15 +184,7 @@ const Header1 = (props) => {
     <div className="header-button d-none d-lg-block">
       <NavLink className="button flat" to="/car-grid">Service Dashboard</NavLink>
     </div>
-    {/* <div className="header-button d-none d-lg-block">
-      <button className="button flat" onClick={() => {
-        setServUser(null);
-        localStorage.removeItem('servUser');
-        navigate('/car-grid');
-      }}>
-        Logout
-      </button>
-    </div> */}
+  
     <div className="header-button d-none d-lg-block">
                         <button className="button flat" onClick={handleLogout}>
                           Logout
@@ -210,15 +202,14 @@ const Header1 = (props) => {
                   )}
 
                   <div className="mobile-menu-btn d-lg-none">
-                    {/* <OffCanvasMenu position="end" /> */}
                         <OffCanvasMenu
-  position="end"
-  onLoginClick={toggleLogin}
-  adminUser={adminUser}
-  servUser={servUser}
+                        position="end"
+                        onLoginClick={toggleLogin}
+                        adminUser={adminUser}
+                        servUser={servUser}
 
-  onLogout={handleLogout}
-/>
+                       onLogout={handleLogout}
+                      />
 
 
                   </div>

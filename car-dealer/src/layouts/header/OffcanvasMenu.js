@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import MainMenu from './MainMenu';
 
-function OffCanvasMenu({ position, onLoginClick, adminUser, onLogout }) {
+function OffCanvasMenu({ position, onLoginClick, adminUser, servUser,onLogout }) {
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
 
@@ -97,6 +97,30 @@ function OffCanvasMenu({ position, onLoginClick, adminUser, onLogout }) {
                                                                   </NavLink>
                 <hr>
                                           </hr>
+                  <button className="button flat" onClick={handleLogoutClick}>
+                    Logout
+                  </button>
+                </>
+              )}
+
+              {!servUser ?(
+                <button
+                  className="button flat"
+                  onClick={() => {
+                    setShow(false);
+                    onLoginClick();
+                  }}
+                >
+                  Login
+                </button>
+              ) :  (
+                <>
+                 
+                        <NavLink className="button flat" to="/car-grid" style={{textDecoration:"none"}}>Service Dashboard</NavLink>
+                  
+                 
+                <hr>
+                </hr>
                   <button className="button flat" onClick={handleLogoutClick}>
                     Logout
                   </button>
