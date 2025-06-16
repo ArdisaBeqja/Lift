@@ -43,7 +43,7 @@ function ModernBanner1() {
   const imageStyle = {
     width: '100%',
     height: '100%',
-    objectFit: 'cover', // Ensures image fits exactly
+    objectFit: 'cover', // Ensures image fits exactlyy
     display: 'block',
   };
 
