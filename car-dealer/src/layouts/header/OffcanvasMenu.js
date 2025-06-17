@@ -67,7 +67,7 @@ function OffCanvasMenu({ position, onLoginClick, adminUser, servUser, onLogout }
               {adminUser ? (
                 <>
                   <NavLink className="button flat" to="/add-car" style={{ textDecoration: 'none' }}>
-                    Add Lift
+                  Shto Ashensorë
                   </NavLink>
                   <hr />
                   <NavLink className="button flat" to="/service" style={{ textDecoration: 'none' }}>
