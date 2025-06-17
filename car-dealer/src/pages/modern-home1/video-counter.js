@@ -20,7 +20,9 @@ function VideoCounter(params) {
               />
             </div>
             <div className="section-title-new text-center">
-              <h3 className="title text-white mt-4">Wandt To Know More About? Play Our Promotional Video Now!</h3>
+              <h3 className="title text-white mt-4">
+                Dëshironi të mësoni më shumë? Shikoni videon tonë promovuese tani!
+              </h3>
             </div>
           </Col>
         </Row>

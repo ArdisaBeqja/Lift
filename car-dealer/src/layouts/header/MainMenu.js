@@ -27,7 +27,7 @@ function MainMenu() {
       {/* Home */}
       <li className={`has-dropdown ${activeItems.includes(0) ? 'menu-active' : ''}`}>
         <Link to="#">
-          Home
+          Kreu
           {showLink ? (
             <span onClick={() => toggleItem(0)} className="submenu-trigger">
               <i className="fa-solid fa-angle-down"></i>
@@ -38,7 +38,8 @@ function MainMenu() {
         </Link>
         <ul className="submenu">
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/">Kreu</NavLink>
+
           </li>
         </ul>
       </li>
@@ -46,7 +47,7 @@ function MainMenu() {
       {/* Pages */}
       <li className={`has-dropdown ${activeItems.includes(1) ? 'menu-active' : ''}`}>
         <Link to="#">
-          Pages
+         Faqet
           {showLink ? (
             <span onClick={() => toggleItem(1)} className="submenu-trigger">
               <i className="fa-solid fa-angle-down"></i>
@@ -57,7 +58,7 @@ function MainMenu() {
         </Link>
         <ul className="submenu">
           <li>
-            <NavLink to="/about-02">About Us</NavLink>
+            <NavLink to="/about-02">Rreth Nesh</NavLink>
           </li>
           {/* <li>
             <NavLink to="/service">Service</NavLink>
@@ -68,7 +69,7 @@ function MainMenu() {
       {/* Blog */}
       <li className={`has-dropdown ${activeItems.includes(2) ? 'menu-active' : ''}`}>
         <Link to="#">
-          Contact us
+                  Kontakto
           {showLink ? (
             <span onClick={() => toggleItem(2)} className="submenu-trigger">
               <i className="fa-solid fa-angle-down"></i>
@@ -79,13 +80,13 @@ function MainMenu() {
         </Link>
         <ul className="submenu">
           <li>
-            <NavLink to="/contact">Contact</NavLink>
+            <NavLink to="/contact">Kontakto</NavLink>
           </li>
         </ul>
       </li>
       <li className={`has-dropdown ${activeItems.includes(2) ? 'menu-active' : ''}`}>
         <Link to="#">
-          Blog
+          Artikuj
           {showLink ? (
             <span onClick={() => toggleItem(2)} className="submenu-trigger">
               <i className="fa-solid fa-angle-down"></i>
@@ -96,7 +97,7 @@ function MainMenu() {
         </Link>
         <ul className="submenu">
           <li>
-            <NavLink to="/blog-details/1">Blog Single</NavLink>
+            <NavLink to="/blog-details/1">Artikuj</NavLink>
           </li>
         </ul>
       </li>

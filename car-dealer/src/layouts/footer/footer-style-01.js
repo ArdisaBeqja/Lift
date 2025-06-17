@@ -55,8 +55,9 @@ function FooterStyle01() {
       label="hide"
     />
   </Col>
-  <Col md={6} lg={3} style={{ marginTop: '20px', minHeight: '350px', paddingLeft: '20px' }}>
-    <RecentPostWidget title="Recent Posts" />
+  <Col md={6} lg={3} style={{ marginTop: '20px', minHeight: '350px', paddingLeft: '20px',color:'white' }}>
+    <RecentPostWidget title="Postimet e Fundit" />
+
   </Col>
 </Row>
 

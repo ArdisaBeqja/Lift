@@ -192,10 +192,10 @@ const handleAddItem = () => {
   return (
     <div className="site-content">
       <PageHeader
-        title="Add Lift"
+        title="Shto Ashensorë"
         breadCrumbItems={[
           { label: 'Home', path: '/' },
-          { label: 'Add Lift', path: '#', active: true },
+          { label: 'Shto Ashensorë', path: '#', active: true },
         ]}
       />
       <div className="content-wrapper cdfs-add-car-page">

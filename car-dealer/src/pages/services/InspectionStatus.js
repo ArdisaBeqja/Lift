@@ -156,7 +156,7 @@ const InspectionStats = () => {
 
   return (
     <div className="container mt-5">
-      <h4>Inspection Statistics</h4>
+      <h4>Statistikat e Inspektimit</h4>
 
      
 
@@ -191,7 +191,7 @@ const InspectionStats = () => {
 
       <div className="mt-4">
         <button className="btn btn-success" onClick={generateSummaryPDF}>
-          Generate Inspection Summary PDF
+          Gjenero Përmbledhjen e Inspektimit në PDF
         </button>
       </div>
     </div>

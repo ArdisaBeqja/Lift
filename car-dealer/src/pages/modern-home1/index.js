@@ -36,22 +36,22 @@ function ModernHome1() {
     <>
       <div className="site-content homepage">
         <div className="content-wrapper">
-          {/* Main Banner */}
+          {/* Banneri Kryesor */}
           <ModernBanner1 />
 
-          {/* Infobox section */}
+          {/* Seksioni i Infobox-it */}
           <section className="section-ptb bg-gradient-grey">
             <Container>
               <Row className="row align-items-center mb-lg-4">
                 <Col lg={6}>
                   <SectionTitle
-                    title="Elevating Excellence, One Floor at a Time"
+                    title="Ngritje e Ekselencës"
                     extraClass="mb-0"
                   />
                 </Col>
                 <Col lg={6}>
                   <p className="mb-0">
-                    At Class Ashensor, we bring cutting-edge technology and unmatched reliability to every vertical transportation solution. Whether it's commercial or residential, our lifts are designed for safety, style, and smooth performance.
+                    Te Class Ashensor, sjellim teknologjinë më të avancuar dhe besueshmëri të pakrahasueshme në çdo zgjidhje transporti vertikal. Qoftë për qëllime komerciale apo banimi, ashensorët tanë janë projektuar për siguri, stil dhe performancë të qetë.
                   </p>
                 </Col>
               </Row>
@@ -63,33 +63,32 @@ function ModernHome1() {
                       icontype="default"
                       iconshape="default"
                       icon="glyph-icon flaticon-travel"
-                      title="Diverse Solutions"
-                      description="From home elevators to industrial freight lifts, we offer tailored solutions for every requirement."
+                      title="Zgjidhje të Larmishme"
+                      description="Nga ashensorët për shtëpi te ngarkuesit industrialë, ne ofrojmë zgjidhje të përshtatura për çdo nevojë."
                     />
                     <InfoBox
                       className="mt-4"
                       icontype="default"
                       iconshape="default"
                       icon="glyph-icon flaticon-disc-brake"
-
-                      title="24/7 Support"
-                      description="Our technicians and service agents are available around the clock to ensure uninterrupted service."
+                      title="Mbështetje 24/7"
+                      description="Teknikët dhe agjentët tanë të shërbimit janë në dispozicion 24/7 për të garantuar shërbim të pandërprerë."
                     />
                     <InfoBox
                       className="mt-4"
                       icontype="default"
                       iconshape="default"
                       icon="glyph-icon flaticon-disc-brake"
-                      title="Competitive Pricing"
-                      description="Top-tier technology and services at market-leading rates."
+                      title="Çmime Konkurruese"
+                      description="Teknologji dhe shërbime të nivelit të lartë me çmime konkuruese në treg."
                     />
                     <InfoBox
                       className="mt-4"
                       icontype="default"
                       iconshape="default"
                       icon="glyph-icon flaticon-wallet"
-                      title="Preventive Maintenance"
-                      description="Scheduled checkups and real-time diagnostics to keep your lifts running safely and efficiently."
+                      title="Mirëmbajtje Parandaluese"
+                      description="Kontrolle të planifikuara dhe diagnostikime në kohë reale për të mbajtur ashensorët tuaj të sigurt dhe funksional."
                     />
                   </div>
                 </Col>
@@ -97,12 +96,12 @@ function ModernHome1() {
             </Container>
           </section>
 
-          {/* About Section */}
+          {/* Seksioni Rreth Nesh */}
           <section className="section-ptb provides-best-solution">
             <AboutSection />
           </section>
 
-          {/* Video Section */}
+          {/* Seksioni i Videos */}
           <section
             className="section-ptb video-section"
             style={{
@@ -115,7 +114,7 @@ function ModernHome1() {
             <VideoCounter />
           </section>
 
-          {/* Counter Section */}
+          {/* Seksioni i Statistikave */}
           <section className="">
             <Container>
               <Row className="bg-danger new-counter-box mx-0">
@@ -126,7 +125,7 @@ function ModernHome1() {
                     countStart="0"
                     countEnd="1500"
                     countSuffix="+"
-                    countTitle="Lifts Installed"
+                    countTitle="Ashensorë të instaluar"
                   />
                 </Col>
                 <Col xl={3} lg={6} md={6}>
@@ -136,7 +135,7 @@ function ModernHome1() {
                     countStart="0"
                     countEnd="10"
                     countSuffix="+"
-                    countTitle="Years in Business"
+                    countTitle="Vite përvojë"
                   />
                 </Col>
                 <Col xl={3} lg={6} md={6}>
@@ -146,7 +145,7 @@ function ModernHome1() {
                     countStart="0"
                     countEnd="1000"
                     countSuffix="+"
-                    countTitle="Happy Clientsz"
+                    countTitle="Klientë të kënaqur"
                   />
                 </Col>
                 <Col xl={3} lg={6} md={6}>
@@ -156,22 +155,22 @@ function ModernHome1() {
                     countStart="0"
                     countEnd="500"
                     countSuffix="+"
-                    countTitle="Service Reviews"
+                    countTitle="Vlerësime të shërbimit"
                   />
                 </Col>
               </Row>
             </Container>
           </section>
 
-          {/* Latest News Section */}
+          {/* Seksioni i Lajmeve të Fundit */}
           <section className="section-pb latest-news-section" style={{ marginTop: '45px' }}>
             <Container>
               <Row className="row justify-content-center">
                 <Col md={8}>
                   <SectionTitle
                     extraClass="text-center section-title-new"
-                    title="Our Recent News & Articles"
-                    content="Stay updated with the latest trends in elevator technology, safety standards, and LiftCo innovations through our blog."
+                    title="Lajmet dhe Artikujt Tanë të Fundit"
+                    content="Qëndroni të përditësuar me tendencat më të fundit në teknologjinë e ashensorëve, standardet e sigurisë dhe risitë e Class Ashensor përmes blogut tonë."
                   />
                 </Col>
               </Row>

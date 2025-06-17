@@ -97,12 +97,13 @@ function FooterNew01() {
                 <div style={textStyle}>
                   <p></p>
                   <ContactInfo
-                    title="Contact Information"
-                    content="We provide everything you need to build an amazing dealership."
-                    contentclass="about-content"
-                    theme="contact-info-style-01"
-                    label="hide"
-                  />
+  title="Informacion Kontakti"
+  content="Ne ofrojmë gjithçka që ju nevojitet për të ndërtuar një showroom fantastik."
+  contentclass="about-content"
+  theme="contact-info-style-01"
+  label="hide"
+/>
+
                 </div>
               </Col>
 

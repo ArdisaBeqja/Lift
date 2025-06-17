@@ -162,12 +162,12 @@ const Header1 = (props) => {
                     <>
                       <div className="header-button d-none d-lg-block">
                         <NavLink className="button flat" to="/add-car" style={{textDecoration:"none"}}>
-                          Add Lift
+                          Shto Ashensorë
                         </NavLink>
                       </div>
                       <div className="header-button d-none d-lg-block">
                         <NavLink className="button flat" to="/service"  style={{textDecoration:"none"}}>
-                          Dashboard
+                          Paneli i Menaxhimit
                         </NavLink>
                       </div>
                       <div className="header-button d-none d-lg-block">
@@ -182,7 +182,7 @@ const Header1 = (props) => {
                    {servUser && (
   <>
     <div className="header-button d-none d-lg-block">
-      <NavLink className="button flat" to="/car-grid">Service Dashboard</NavLink>
+      <NavLink className="button flat" to="/car-grid" style={{ textDecoration: 'none' }}>Service Dashboard</NavLink>
     </div>
   
     <div className="header-button d-none d-lg-block">

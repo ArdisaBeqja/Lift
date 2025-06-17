@@ -219,7 +219,7 @@ const renderCalendar = () => {
 
   return (
     <div className="mt-4">
-      <h5 className="mb-3">Inspection Calendar</h5>
+      <h5 className="mb-3">Kalendari i Kontrollit</h5>
 
       {/* Centered navigation buttons */}
       <div className="d-flex justify-content-center gap-3 mb-2">
@@ -330,14 +330,15 @@ const renderCalendar = () => {
 
   return (
     <div className="site-content">
-      <PageHeader
-        title={cardata.carName}
-        breadCrumbItems={[
-          { label: 'Home', path: '/' },
-          { label: 'Pages', path: '#' },
-          { label: 'Car Details', path: '#', active: true },
-        ]}
-      />
+     <PageHeader
+  title={cardata.carName}
+  breadCrumbItems={[
+    { label: 'Faqja Kryesore', path: '/' },
+    { label: 'Faqet', path: '#' },
+    { label: 'Detajet e Ashensorit', path: '#', active: true },
+  ]}
+/>
+
       <div className="content-wrapper">
         <section className="car-details section-ptb py-5">
           
@@ -419,7 +420,8 @@ const renderCalendar = () => {
               </Col>
               <Col md={6}>
                 <div className="details-form details-weight">
-                  <h5 className="weight-title mb-3">Send Enquiry</h5>
+                  <h5 className="weight-title mb-3">Dërgo Pyetje</h5>
+
                   <EnquiryForm />
                 </div>
               </Col>

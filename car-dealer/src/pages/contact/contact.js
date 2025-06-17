@@ -1,44 +1,45 @@
 import React from 'react';
 
-// Libraries
+// Libraritë
 import { Col, Container, Row } from 'react-bootstrap';
 
 // Layouts
 import PageHeader from '../../layouts/page-header/PageHeader';
 
-// Components
+// Komponentët
 import SectionTitle from '../../component/section-title/section-title';
 import FeatureInfo from '../../component/feature-info';
 import OpeningHours from '../../component/openinghours';
 import Googlemap from '../../component/googlemap/googlemap';
-import EnquiryForm from '../../form/enquiry-form';
 
-// Form
+// Formularët
+import EnquiryForm from '../../form/enquiry-form';
 import ContactForm from '../../form/contact-form';
 
 function ContactUs() {
   const OpeningHoursItems = [
-    { id: 1, day: 'Sunday', time: ' Closed' },
-    { id: 2, day: 'Monday', time: ' 9:00 AM to 9:00 PM' },
-    { id: 3, day: 'Tuesday', time: ' 9:00 AM to 9:00 PM' },
-    { id: 4, day: 'Wednesday', time: ' 9:00 AM to 9:00 PM' },
-    { id: 5, day: 'Thursday', time: ' 9:00 AM to 9:00 PM' },
-    { id: 6, day: 'Friday', time: ' 9:00 AM to 9:00 PM' },
-    { id: 7, day: 'Saturday', time: ' 9:00 AM to 9:00 PM' },
+    { id: 1, day: 'E Diel', time: ' Mbyllur' },
+    { id: 2, day: 'E Hënë', time: ' 09:00 - 21:00' },
+    { id: 3, day: 'E Martë', time: ' 09:00 - 21:00' },
+    { id: 4, day: 'E Mërkurë', time: ' 09:00 - 21:00' },
+    { id: 5, day: 'E Enjte', time: ' 09:00 - 21:00' },
+    { id: 6, day: 'E Premte', time: ' 09:00 - 21:00' },
+    { id: 7, day: 'E Shtunë', time: ' 09:00 - 21:00' },
   ];
 
   return (
     <>
       <div className="site-content">
         <PageHeader
-          title="Contact us"
+          title="Na Kontaktoni"
           description=""
           breadCrumbItems={[
-            { label: 'Home', path: '/' },
-            { label: 'Pages', path: '#' },
-            { label: 'Contact us', path: '#', active: true },
+            { label: 'Kreu', path: '/' },
+            { label: 'Faqe', path: '#' },
+            { label: 'Na Kontaktoni', path: '#', active: true },
           ]}
         />
+
         <div className="content-wrapper">
           <section className="section-ptb">
             <Container>
@@ -46,8 +47,8 @@ function ContactUs() {
                 <Col lg={12}>
                   <SectionTitle
                     extraClass="text-center"
-                    subtitle="We’d Love to Hear From You"
-                    title="Let's Get in Touch!"
+                    subtitle="Na vjen mirë të dëgjojmë nga ju"
+                    title="Le të lidhemi së bashku!"
                     separator="separator"
                   />
                 </Col>
@@ -65,13 +66,13 @@ function ContactUs() {
                     <FeatureInfo
                       className="feature-box-hover contact-box text-center"
                       icon="fa-solid fa-location-dot"
-                      title="Address"
-                      content="Rruga Dritan Hoxha, Tirana, Albania"
+                      title="Adresa"
+                      content="Rruga Dritan Hoxha, Tiranë, Shqipëri"
                     />
                     <FeatureInfo
                       className="feature-box-hover contact-box text-center"
                       icon="fa-solid fa-phone"
-                      title="Phone"
+                      title="Telefoni"
                       content="+355 68 202 7948"
                     />
                     <FeatureInfo
@@ -83,43 +84,46 @@ function ContactUs() {
                   </div>
                 </Col>
               </Row>
+
               <Row className="section-ptb">
                 <Col lg={8} md={7}>
                   <EnquiryForm />
                 </Col>
                 <Col lg={4} md={5}>
                   <div className="opening-hours bg-light mt-4 mt-md-0">
-                    <h6 className="title">Opening hours</h6>
+                    <h6 className="title">Orari i punës</h6>
                     <OpeningHours data={OpeningHoursItems} />
                   </div>
                 </Col>
               </Row>
+
               <Row>
                 <Col sm={12}>
                   <div className="feature-wrapper contact-info grid-wrapper grid-lg-3 grid-md-3 grid-sm-2 grid-xs-1">
                     <FeatureInfo
                       className="feature-box-style-03 grey-border"
                       icon="fa-regular fa-clock"
-                      title="Opening Hours"
-                      content="We're open Monday to Saturday from 9:00 AM to 9:00 PM. Contact us anytime during these hours for inquiries or support."
+                      title="Orari i Punës"
+                      content="Jemi të hapur nga e hëna në të shtunë, 09:00 - 21:00. Na kontaktoni në këtë orar për çdo pyetje apo kërkesë."
                     />
                     <FeatureInfo
                       className="feature-box-style-03 grey-border"
                       icon="fa-solid fa-life-ring"
-                      title="Our Support Center"
-                      content="Our support team is here to assist with elevator installations, maintenance, and emergency services across Albania."
+                      title="Qendra e Mbështetjes"
+                      content="Ekipi ynë është në dispozicion për instalime, mirëmbajtje dhe shërbime urgjente të ashensorëve në të gjithë Shqipërinë."
                     />
                     <FeatureInfo
                       className="feature-box-style-03 grey-border"
                       icon="fa-solid fa-info"
-                      title="About Class Ashensor"
-                      content="Class Ashensore specializes in elevator installation, modernization, and maintenance. With over 10 years of experience, we ensure top-tier safety and service."
+                      title="Rreth Class Ashensor"
+                      content="Class Ashensor është i specializuar në instalimin, modernizimin dhe mirëmbajtjen e ashensorëve. Me mbi 10 vite eksperiencë, ofrojmë siguri dhe cilësi të lartë."
                     />
                   </div>
                 </Col>
               </Row>
             </Container>
           </section>
+
           <section>
             <Container fluid className="p-0">
               <Row className="g-0">

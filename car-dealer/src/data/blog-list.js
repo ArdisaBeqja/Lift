@@ -24,22 +24,22 @@ const BlogList = [
     imgSrc: blogImg1,
     authorImg: authorImg1,
     authorName: 'Emily Carter',
-    bydealer: 'By LiftTech',
-    category: 'Technology',
-    title: 'Smart Elevators',
+    bydealer: 'Nga LiftTech',
+    category: 'Teknologji',
+    title: 'Ashensorët Smart',
     comments: 8,
     like: 25,
     news: '',
-    metaDate: [{ date: '12', month: 'May', year: '2025' }],
+    metaDate: [{ date: '12', month: 'Maj', year: '2025' }],
     shortDescription:
-      'Explore how smart elevator systems are improving safety, efficiency, and user experience in modern buildings.',
+      'Zbuloni si sistemet inteligjente të ashensorëve po përmirësojnë sigurinë, efikasitetin dhe përvojën e përdoruesit në ndërtesat moderne.',
     mainDescription:
-      'Smart elevators integrate AI and IoT to optimize travel routes, reduce wait times, and enhance passenger safety. From predictive maintenance to voice control, learn how technology is transforming vertical transportation.',
-    quote: 'Smart elevators are not just moving people — they’re moving cities upward.',
+      'Ashensorët inteligjentë integrojnë AI dhe IoT për të optimizuar rrugët e udhëtimit, për të reduktuar kohën e pritjes dhe për të rritur sigurinë e pasagjerëve. Nga mirëmbajtja parashikuese tek kontrolli zanor, mësoni si teknologjia po transformon transportin vertikal.',
+    quote: 'Ashensorët inteligjentë nuk po lëvizin vetëm njerëzit — ata po lëvizin qytetet përpjetë.',
     quoteAuthor: '– Emily Carter',
     extraParagraphs: [
-      'With real-time data and AI algorithms, smart elevators can predict traffic flows in buildings and adjust their operation accordingly, reducing congestion during peak hours. This innovation improves energy efficiency by limiting unnecessary stops and conserving power during low usage periods.',
-      'Future elevators will offer personalized experiences, recognizing passengers and adjusting settings like lighting and music preferences. Integration with building security systems ensures authorized access and enhanced safety, making elevators a critical part of smart building ecosystems.'
+      'Me të dhënat në kohë reale dhe algoritmet e AI-së, ashensorët inteligjentë mund të parashikojnë fluksin e trafikut në ndërtesa dhe të rregullojnë funksionimin në përputhje me rrethanat, duke ulur ngarkesën në oraret e pikut. Kjo risi përmirëson efikasitetin energjetik duke shmangur ndalesat e panevojshme dhe duke kursyer energji në periudha të ulëta përdorimi.',
+      'Ashensorët e së ardhmes do të ofrojnë përvoja të personalizuara, duke njohur pasagjerët dhe duke përshtatur ndriçimin apo muzikën sipas preferencave. Integrimi me sistemet e sigurisë së ndërtesës siguron akses të autorizuar dhe siguri të lartë.'
     ]
   },
   {
@@ -47,22 +47,22 @@ const BlogList = [
     imgSrc: blogImg2,
     authorImg: authorImg2,
     authorName: 'Liam Nguyen',
-    bydealer: 'By Elevator Insights',
-    category: 'Innovation',
-    title: 'Top 5 Elevator Innovations',
+    bydealer: 'Nga Elevator Insights',
+    category: 'Inovacion',
+    title: 'Inovacionet Kryesore',
     comments: 14,
     like: 32,
-    news: 'News 2025',
-    metaDate: [{ date: '06', month: 'Apr', year: '2025' }],
+    news: 'Lajme 2025',
+    metaDate: [{ date: '06', month: 'Prill', year: '2025' }],
     shortDescription:
-      'From ultra-fast lifts to eco-friendly designs, discover the top elevator innovations revolutionizing the industry.',
+      'Nga ashensorët ultra të shpejtë te dizajnet miqësore me mjedisin, zbuloni risitë që po revolucionarizojnë industrinë.',
     mainDescription:
-      'Elevator technology is evolving rapidly. This article highlights breakthroughs such as magnetic levitation, regenerative braking, and AI-powered predictive maintenance that are setting new standards for performance and sustainability.',
-    quote: 'Elevators of tomorrow are faster, greener, and smarter.',
+      'Teknologjia e ashensorëve po evoluon me shpejtësi. Ky artikull thekson arritje si levitimi magnetik, frenimi rigjenerues dhe mirëmbajtja e parashikuar e mbështetur në AI që po vendosin standarde të reja për performancën dhe qëndrueshmërinë.',
+    quote: 'Ashensorët e së nesërmes janë më të shpejtë, më ekologjikë dhe më të zgjuar.',
     quoteAuthor: '– Liam Nguyen',
     extraParagraphs: [
-      'Magnetic levitation (maglev) technology eliminates the need for cables, allowing elevators to move both vertically and horizontally, opening new architectural possibilities. Regenerative braking systems capture energy during descent, feeding it back into the building’s power grid, reducing overall energy consumption.',
-      'AI-powered maintenance platforms detect potential issues before they cause downtime, increasing safety and reliability. These innovations not only improve ride quality but also contribute significantly to reducing the carbon footprint of high-rise buildings.'
+      'Teknologjia e levitimit magnetik eliminon nevojën për kabllo, duke lejuar ashensorët të lëvizin vertikalisht dhe horizontalisht, duke hapur mundësi të reja arkitektonike. Sistemet e frenimit rigjenerues kapin energjinë gjatë zbritjes dhe e rikthejnë atë në rrjetin elektrik të ndërtesës.',
+      'Platforma e mirëmbajtjes së bazuar në AI identifikon probleme potenciale përpara se të ndodhin, duke rritur sigurinë dhe besueshmërinë. Këto risi përmirësojnë cilësinë e udhëtimit dhe reduktojnë ndjeshëm ndikimin mjedisor të ndërtesave të larta.'
     ]
   },
   {
@@ -70,22 +70,22 @@ const BlogList = [
     imgSrc: blogImg3,
     authorImg: authorImg3,
     authorName: 'Sophia Martínez',
-    bydealer: 'By GreenLift',
-    category: 'Sustainability',
-    title: 'Eco-Friendly Elevatorst',
+    bydealer: 'Nga GreenLift',
+    category: 'Qëndrueshmëri',
+    title: 'Ashensorë Eko',
     comments: 6,
     like: 18,
-    news: 'News 2025',
-    metaDate: [{ date: '22', month: 'Mar', year: '2025' }],
+    news: 'Lajme 2025',
+    metaDate: [{ date: '22', month: 'Mars', year: '2025' }],
     shortDescription:
-      'Learn how elevator manufacturers and building managers are adopting greener technologies.',
+      'Mësoni si prodhuesit e ashensorëve dhe menaxherët e ndërtesave po zbatojnë teknologji më të gjelbra.',
     mainDescription:
-      'Sustainability is key in elevator design and operation. From energy-efficient motors to smart lighting and recycled materials, the elevator industry is stepping up its commitment to the environment.',
-    quote: 'Green elevators are lifting us toward a more sustainable future.',
+      'Qëndrueshmëria është thelbësore në dizajnin dhe funksionimin e ashensorëve. Nga motorët efikasë energjetikisht te ndriçimi inteligjent dhe materialet e ricikluara, industria e ashensorëve po rrit angazhimin ndaj mjedisit.',
+    quote: 'Ashensorët e gjelbër po na ngrejnë drejt një të ardhmeje më të qëndrueshme.',
     quoteAuthor: '– Sophia Martínez',
     extraParagraphs: [
-      'Modern elevators use regenerative drives that convert kinetic energy into electricity, which is then reused in the building, dramatically cutting energy usage. LED lighting and standby modes reduce power consumption when elevators are idle.',
-      'Using recycled and sustainable materials for cab interiors and parts helps reduce environmental impact. Additionally, manufacturers are exploring biodegradable lubricants and eco-friendly hydraulic fluids, further decreasing harmful emissions.'
+      'Ashensorët modernë përdorin sisteme rigjenerimi që kthejnë energjinë kinetike në elektricitet për përdorim të brendshëm në ndërtesë. Ndriçimi LED dhe modalitetet e fjetjes reduktojnë konsumin e energjisë kur ashensori është jashtë funksionit.',
+      'Përdorimi i materialeve të qëndrueshme dhe të ricikluara për pjesët dhe kabinën redukton ndikimin mjedisor. Prodhuesit po eksplorojnë gjithashtu lubrifikantë biodegradues dhe lëngje hidraulike miqësore me natyrën.'
     ]
   },
   {
@@ -93,22 +93,22 @@ const BlogList = [
     imgSrc: blogImg4,
     authorImg: authorImg4,
     authorName: 'Marcus Lee',
-    bydealer: 'By Elevate Marketing',
+    bydealer: 'Nga Elevate Marketing',
     category: 'Marketing',
-    title: 'Marketing Strategies',
+    title: 'Marketing Efektiv',
     comments: 11,
     like: 20,
-    news: 'News 2025',
-    metaDate: [{ date: '03', month: 'Mar', year: '2025' }],
+    news: 'Lajme 2025',
+    metaDate: [{ date: '03', month: 'Mars', year: '2025' }],
     shortDescription:
-      'Discover effective ways elevator companies can grow their brand and reach customers online.',
+      'Zbuloni mënyra efektive se si kompanitë e ashensorëve mund të rrisin markën e tyre dhe të arrijnë më shumë klientë online.',
     mainDescription:
-      'From targeted ads to social media campaigns, elevator companies are using digital marketing to boost sales and build trust in a competitive market.',
-    quote: 'The elevator company with the best online presence rises above the rest.',
+      'Nga reklamat e synuara deri tek fushatat në rrjetet sociale, kompanitë e ashensorëve po përdorin marketingun digjital për të rritur shitjet dhe për të ndërtuar besimin.',
+    quote: 'Kompania me praninë më të mirë online ngrihet mbi të tjerat.',
     quoteAuthor: '– Marcus Lee',
     extraParagraphs: [
-      'Data-driven marketing helps companies identify potential clients based on building projects, geographic location, and industry demand. Combining SEO with content marketing positions companies as thought leaders, attracting architects, engineers, and developers.',
-      'Interactive 3D models, video tours, and virtual demos on websites and social platforms engage prospects effectively. Partnering with influencers in the construction and architecture sectors amplifies reach and creates authentic endorsements.'
+      'Marketingu i bazuar në të dhëna ndihmon kompanitë të identifikojnë klientët potencialë sipas projekteve ndërtimore dhe vendndodhjes. Kombinimi i SEO me përmbajtje cilësore krijon autoritet dhe besueshmëri.',
+      'Modelet 3D interaktive, videot demonstrative dhe prezantimet virtuale janë mjete që tërheqin klientët. Bashkëpunimi me influencues të fushës rrit besueshmërinë dhe shtrirjen e markës.'
     ]
   },
   {
@@ -116,22 +116,22 @@ const BlogList = [
     imgSrc: blogImg2,
     authorImg: authorImg5,
     authorName: 'Isabella Rossi',
-    bydealer: 'By Lift Finance Journal',
-    category: 'Finance',
-    title: 'Financing Needs',
+    bydealer: 'Nga Lift Finance Journal',
+    category: 'Financa',
+    title: 'Financim Ashensorësh',
     comments: 7,
     like: 15,
-    news: 'News 2025',
-    metaDate: [{ date: '28', month: 'Feb', year: '2025' }],
+    news: 'Lajme 2025',
+    metaDate: [{ date: '28', month: 'Shkurt', year: '2025' }],
     shortDescription:
-      'A practical guide to financing elevator installations for commercial and residential buildings.',
+      'Një udhëzues praktik për financimin e ashensorëve për ndërtesa banimi dhe komerciale.',
     mainDescription:
-      'Elevator installation can be costly, but with the right financial planning, incentives, and leasing options, upgrading your building is more affordable than ever.',
-    quote: 'Smart financing lifts your building to new heights.',
+      'Instalimi i ashensorëve mund të jetë i kushtueshëm, por me planifikim të duhur financiar dhe opsione të financimit, përmirësimi i ndërtesës bëhet më i përballueshëm.',
+    quote: 'Financimi i zgjuar ngre vlerën e ndërtesës suaj.',
     quoteAuthor: '– Isabella Rossi',
     extraParagraphs: [
-      'Many regions offer grants and tax incentives for installing energy-efficient elevators, helping offset upfront costs. Leasing options provide flexible payment plans that reduce financial strain and include maintenance packages.',
-      'Understanding the total cost of ownership—including installation, maintenance, and energy savings—helps building owners make informed decisions. Collaborating with financial advisors ensures you select the best funding strategy tailored to your project’s scale and timeline.'
+      'Shumë zona ofrojnë subvencione dhe lehtësime tatimore për instalimin e ashensorëve me efikasitet të lartë energjetik. Opsionet e leasing-ut ofrojnë plane fleksibile pagese me mirëmbajtje të përfshirë.',
+      'Kuptimi i kostos totale — përfshirë instalimin, mirëmbajtjen dhe kursimet e energjisë — ndihmon pronarët të marrin vendime të informuara. Konsultimi me këshilltarë financiarë ndihmon për të gjetur strategjinë më të përshtatshme.'
     ]
   }
 ];

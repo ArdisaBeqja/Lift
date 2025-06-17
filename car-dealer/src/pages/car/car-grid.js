@@ -50,13 +50,14 @@ function CarGrid() {
     <>
       <div className="site-content">
         <PageHeader
-          title="Lift Listing"
-          breadCrumbItems={[
-            { label: 'Home', path: '/' },
-            { label: 'Pages', path: '#' },
-            { label: 'Lift Listing', path: '#', active: true },
-          ]}
-        />
+  title="Lista e Ashensorëve"
+  breadCrumbItems={[
+    { label: 'Kryefaqja', path: '/' },
+    { label: 'Faqet', path: '#' },
+    { label: 'Lista e Ashensorëve', path: '#', active: true },
+  ]}
+/>
+
         <div className="content-wrapper">
           <section className="blog section-ptb">
             <Container>

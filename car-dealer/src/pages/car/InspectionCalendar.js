@@ -92,7 +92,7 @@ const InspectionCalendar = ({
 
   return (
     <div className="mt-4">
-      <h5 className="mb-3">Inspection Calendar</h5>
+      <h5 className="mb-3">Kalendari i Kontrollit</h5>
 
       {/* Centered navigation buttons */}
       <div className="d-flex justify-content-center gap-3 mb-2">

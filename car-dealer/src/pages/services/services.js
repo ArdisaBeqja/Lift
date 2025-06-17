@@ -17,24 +17,24 @@ import FeatureServices from './feature-services';
 import EnquiryForm from '../../form/enquiry-form';
 
 function Service() {
-  const OpeningHoursItems = [
-    { id: 1, day: 'Sunday', time: ' closed' },
-    { id: 2, day: 'Monday', time: ' 9:00 AM to 5:00 PM' },
-    { id: 3, day: 'Tuesday', time: ' 9:00 AM to 5:00 PM' },
-    { id: 4, day: 'Wednesday', time: ' 9:00 AM to 5:00 PM' },
-    { id: 5, day: 'Thursday', time: ' 9:00 AM to 5:00 PM' },
-    { id: 6, day: 'Friday', time: ' 9:00 AM to 5:00 PM' },
-    { id: 7, day: 'Saturday', time: ' 9:00 AM to 5:00 PM' },
+  const OrariHapjes = [
+    { id: 1, day: 'E Diel', time: ' mbyllur' },
+    { id: 2, day: 'E Hënë', time: ' 9:00 - 17:00' },
+    { id: 3, day: 'E Martë', time: ' 9:00 - 17:00' },
+    { id: 4, day: 'E Mërkurë', time: ' 9:00 - 17:00' },
+    { id: 5, day: 'E Enjte', time: ' 9:00 - 17:00' },
+    { id: 6, day: 'E Premte', time: ' 9:00 - 17:00' },
+    { id: 7, day: 'E Shtunë', time: ' 9:00 - 17:00' },
   ];
   return (
     <>
       <div className="site-content">
         <PageHeader
-          title="Service"
+          title="Shërbimi"
           breadCrumbItems={[
-            { label: 'Home', path: '/' },
-            { label: 'Pages', path: '#' },
-            { label: 'Service', path: '#', active: true },
+            { label: 'Kreu', path: '/' },
+            { label: 'Faqet', path: '#' },
+            { label: 'Shërbimi', path: '#', active: true },
           ]}
         />
         <div className="content-wrapper">
@@ -48,7 +48,7 @@ function Service() {
                     className="counterstyle-03 mb-4 mb-lg-0"
                     countStart="0"
                     countEnd="300"
-                    countTitle="Stock"
+                    countTitle="Stoku"
                   />
                 </Col>
                 <Col lg={3} sm={6}>
@@ -56,7 +56,7 @@ function Service() {
                     className="counterstyle-03 mb-4 mb-lg-0"
                     countStart="0"
                     countEnd="80"
-                    countTitle="Reviews"
+                    countTitle="Vlerësime"
                   />
                 </Col>
                 <Col lg={3} sm={6}>
@@ -64,7 +64,7 @@ function Service() {
                     className="counterstyle-03 mb-4 mb-sm-0"
                     countStart="0"
                     countEnd="120"
-                    countTitle="Happy Customer"
+                    countTitle="Klientë të Kënaqur"
                   />
                 </Col>
                 <Col lg={3} sm={6}>
@@ -73,26 +73,24 @@ function Service() {
                     countStart="0"
                     countEnd="220"
                     countIcon="glyph-icon flaticon-cup"
-                    countTitle="Modernizations Completed"
+                    countTitle="Modernizime të Përfunduara"
                   />
                 </Col>
               </Row>
             </Container>
           </section>
           <hr className="gray" />
-       <section className="section-ptb">
-  <Container fluid> {/* fluid to span full width */}
-    <Row className="justify-content-center">
-      <Col xs={12}> {/* full width on all devices */}
-        <div className="d-flex justify-content-center">
-          <InspectionCalendar />
-        </div>
-      </Col>
-    </Row>
-  </Container>
-</section>
-
-
+          <section className="section-ptb">
+            <Container fluid>
+              <Row className="justify-content-center">
+                <Col xs={12}>
+                  <div className="d-flex justify-content-center">
+                    <InspectionCalendar />
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          </section>
         </div>
       </div>
     </>

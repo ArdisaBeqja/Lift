@@ -122,7 +122,7 @@ const InspectionCalendar = () => {
       <div className="row">
         <div className="col-md-6">
           <div className="d-flex justify-content-between align-items-center mb-2">
-            <h5>Calendar</h5>
+            <h5>Kalendari</h5>
             <button
               className="btn btn-outline-secondary btn-sm"
               onClick={openFullscreen}
@@ -147,7 +147,7 @@ const InspectionCalendar = () => {
         </div>
 
         <div className="col-md-6">
-          <h5>Inspection Dates</h5>
+          <h5>Datat e Kontrollit</h5>
           <div className="d-flex justify-content-between align-items-center mb-2">
             <button className="btn btn-outline-primary btn-sm" onClick={handlePrev} disabled={pageIndex === 0}>
               &lt;

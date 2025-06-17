@@ -9,44 +9,44 @@ function FeatureServices() {
   const ServiceItems = [
     {
       id: 1,
-      icon: 'glyph-icon flaticon-lift', // Consider updating your icon set accordingly
-      title: 'Fast Installation',
-      description: 'We ensure timely and efficient lift installation to get your building up and running without delays.',
+      icon: 'glyph-icon flaticon-lift',
+      title: 'Instalim i Shpejtë',
+      description: 'Sigurojmë instalim në kohë dhe me efikasitet të ashensorëve për t\'u nisur sa më shpejtë pa vonesa.',
       link: '#'
     },
     {
       id: 2,
       icon: 'glyph-icon flaticon-price-tdag',
-      title: 'Affordable Maintenance Plans',
-      description: 'Our service plans are designed to keep your lifts in optimal condition—without breaking your budget.',
+      title: 'Planet e Mirëmbajtjes së Përballueshme',
+      description: 'Planet tona të shërbimit janë dizajnuar për të mbajtur ashensorët në gjendje optimale, pa shpenzuar shumë.',
       link: '#'
     },
     {
       id: 3,
       icon: 'glyph-icon flaticon-wrench',
-      title: 'Routine Inspections',
-      description: 'We conduct regular safety checks and performance inspections to ensure compliance and reliability.',
+      title: 'Inspektime Rutine',
+      description: 'Bëjmë kontrolle të rregullta sigurie dhe performancë për të siguruar përputhshmëri dhe besueshmëri.',
       link: '#'
     },
     {
       id: 4,
       icon: 'glyph-icon flaticon-tools',
-      title: 'Modernization Services',
-      description: 'Upgrade your old lifts with modern technology to improve efficiency, safety, and aesthetics.',
+      title: 'Shërbime Modernizimi',
+      description: 'Përmirësoni ashensorët tuaj të vjetër me teknologji moderne për efikasitet, siguri dhe estetikë më të mirë.',
       link: '#'
     },
     {
       id: 5,
       icon: 'glyph-icon flaticon-emergency',
-      title: '24/7 Emergency Support',
-      description: 'Our team is available around the clock to respond to any lift emergencies and restore functionality fast.',
+      title: 'Mbështetje Emergjente 24/7',
+      description: 'Ekipi ynë është në dispozicion gjatë gjithë kohës për të reaguar ndaj emergjencave dhe për të rikthyer funksionalitetin shpejt.',
       link: '#'
     },
     {
       id: 6,
       icon: 'glyph-icon flaticon-shield',
-      title: 'Trusted Industry Experts',
-      description: 'With years of experience, we are a reliable partner for safe, durable, and code-compliant lift systems.',
+      title: 'Ekspertë të Besuar të Industrisë',
+      description: 'Me vite eksperiencë, jemi partneri juaj i besueshëm për sisteme ashensorësh të sigurta, të qëndrueshme dhe sipas standardeve.',
       link: '#'
     },
   ];

@@ -68,7 +68,7 @@ function CarDetailsTwo() {
           breadCrumbItems={[
             { label: 'Home', path: '/' },
             { label: 'Pages', path: '#' },
-            { label: 'Car Details 02', path: '#', active: true },
+            { label: 'Lift Details 02', path: '#', active: true },
           ]}
         />
         <div className="content-wrapper">
