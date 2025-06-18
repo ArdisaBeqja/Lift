@@ -5,7 +5,7 @@ const useGeneral = () => {
   const [loading, setLoading] = useState(true); // Loading state
 
   useEffect(() => {
-    fetch("https://lift-2tmr.onrender.com/api/cars")
+    fetch("https://lift-4s9g.onrender.com/api/cars")
       .then((response) => response.json())
       .then((data) => {
         setCars(data);

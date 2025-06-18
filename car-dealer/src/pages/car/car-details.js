@@ -100,7 +100,7 @@ const handleYes = async () => {
   setInspectionChecked(true);  // ✅ Update local state
 
   try {
-    await fetch(`https://lift-2tmr.onrender.com/api/cars1/${id}/toggle-inspection`, {
+    await fetch(`https://lift-4s9g.onrender.com/api/cars1/${id}/toggle-inspection`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ inspectionChecked: true }),
@@ -120,7 +120,7 @@ const handleNo = async () => {
   setInspectionChecked(false);  // ✅ Update local state
 
   try {
-    await fetch(`https://lift-2tmr.onrender.com/api/cars1/${id}/toggle-inspection`, {
+    await fetch(`https://lift-4s9g.onrender.com/api/cars1/${id}/toggle-inspection`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ inspectionChecked: false }),
@@ -367,7 +367,7 @@ const renderCalendar = () => {
                         {cardata.gallery.slice(0, 5).map((val, ind) => {
                           const imageUrl = val.image.startsWith('http')
                             ? val.image
-                            : `https://lift-2tmr.onrender.com/uploads/${val.image}`;
+                            : `https://lift-4s9g.onrender.com/uploads/${val.image}`;
                           return (
                             <SwiperSlide key={ind}>
                               <img
@@ -393,7 +393,7 @@ const renderCalendar = () => {
                           <SwiperSlide key={ind}>
                             <img
                               className="img-fluid rounded border"
-                              src={`https://lift-2tmr.onrender.com/uploads/${val.image}`}
+                              src={`https://lift-4s9g.onrender.com/uploads/${val.image}`}
                               alt={`Thumbnail image ${ind}`}
                             />
                           </SwiperSlide>

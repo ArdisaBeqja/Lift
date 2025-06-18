@@ -10,7 +10,7 @@ function CarDetailsGeneralInformation() {
   useEffect(() => {
     const fetchCarDetails = async () => {
       try {
-        const response = await fetch(`https://lift-2tmr.onrender.com/api/cars/${id}`);
+        const response = await fetch(`https://lift-4s9g.onrender.com/api/cars/${id}`);
         if (!response.ok) {
           throw new Error('Car not found');
         }

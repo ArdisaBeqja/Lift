@@ -77,7 +77,7 @@ function CarGrid() {
                             <VehicleShowcase1
                               className="bg-light"
                               key={index}
-                              imgSrc={`https://lift-2tmr.onrender.com/uploads/${firstImage}`}
+                              imgSrc={`https://lift-4s9g.onrender.com/uploads/${firstImage}`}
                               liftName={val.liftName}
                               liftPrice={val.liftPrice}
                               attri={val.attributes}

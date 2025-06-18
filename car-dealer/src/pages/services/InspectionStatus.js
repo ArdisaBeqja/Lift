@@ -35,7 +35,7 @@ const InspectionStats = () => {
   useEffect(() => {
     const fetchInspectionData = async () => {
       try {
-        const response = await axios.get("https://lift-2tmr.onrender.com/api/cars");
+        const response = await axios.get("https://lift-4s9g.onrender.com/api/cars");
         setInspectionData(response.data);
 
         // Extract unique inspection dates
@@ -56,7 +56,7 @@ const InspectionStats = () => {
 
   const handleDateClick = async (date) => {
     try {
-      const response = await axios.get(`https://lift-2tmr.onrender.com/api/cars/by-date/${date}`);
+      const response = await axios.get(`https://lift-4s9g.onrender.com/api/cars/by-date/${date}`);
       setDateFilteredData(response.data);
     } catch (error) {
       console.error("Error fetching cars by date:", error);

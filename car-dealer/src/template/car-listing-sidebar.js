@@ -13,7 +13,7 @@ function CarListingSidebar({ onFilteredCars }) {
   useEffect(() => {
     const fetchFilters = async () => {
       try {
-        const res = await axios.get("https://lift-2tmr.onrender.com/api/filter");
+        const res = await axios.get("https://lift-4s9g.onrender.com/api/filter");
         const data = res.data;
 
         const newSearchListGroup = Object.keys(data).map((key, index) => {
@@ -61,7 +61,7 @@ function CarListingSidebar({ onFilteredCars }) {
         for (const spec of specs) {
           requests.push(
             
-            axios.get("https://lift-2tmr.onrender.com/api/cars/by-attribute", {
+            axios.get("https://lift-4s9g.onrender.com/api/cars/by-attribute", {
               params: {
                 title,
                 spec,
