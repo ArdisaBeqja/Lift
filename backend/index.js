@@ -28,6 +28,7 @@ app.use(express.json());
 const allowedOrigins = [
   'http://localhost:3000',
   'https://lift-2tmr.onrender.com',
+  'https://lift-4s9g.onrender.com',
   'https://classashensors.com'
 ];
 app.use(cors({
