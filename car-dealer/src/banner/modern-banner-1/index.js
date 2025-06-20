@@ -91,7 +91,7 @@ function ModernBanner1() {
         ))}
       </div>
       <Container style={textContainerStyle}>
-        <h1 style={textStyle}>Class Ashesnsor</h1>
+        <h1 style={textStyle}>*Elevator Compnay*</h1>
       </Container>
     </section>
   );
