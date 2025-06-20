@@ -115,8 +115,8 @@ function ContactUs() {
                     <FeatureInfo
                       className="feature-box-style-03 grey-border"
                       icon="fa-solid fa-info"
-                      title="Rreth Class Ashensor"
-                      content="Class Ashensor është i specializuar në instalimin, modernizimin dhe mirëmbajtjen e ashensorëve. Me mbi 10 vite eksperiencë, ofrojmë siguri dhe cilësi të lartë."
+                      title="Rreth Lift"
+                      content="Lift është i specializuar në instalimin, modernizimin dhe mirëmbajtjen e ashensorëve. Me mbi 10 vite eksperiencë, ofrojmë siguri dhe cilësi të lartë."
                     />
                   </div>
                 </Col>

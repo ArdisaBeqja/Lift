@@ -51,7 +51,7 @@ function ModernHome1() {
                 </Col>
                 <Col lg={6}>
                   <p className="mb-0">
-                    Te Class Ashensor, sjellim teknologjinë më të avancuar dhe besueshmëri të pakrahasueshme në çdo zgjidhje transporti vertikal. Qoftë për qëllime komerciale apo banimi, ashensorët tanë janë projektuar për siguri, stil dhe performancë të qetë.
+                    Te Lift, sjellim teknologjinë më të avancuar dhe besueshmëri të pakrahasueshme në çdo zgjidhje transporti vertikal. Qoftë për qëllime komerciale apo banimi, ashensorët tanë janë projektuar për siguri, stil dhe performancë të qetë.
                   </p>
                 </Col>
               </Row>
@@ -170,7 +170,7 @@ function ModernHome1() {
                   <SectionTitle
                     extraClass="text-center section-title-new"
                     title="Lajmet dhe Artikujt Tanë të Fundit"
-                    content="Qëndroni të përditësuar me tendencat më të fundit në teknologjinë e ashensorëve, standardet e sigurisë dhe risitë e Class Ashensor përmes blogut tonë."
+                    content="Qëndroni të përditësuar me tendencat më të fundit në teknologjinë e ashensorëve, standardet e sigurisë dhe risitë e Lift përmes blogut tonë."
                   />
                 </Col>
               </Row>

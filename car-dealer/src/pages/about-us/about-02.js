@@ -30,7 +30,7 @@ const TestimonialList3 = [
     icon: 'glyph-icon flaticon-quote',
     iconLeft: true,
     description:
-      'Class Ashensor instaloi ashensorin tonë të ri për banesë përpara afatit dhe me saktësi të jashtëzakonshme. Ekipi ishte profesional dhe shërbimi i shkëlqyer.',
+      'Lift instaloi ashensorin tonë të ri për banesë përpara afatit dhe me saktësi të jashtëzakonshme. Ekipi ishte profesional dhe shërbimi i shkëlqyer.',
   },
   {
     authorImg: 'client2.jpg',
@@ -48,7 +48,7 @@ const TestimonialList3 = [
     icon: 'glyph-icon flaticon-quote',
     iconLeft: true,
     description:
-      'Bashkëpunimi me Class Ashensor gjatë projektit tonë komercial ishte i lehtë dhe efikas. Ekspertiza teknike dhe këshillat e personalizuara ishin thelbësore për suksesin tonë.',
+      'Bashkëpunimi me Lift gjatë projektit tonë komercial ishte i lehtë dhe efikas. Ekspertiza teknike dhe këshillat e personalizuara ishin thelbësore për suksesin tonë.',
   },
 ];
 

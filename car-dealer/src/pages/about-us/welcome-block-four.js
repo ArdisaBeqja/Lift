@@ -21,9 +21,9 @@ function WelcomeBlockFour(props) {
             <SectionTitle
               extraClass="text-center mb-5"
               subtitle="Mirë se vini në"
-              title="Class Ashensor"
+              title="Lift"
               separator="separator"
-              content="Class Ashensor është një ofrues premium i instalimit dhe mirëmbajtjes së ashensorëve. Ne jemi të specializuar në sisteme ashensorësh me cilësi të lartë për ndërtesa banimi, komerciale dhe industriale. Qoftë për një instalim të ri apo mirëmbajtje të vazhdueshme, ekipi ynë i ekspertëve siguron siguri, efikasitet dhe besueshmëri."
+              content="Lift është një ofrues premium i instalimit dhe mirëmbajtjes së ashensorëve. Ne jemi të specializuar në sisteme ashensorësh me cilësi të lartë për ndërtesa banimi, komerciale dhe industriale. Qoftë për një instalim të ri apo mirëmbajtje të vazhdueshme, ekipi ynë i ekspertëve siguron siguri, efikasitet dhe besueshmëri."
             />
           </Col>
         </Row>
@@ -50,13 +50,13 @@ function WelcomeBlockFour(props) {
           </Col>
           <Col md={6}>
             <p>
-              Te Class Ashensor, prioriteti ynë është inovacioni dhe siguria. Ekipi ynë është i përkushtuar të ofrojë sisteme ashensorësh që përmirësojnë lëvizshmërinë dhe aksesueshmërinë në çdo mjedis.
+              Te Lift, prioriteti ynë është inovacioni dhe siguria. Ekipi ynë është i përkushtuar të ofrojë sisteme ashensorësh që përmirësojnë lëvizshmërinë dhe aksesueshmërinë në çdo mjedis.
             </p>
             <p>
               Me dekada përvojë, kemi fituar besimin e klientëve përmes shërbimit të besueshëm dhe mjeshtërisë profesionale. Nga dizajni deri tek mbështetja pas instalimit, ne e mbulojmë çdo nevojë të transportit vertikal.
             </p>
             <p>
-              Qoftë në përmirësimin e një sistemi ekzistues apo ndërtimin nga e para, Class Ashensor garanton ekselencë në çdo projekt. Na lejoni t’ju ndihmojmë të lëvizni më zgjuar dhe më të sigurt.
+              Qoftë në përmirësimin e një sistemi ekzistues apo ndërtimin nga e para, Lift garanton ekselencë në çdo projekt. Na lejoni t’ju ndihmojmë të lëvizni më zgjuar dhe më të sigurt.
             </p>
           </Col>
         </Row>
@@ -106,7 +106,7 @@ function AboutWelcomeBlock(props) {
               subtitle="Mirë se vini te"
               title="Vlerat Tona Themelore"
               separator="separator"
-              content="Te Class Ashensor, misioni ynë bazohet në integritet, inovacion dhe shërbim të jashtëzakonshëm. Synojmë të ofrojmë sisteme të sigurta, të besueshme dhe efikase, të mbështetura nga kujdes i pandërprerë për klientin."
+              content="Te Lift, misioni ynë bazohet në integritet, inovacion dhe shërbim të jashtëzakonshëm. Synojmë të ofrojmë sisteme të sigurta, të besueshme dhe efikase, të mbështetura nga kujdes i pandërprerë për klientin."
             />
           </Col>
         </Row>
